@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Demander son chemin en ville",
+    "objective": "S'orienter en ville et comprendre les directions",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "deplacements-directions",
+    "grammar_focus": "Fin kayn...? + Impératif directionnel",
+    "chunk_focus": ["Fin kayn...?", "Sir nishan", "Dour 3la limen/liser", "B3id/9rib", "Hda..."],
+    "dialogue_darija": "A: 3afak, fin kayn l-bosta?\nB: L-bosta? Machi b3ida. Sir nishan had z-zn9a, w dour 3la limen f dik la croisement.\nA: W mn b3d?\nB: Mn b3d sir chwiya, ghadi tchoufha 3la liser. Hdaha wahd l-banque.\nA: Bchhal d d-dqiqa mn hna?\nB: Chi 3achra d d-dqa2iq machi.\nA: Wakha, chokran bzzaf khouya!\nB: Bla jmil, bslama!",
+    "dialogue_francais": "A: S'il te plaît, où est la poste ?\nB: La poste ? C'est pas loin. Va tout droit dans cette rue, et tourne à droite au croisement.\nA: Et après ?\nB: Après continue un peu, tu la verras à gauche. À côté il y a une banque.\nA: C'est à combien de minutes d'ici ?\nB: Environ 10 minutes à pied.\nA: D'accord, merci beaucoup mon frère !\nB: De rien, au revoir !",
+    "dialogue_arabe": "A: عافاك، فين كاين البوسطا؟\nB: البوسطا؟ ماشي بعيدة. سير نيشان هاد الزنقة، و دور على ليمن ف ديك لا كرواسمو.\nA: و من بعد؟\nB: من بعد سير شوية، غادي تشوفها على ليسر. حداها واحد البنكة.\nA: بشحال د الدقيقة من هنا؟\nB: شي عشرة د الدقائق ماشي.\nA: واخا، شكرا بزاف خويا!\nB: بلا جميل، بسلامة!",
+    "vocabulaire": [
+      {"darija": "Fin kayn?", "arabe": "فين كاين؟", "francais": "Où est ?"},
+      {"darija": "L-bosta", "arabe": "البوسطا", "francais": "La poste"},
+      {"darija": "Z-zn9a", "arabe": "الزنقة", "francais": "La rue"},
+      {"darija": "Sir nishan", "arabe": "سير نيشان", "francais": "Va tout droit"},
+      {"darija": "Hda", "arabe": "حدا", "francais": "À côté de"},
+      {"darija": "B3id / 9rib", "arabe": "بعيد / قريب", "francais": "Loin / Proche"},
+      {"darija": "Machi", "arabe": "ماشي", "francais": "Marche / À pied"},
+      {"darija": "La croisement", "arabe": "لا كرواسمو", "francais": "Le croisement (emprunt français)"}
+    ]
+  },
+  {
+    "title": "Chez le médecin",
+    "objective": "Décrire ses symptômes et comprendre les instructions du médecin",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "sante-corps",
+    "grammar_focus": "Ka-y3ini... (j'ai mal à...) + passé récent (bdit...)",
+    "chunk_focus": ["Ka-y3ini...", "Bdit...", "Khoud...", "Mra f nhar", "Rja3 3ndi"],
+    "dialogue_darija": "A: Salam docteur.\nB: Salam, tfdl gls. Chnou kayn?\nA: Ka-y3ini rassi bzzaf, w 3ndi s-sokhana.\nB: Imta bdit thss bhad chi?\nA: Daba tlat iyam. W ka-nks7l bzzaf.\nB: Wakha. Khllini nchof. Fth fmmk... Aha. 3ndk l-grippe. Ghadi n3tik dwa.\nA: Chhal d l-mra f nhar?\nB: Jouj d l-mrrat f nhar, mra f ssba7 w mra f l-3chiya. W chreb l-ma bzzaf.\nA: Chokran docteur.\nB: Bslama, rja3 3ndi ila ma t7ssnitch f 3 d iyam.",
+    "dialogue_francais": "A: Bonjour docteur.\nB: Bonjour, assieds-toi. Qu'est-ce qu'il y a ?\nA: J'ai très mal à la tête, et j'ai de la fièvre.\nB: Depuis quand tu ressens ça ?\nA: Depuis 3 jours. Et je tousse beaucoup.\nB: D'accord. Laisse-moi voir. Ouvre la bouche... Ah. Tu as la grippe. Je vais te donner un médicament.\nA: Combien de fois par jour ?\nB: Deux fois par jour, le matin et le soir. Et bois beaucoup d'eau.\nA: Merci docteur.\nB: Au revoir, reviens me voir si ça ne s'améliore pas dans 3 jours.",
+    "dialogue_arabe": "A: السلام دكتور.\nB: السلام، تفضل گلس. شنو كاين؟\nA: كيعييني راسي بزاف، و عندي السخانة.\nB: إمتى بديتي تحس بهاد شي؟\nA: دابا تلات إيام. و كنكسحل بزاف.\nB: واخا. خليني نشوف. فتح فمك... أها. عندك لاگريپ. غادي نعطيك دوا.\nA: شحال د المرة ف نهار؟\nB: جوج د المرات ف نهار، مرة ف الصباح و مرة ف العشية. و شرب الما بزاف.\nA: شكرا دكتور.\nB: بسلامة، رجع عندي إلا ما تحسنتيش ف 3 د إيام.",
+    "vocabulaire": [
+      {"darija": "Ka-y3ini rassi", "arabe": "كيعييني راسي", "francais": "J'ai mal à la tête"},
+      {"darija": "S-sokhana", "arabe": "السخانة", "francais": "La fièvre"},
+      {"darija": "Dwa", "arabe": "دوا", "francais": "Médicament"},
+      {"darija": "Ka-nks7l", "arabe": "كنكسحل", "francais": "Je tousse"},
+      {"darija": "Fth fmmk", "arabe": "فتح فمك", "francais": "Ouvre la bouche"},
+      {"darija": "Ssba7", "arabe": "الصباح", "francais": "Le matin"},
+      {"darija": "L-3chiya", "arabe": "العشية", "francais": "Le soir"},
+      {"darija": "Rja3 3ndi", "arabe": "رجع عندي", "francais": "Reviens me voir"}
+    ]
+  }
+]

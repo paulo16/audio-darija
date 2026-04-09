@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Comment vas-tu ? - Au café",
+    "objective": "Demander et répondre 'comment ça va' dans différentes situations",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "faire-connaissance",
+    "grammar_focus": "Kif dayer/dayra + réponses variées",
+    "chunk_focus": ["Kif dayer?", "Labas lhamdullah", "Koulchi bikhir", "Wa nta?"],
+    "dialogue_darija": "A: Salam 3likom! Kif dayer lyoum?\nB: Wa 3likom salam! Labas, lhamdullah. W nta, kif dayer?\nA: Ana mzyan, chokran. Chnou ka-dir hna?\nB: Jit nchreb wa7d l-9hwa. W nta?\nA: Ana tani. Gales m3aya?\nB: B koll srour! Yallah!",
+    "dialogue_francais": "A: Bonjour ! Comment vas-tu aujourd'hui ?\nB: Bonjour ! Ça va, grâce à Dieu. Et toi, comment vas-tu ?\nA: Je vais bien, merci. Qu'est-ce que tu fais ici ?\nB: Je suis venu boire un café. Et toi ?\nA: Moi aussi. Tu t'assieds avec moi ?\nB: Avec plaisir ! Allez !",
+    "dialogue_arabe": "A: السلام عليكم! كيف داير اليوم؟\nB: و عليكم السلام! لاباس، الحمد لله. و نتا، كيف داير؟\nA: أنا مزيان، شكرا. شنو كادير هنا؟\nB: جيت نشرب واحد القهوة. و نتا؟\nA: أنا تاني. جالس معايا؟\nB: بكل سرور! يالله!",
+    "vocabulaire": [
+      {"darija": "Kif dayer?", "arabe": "كيف داير؟", "francais": "Comment vas-tu ? (masculin)"},
+      {"darija": "Kif dayra?", "arabe": "كيف دايرة؟", "francais": "Comment vas-tu ? (féminin)"},
+      {"darija": "Mzyan", "arabe": "مزيان", "francais": "Bien / Bon"},
+      {"darija": "Lyoum", "arabe": "اليوم", "francais": "Aujourd'hui"},
+      {"darija": "Koulchi bikhir", "arabe": "كلشي بيخير", "francais": "Tout va bien"},
+      {"darija": "Gales", "arabe": "جالس", "francais": "Assieds-toi"},
+      {"darija": "B koll srour", "arabe": "بكل سرور", "francais": "Avec plaisir"},
+      {"darija": "Yallah", "arabe": "يالله", "francais": "Allez ! / On y va !"}
+    ]
+  },
+  {
+    "title": "D'où tu viens ? - Nouvelle rencontre",
+    "objective": "Savoir demander et dire d'où on vient",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "faire-connaissance",
+    "grammar_focus": "Mn fin + Ana mn... + nationalités",
+    "chunk_focus": ["Mn fin nta?", "Ana mn...", "Nta maghribi?", "Ana franssawi"],
+    "dialogue_darija": "A: Mcharfin! Ana smiti Sarah. W nti, chnou smitk?\nB: Ana smiti Leila. Mcharfin! Nti mn fin?\nA: Ana mn Fransa, mn Paris. W nti?\nB: Ana mn l-Maghrib, mn Fes. Nti hna f l-Maghrib mn b3id?\nA: Ah, ana hna mn chher. 3jbatni had l-blad bzzaf!\nB: Mrhba bik! L-Maghrib zwin.",
+    "dialogue_francais": "A: Enchantée ! Je m'appelle Sarah. Et toi, comment tu t'appelles ?\nB: Je m'appelle Leila. Enchantée ! Tu viens d'où ?\nA: Je suis de France, de Paris. Et toi ?\nB: Je suis du Maroc, de Fès. Tu es ici au Maroc depuis loin ?\nA: Oui, je suis ici depuis un mois. Ce pays me plaît beaucoup !\nB: Bienvenue ! Le Maroc est beau.",
+    "dialogue_arabe": "A: مشرفين! أنا سميتي سارة. و نتي، شنو سميتك؟\nB: أنا سميتي ليلى. مشرفين! نتي من فين؟\nA: أنا من فرانسا، من باريس. و نتي؟\nB: أنا من المغرب، من فاس. نتي هنا ف المغرب من بعيد؟\nA: آه، أنا هنا من شهر. عجباتني هاد البلاد بزاف!\nB: مرحبا بيك! المغرب زوين.",
+    "vocabulaire": [
+      {"darija": "Mn fin?", "arabe": "من فين؟", "francais": "D'où ?"},
+      {"darija": "Ana mn...", "arabe": "أنا من...", "francais": "Je suis de..."},
+      {"darija": "L-Maghrib", "arabe": "المغرب", "francais": "Le Maroc"},
+      {"darija": "Fransa", "arabe": "فرانسا", "francais": "La France"},
+      {"darija": "L-blad", "arabe": "البلاد", "francais": "Le pays"},
+      {"darija": "Mn b3id", "arabe": "من بعيد", "francais": "Depuis longtemps"},
+      {"darija": "Chher", "arabe": "شهر", "francais": "Un mois"},
+      {"darija": "3jbatni", "arabe": "عجباتني", "francais": "Ça m'a plu"}
+    ]
+  },
+  {
+    "title": "Tu fais quoi comme travail ? - Chez des amis",
+    "objective": "Parler de son métier et demander le travail de quelqu'un",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "faire-connaissance",
+    "grammar_focus": "Chnou ka-tkhdem? + métiers + Ana ka-nkhdem f...",
+    "chunk_focus": ["Chnou ka-tkhdem?", "Ana ka-nkhdem f...", "Wach 3jbk l-khdma?", "Mgharba bzzaf ka-ykhdmo f..."],
+    "dialogue_darija": "A: Nta hna f l-Maghrib, chnou ka-tkhdem?\nB: Ana ka-nkhdem f wa7d ch-charika, ka-n3llem l-anglais.\nA: Wa3r! Wach 3jbk l-khdma?\nB: Ah, bzzaf! T-tlamiyd diali mzyannin. W nta, chnou ka-dir?\nA: Ana ingénieur, ka-nkhdem f l-informatique.\nB: Zwin! Hna f Casa wla f Rabat?\nA: F Casa, f Hay Hassani. W nta fin ka-tkhdem?\nB: F Hay Riad, f wa7d l-markaz dyal l-loghatt.",
+    "dialogue_francais": "A: Tu es ici au Maroc, tu fais quoi comme travail ?\nB: Je travaille dans une entreprise, j'enseigne l'anglais.\nA: Super ! Ça te plaît le travail ?\nB: Oui, beaucoup ! Mes étudiants sont bien. Et toi, tu fais quoi ?\nA: Je suis ingénieur, je travaille dans l'informatique.\nB: Cool ! Ici à Casa ou à Rabat ?\nA: À Casa, à Hay Hassani. Et toi, tu travailles où ?\nB: À Hay Riad, dans un centre de langues.",
+    "dialogue_arabe": "A: نتا هنا ف المغرب، شنو كاتخدم؟\nB: أنا كانخدم ف واحد الشاريكة، كانعلم الأنجليزية.\nA: واعر! واش عجبك الخدمة؟\nB: آه، بزاف! التلاميذ ديالي مزيانين. و نتا، شنو كادير؟\nA: أنا إنجينيور، كانخدم ف الإنفورماتيك.\nB: زوين! هنا ف كازا ولا ف الرباط؟\nA: ف كازا، ف الحي الحسني. و نتا فين كاتخدم؟\nB: ف حي الرياض، ف واحد المركز ديال اللغات.",
+    "vocabulaire": [
+      {"darija": "Chnou ka-tkhdem?", "arabe": "شنو كاتخدم؟", "francais": "Tu fais quoi comme travail ?"},
+      {"darija": "Ka-nkhdem f...", "arabe": "كانخدم ف...", "francais": "Je travaille dans..."},
+      {"darija": "L-khdma", "arabe": "الخدمة", "francais": "Le travail"},
+      {"darija": "Ch-charika", "arabe": "الشاريكة", "francais": "L'entreprise"},
+      {"darija": "Ka-n3llem", "arabe": "كانعلم", "francais": "J'enseigne"},
+      {"darija": "T-tlamiyd", "arabe": "التلاميذ", "francais": "Les étudiants/élèves"},
+      {"darija": "L-markaz", "arabe": "المركز", "francais": "Le centre"},
+      {"darija": "L-loghatt", "arabe": "اللغات", "francais": "Les langues"}
+    ]
+  },
+  {
+    "title": "Tu es là depuis combien de temps ? - Au hammam",
+    "objective": "Parler de la durée de séjour et de ses impressions",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "faire-connaissance",
+    "grammar_focus": "Chhal hadi + durée + phrases au passé",
+    "chunk_focus": ["Chhal hadi w nta hna?", "Ana hna mn...", "Bgha yek 3jbk?", "Bdit ka-nt3llem"],
+    "dialogue_darija": "A: Salam! Nta mn hna wla barrani?\nB: Ana barrani, mn Fransa. Ana hna f l-Maghrib.\nA: Ah mrhba! Chhal hadi w nta hna f l-Maghrib?\nB: Ana hna mn stta d ch-chhor. Jit f shtamber.\nA: Wa3r! W bgha yek 3jbk l-Maghrib?\nB: Ah wallah! L-makla, n-nas, koulchi zwin. W bdit ka-nt3llem d-darija.\nA: Tbark llah 3lik! Ka-thdr mzyan.\nB: Chokran! Mazal chwiya, walakin ka-n7awl.",
+    "dialogue_francais": "A: Salut ! Tu es d'ici ou étranger ?\nB: Je suis étranger, de France. Je suis ici au Maroc.\nA: Ah bienvenue ! Ça fait combien de temps que tu es au Maroc ?\nB: Je suis ici depuis 6 mois. Je suis arrivé en septembre.\nA: Super ! Et ça te plaît le Maroc ?\nB: Oh oui je te jure ! La nourriture, les gens, tout est beau. Et j'ai commencé à apprendre le darija.\nA: Bravo ! Tu parles bien.\nB: Merci ! C'est encore un peu, mais j'essaie.",
+    "dialogue_arabe": "A: السلام! نتا من هنا ولا برّاني؟\nB: أنا برّاني، من فرانسا. أنا هنا ف المغرب.\nA: آه مرحبا! شحال هادي و نتا هنا ف المغرب؟\nB: أنا هنا من ستّة د الشّهور. جيت ف شتامبر.\nA: واعر! و بغا يك عجبك المغرب؟\nB: آه والله! الماكلة، الناس، كلشي زوين. و بديت كانتعلم الدارجة.\nA: تبارك الله عليك! كاتهدر مزيان.\nB: شكرا! مازال شوية، ولاكين كانحاول.",
+    "vocabulaire": [
+      {"darija": "Chhal hadi?", "arabe": "شحال هادي؟", "francais": "Ça fait combien de temps ?"},
+      {"darija": "Barrani", "arabe": "برّاني", "francais": "Étranger"},
+      {"darija": "Ch-chhor", "arabe": "الشّهور", "francais": "Les mois"},
+      {"darija": "Jit", "arabe": "جيت", "francais": "Je suis venu(e)"},
+      {"darija": "Bgha yek 3jbk?", "arabe": "بغا يك عجبك؟", "francais": "Ça te plaît ?"},
+      {"darija": "Bdit", "arabe": "بديت", "francais": "J'ai commencé"},
+      {"darija": "Ka-n7awl", "arabe": "كانحاول", "francais": "J'essaie"},
+      {"darija": "Mazal", "arabe": "مازال", "francais": "Encore / Pas encore"}
+    ]
+  },
+  {
+    "title": "Se présenter en groupe - Soirée chez des amis",
+    "objective": "Se présenter dans un groupe, poser toutes les questions de base",
+    "estimated_minutes": 7,
+    "cefr_level": "A2",
+    "theme": "faire-connaissance",
+    "grammar_focus": "Synthèse : présentation + origine + travail + durée",
+    "chunk_focus": ["Mcharfin", "Ana hna mn...", "Ka-nkhdem f...", "3jbatni..."],
+    "dialogue_darija": "A: Salam 3likom! Mcharfin, ana smiti Omar.\nB: Salam! Ana Fatima. W hadi Sophie, s7abti.\nA: Ahlan Sophie! Nti mn fin?\nB: Ana mn Lyon, Fransa. W nta?\nA: Ana mn Meknes. Sophie, chnou ka-tkhdemmi f l-Maghrib?\nB: Ka-nkhdem professeur d français f wa7d l-madrasssa.\nA: W chhal hadi w nti hna?\nB: Mn 3am. Jit f 2024.\nA: Wa3r! Wach ka-thdri d-darija?\nB: Chwiya chwiya! Ka-nfhem akttar mn ma ka-nhdr.",
+    "dialogue_francais": "A: Bonjour ! Enchanté, je m'appelle Omar.\nB: Salut ! Moi c'est Fatima. Et voici Sophie, mon amie.\nA: Bienvenue Sophie ! Tu viens d'où ?\nB: Je suis de Lyon, France. Et toi ?\nA: Je suis de Meknès. Sophie, tu fais quoi comme travail au Maroc ?\nB: Je travaille comme professeur de français dans une école.\nA: Et ça fait combien de temps que tu es ici ?\nB: Un an. Je suis arrivée en 2024.\nA: Super ! Est-ce que tu parles darija ?\nB: Un petit peu ! Je comprends plus que je ne parle.",
+    "dialogue_arabe": "A: السلام عليكم! مشرفين، أنا سميتي عمر.\nB: السلام! أنا فاطمة. و هادي صوفي، صحابتي.\nA: أهلا صوفي! نتي من فين؟\nB: أنا من ليون، فرانسا. و نتا؟\nA: أنا من مكناس. صوفي، شنو كاتخدمي ف المغرب؟\nB: كانخدم بروفيسور د فرنسية ف واحد المدرسة.\nA: و شحال هادي و نتي هنا؟\nB: من عام. جيت ف ألفين و أربع و عشرين.\nA: واعر! واش كاتهدري الدارجة؟\nB: شوية شوية! كانفهم أكتر من ما كانهدر.",
+    "vocabulaire": [
+      {"darija": "S7abti", "arabe": "صحابتي", "francais": "Mon amie"},
+      {"darija": "L-madrasssa", "arabe": "المدرسة", "francais": "L'école"},
+      {"darija": "3am", "arabe": "عام", "francais": "Un an / une année"},
+      {"darija": "Wach ka-thdri?", "arabe": "واش كاتهدري؟", "francais": "Est-ce que tu parles ? (fém.)"},
+      {"darija": "Chwiya chwiya", "arabe": "شوية شوية", "francais": "Un petit peu"},
+      {"darija": "Ka-nfhem", "arabe": "كانفهم", "francais": "Je comprends"},
+      {"darija": "Akttar", "arabe": "أكتر", "francais": "Plus"},
+      {"darija": "Ka-nhdr", "arabe": "كانهدر", "francais": "Je parle"}
+    ]
+  }
+]

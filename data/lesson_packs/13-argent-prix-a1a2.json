@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Combien ça coûte ? - Au souk",
+    "objective": "Demander les prix et négocier au marché",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "argent-prix",
+    "grammar_focus": "Bchhal + nombres + négociation basique",
+    "chunk_focus": ["Bchhal hada?", "Ghali!", "Nqss liya", "Akhir taman"],
+    "dialogue_darija": "A: 3afak, bchhal had t-tichirt?\nB: Mia w khamsin dirham.\nA: Mia w khamsin?! Ghali bzzaf! Nqss liya?\nB: Akhir taman, mia w 3chrin.\nA: Khouya, 3tini b mia?\nB: Wakha, mia dirham. Hadik akhir klma.\nA: Safi, nakhod-ha. Hak mia dirham.\nB: Chokran. Bghiti chi 7aja khra?\nA: La, hadchi safi. Bslama!",
+    "dialogue_francais": "A: S'il te plaît, c'est combien ce t-shirt ?\nB: 150 dirhams.\nA: 150 ?! C'est trop cher ! Tu baisses un peu ?\nB: Dernier prix, 120.\nA: Mon frère, donne-le moi à 100 ?\nB: D'accord, 100 dirhams. C'est mon dernier mot.\nA: OK, je le prends. Tiens 100 dirhams.\nB: Merci. Tu veux autre chose ?\nA: Non, c'est tout. Au revoir !",
+    "dialogue_arabe": "A: عافاك، بشحال هاد التيشيرت؟\nB: مية و خمسين درهم.\nA: مية و خمسين؟! غالي بزاف! نقص ليا؟\nB: آخر تمن، مية و عشرين.\nA: خويا، عطيني بمية؟\nB: واخا، مية درهم. هاديك آخر كلمة.\nA: صافي، ناخدها. هاك مية درهم.\nB: شكرا. بغيتي شي حاجة خرا؟\nA: لا، هادشي صافي. بسلامة!",
+    "vocabulaire": [
+      {"darija": "Bchhal hada?", "arabe": "بشحال هادا؟", "francais": "C'est combien ça ?"},
+      {"darija": "Nqss liya", "arabe": "نقص ليا", "francais": "Baisse-moi le prix"},
+      {"darija": "Akhir taman", "arabe": "آخر تمن", "francais": "Dernier prix"},
+      {"darija": "Akhir klma", "arabe": "آخر كلمة", "francais": "Dernier mot"},
+      {"darija": "Nakhod-ha", "arabe": "ناخدها", "francais": "Je la prends"},
+      {"darija": "Mia", "arabe": "مية", "francais": "Cent (100)"},
+      {"darija": "Khamsin", "arabe": "خمسين", "francais": "Cinquante (50)"},
+      {"darija": "T-tichirt", "arabe": "التيشيرت", "francais": "Le t-shirt"}
+    ]
+  },
+  {
+    "title": "Changer de l'argent - Bureau de change",
+    "objective": "Changer des devises et comprendre le taux de change",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "argent-prix",
+    "grammar_focus": "Devises + taux de change + montants",
+    "chunk_focus": ["Bghit nsserref...", "Chhal l-cours?", "Euro b dirham", "3tini..."],
+    "dialogue_darija": "A: Salam! Bghit nsserref chwiya dyal l-flouss.\nB: Mrhba! Chnou bghiti tsserf? Euro wla Dollar?\nA: Euro. 3ndi tlat mia euro. Chhal l-cours lyoum?\nB: L-euro b 10 dyal d-dirham w tnin.\nA: Mzyan. Yallah, sserref liya tlat mia euro.\nB: Safi. Tlat mia euro b 3060 dirham.\nA: Wakha. W wach tssereflou l-dollar tani?\nB: Ah, l-dollar b tss3oud d dirham.\nA: La, ghir l-euro. Chokran!",
+    "dialogue_francais": "A: Salut ! Je veux changer un peu d'argent.\nB: Bienvenue ! Vous voulez changer quoi ? Euro ou Dollar ?\nA: Euro. J'ai 300 euros. Quel est le cours aujourd'hui ?\nB: L'euro est à 10,2 dirhams.\nA: Bien. Allez, change-moi 300 euros.\nB: D'accord. 300 euros font 3060 dirhams.\nA: OK. Et vous changez le dollar aussi ?\nB: Oui, le dollar est à 9 dirhams.\nA: Non, juste l'euro. Merci !",
+    "dialogue_arabe": "A: السلام! بغيت نصرف شوية ديال الفلوس.\nB: مرحبا! شنو بغيتي تصرف؟ أورو ولا دولار؟\nA: أورو. عندي تلت مية أورو. شحال الكور اليوم؟\nB: الأورو ب عشرة ديال الدرهم و طنين.\nA: مزيان. يالله، صرف ليا تلت مية أورو.\nB: صافي. تلت مية أورو ب تلت آلاف و ستين درهم.\nA: واخا. و واش تصرفو الدولار تاني؟\nB: آه، الدولار بتسعود درهم.\nA: لا، غير الأورو. شكرا!",
+    "vocabulaire": [
+      {"darija": "Nsserref", "arabe": "نصرف", "francais": "Je change (de l'argent)"},
+      {"darija": "L-flouss", "arabe": "الفلوس", "francais": "L'argent"},
+      {"darija": "L-cours", "arabe": "الكور", "francais": "Le taux de change"},
+      {"darija": "Euro", "arabe": "أورو", "francais": "Euro"},
+      {"darija": "Dollar", "arabe": "دولار", "francais": "Dollar"},
+      {"darija": "Dirham", "arabe": "درهم", "francais": "Dirham (monnaie marocaine)"},
+      {"darija": "Sserref liya", "arabe": "صرف ليا", "francais": "Change-moi"},
+      {"darija": "Tlat mia", "arabe": "تلت مية", "francais": "Trois cents (300)"}
+    ]
+  },
+  {
+    "title": "Payer la note au restaurant",
+    "objective": "Demander l'addition et payer au restaurant",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "argent-prix",
+    "grammar_focus": "L-addition + payer + pourboire",
+    "chunk_focus": ["L-7ssab 3afak", "Bchhal koulchi?", "Wach tqbl credit?", "Khlli s-ssrfa"],
+    "dialogue_darija": "A: 3afak, l-7ssab!\nB: Wakha. Jouj tajine, salata, w tlata d l-ma. Koulchi b mia w 3chrin dirham.\nA: Wakha. Wach tqbl l-carte bancaire?\nB: Ah, 3ndna l-machine.\nA: Safi, hak l-carte.\nB: Chokran. Hak l-reçu.\nA: Chokran. Khouya, l-makla kanat bnina bzzaf!\nB: Allah y3tik ssaha! Mrhba bik dima.",
+    "dialogue_francais": "A: S'il te plaît, l'addition !\nB: D'accord. Deux tajines, une salade, et trois bouteilles d'eau. Le tout fait 120 dirhams.\nA: OK. Vous acceptez la carte bancaire ?\nB: Oui, on a la machine.\nA: Bon, tiens la carte.\nB: Merci. Voici le reçu.\nA: Merci. Mon frère, la nourriture était très bonne !\nB: Que Dieu te donne la santé ! Bienvenue toujours.",
+    "dialogue_arabe": "A: عافاك، الحساب!\nB: واخا. جوج طاجين، سلاطة، و تلاتة ديال الما. كلشي بمية و عشرين درهم.\nA: واخا. واش تقبل الكارت بنكير?\nB: آه، عندنا الماشين.\nA: صافي، هاك الكارت.\nB: شكرا. هاك الريسو.\nA: شكرا. خويا، الماكلة كانت بنينة بزاف!\nB: الله يعطيك الصحة! مرحبا بيك ديما.",
+    "vocabulaire": [
+      {"darija": "L-7ssab", "arabe": "الحساب", "francais": "L'addition / La note"},
+      {"darija": "L-carte bancaire", "arabe": "الكارت بنكير", "francais": "La carte bancaire"},
+      {"darija": "Bnina", "arabe": "بنينة", "francais": "Délicieuse"},
+      {"darija": "Tqbl", "arabe": "تقبل", "francais": "Tu acceptes"},
+      {"darija": "L-reçu", "arabe": "الريسو", "francais": "Le reçu"},
+      {"darija": "Dima", "arabe": "ديما", "francais": "Toujours"},
+      {"darija": "Koulchi", "arabe": "كلشي", "francais": "Tout"},
+      {"darija": "Kanat", "arabe": "كانت", "francais": "C'était (fém.)"}
+    ]
+  },
+  {
+    "title": "Les dépenses du mois - L'argent au quotidien",
+    "objective": "Parler de son budget, des dépenses et du coût de la vie",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "argent-prix",
+    "grammar_focus": "Dépenses + comparaisons de prix + budget",
+    "chunk_focus": ["Ka-nssref...", "Ghali/rkhiss", "L-kra", "L-flouss ma kafinch"],
+    "dialogue_darija": "A: Khouya, l-7ayat f Casa ghalia wla rkhissa?\nB: Wllah, chwiya ghalia. L-kra bwahdo ka-yakol bzzaf d l-flouss.\nA: Bchhal ka-tkhless f l-kra?\nB: Tlat alaf dirham f ch-chher.\nA: W l-makla?\nB: Chi alf w khamsmia. L-khodra mn s-souk rkhissa, walakin l-marché gourmet ghali.\nA: W t-transport?\nB: L-tram b mia w 3chrin f ch-chher. Rkhiss.\nA: Ghadi ykoun khassni chi khmsa d alaf f ch-chher.\nB: Ah, b l-a9all. Bla l-khroj w d-divertissement.",
+    "dialogue_francais": "A: Mon frère, la vie à Casa c'est cher ou pas cher ?\nB: Franchement, un peu cher. Le loyer seul mange beaucoup d'argent.\nA: Tu paies combien pour le loyer ?\nB: 3000 dirhams par mois.\nA: Et la nourriture ?\nB: Environ 1500. Les légumes au souk c'est pas cher, mais le marché gourmet c'est cher.\nA: Et le transport ?\nB: Le tram à 120 par mois. Pas cher.\nA: Il me faudra environ 5000 par mois.\nB: Oui, au minimum. Sans les sorties et les divertissements.",
+    "dialogue_arabe": "A: خويا، الحياة ف كازا غالية ولا رخيصة؟\nB: والله، شوية غالية. الكرا بوحدو كاياكل بزاف ديال الفلوس.\nA: بشحال كاتخلص ف الكرا؟\nB: تلت آلاف درهم ف الشهر.\nA: و الماكلة؟\nB: شي ألف و خمسمية. الخضرة من السوق رخيصة، ولاكين المارشي كورمي غالي.\nA: و الترانسبور؟\nB: الطرام بمية و عشرين ف الشهر. رخيص.\nA: غادي يكون خاصني شي خمسة ديال الآلاف ف الشهر.\nB: آه، بالأقل. بلا الخروج و الديفيرتيسمون.",
+    "vocabulaire": [
+      {"darija": "L-kra", "arabe": "الكرا", "francais": "Le loyer"},
+      {"darija": "Ka-nssref", "arabe": "كانصرف", "francais": "Je dépense"},
+      {"darija": "Rkhiss/Rkhissa", "arabe": "رخيص/رخيصة", "francais": "Pas cher / Bon marché"},
+      {"darija": "L-khodra", "arabe": "الخضرة", "francais": "Les légumes"},
+      {"darija": "Alf", "arabe": "ألف", "francais": "Mille (1000)"},
+      {"darija": "Ka-tkhless", "arabe": "كاتخلص", "francais": "Tu paies"},
+      {"darija": "Ch-chher", "arabe": "الشهر", "francais": "Le mois"},
+      {"darija": "Khassni", "arabe": "خاصني", "francais": "Il me faut / J'ai besoin"}
+    ]
+  },
+  {
+    "title": "Acheter des fruits au souk - Négocier le prix",
+    "objective": "Acheter au kilo et négocier habilement",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "argent-prix",
+    "grammar_focus": "Prix au kilo + quantités + les fruits en darija",
+    "chunk_focus": ["Bchhal l-kilo?", "3tini jouj kilo", "Nqss", "Zid chwiya"],
+    "dialogue_darija": "A: Salam khouya! 3ndek l-brtou9al?\nB: Ah, brtou9al zwin w bnin. Bchhal bghiti?\nA: Bchhal l-kilo?\nB: Khamsa d dirham l-kilo.\nA: 3tini tlata d kilo. W l-banana, bchhal?\nB: L-banana b sab3a d dirham.\nA: Ghalia chwiya. Sitta?\nB: Wakha, sitta d dirham. Chi 7aja khra?\nA: Zid liya noss kilo dyal t-teffah.\nB: Safi. Koulchi b rb3a w 3chrin dirham.\nA: Hak, chokran!",
+    "dialogue_francais": "A: Salut mon frère ! Tu as des oranges ?\nB: Oui, des oranges belles et bonnes. Combien tu en veux ?\nA: C'est combien le kilo ?\nB: 5 dirhams le kilo.\nA: Donne-moi 3 kilos. Et les bananes, combien ?\nB: Les bananes à 7 dirhams.\nA: Un peu cher. 6 ?\nB: D'accord, 6 dirhams. Autre chose ?\nA: Ajoute-moi un demi-kilo de pommes.\nB: C'est bon. Le tout fait 24 dirhams.\nA: Tiens, merci !",
+    "dialogue_arabe": "A: السلام خويا! عندك البرتقال؟\nB: آه، برتقال زوين و بنين. بشحال بغيتي؟\nA: بشحال الكيلو؟\nB: خمسة درهم الكيلو.\nA: عطيني تلاتة ديال الكيلو. و البنانة، بشحال؟\nB: البنانة بسبعة درهم.\nA: غالية شوية. ستة؟\nB: واخا، ستة درهم. شي حاجة خرا؟\nA: زيد ليا نص كيلو ديال التفاح.\nB: صافي. كلشي بربعة و عشرين درهم.\nA: هاك، شكرا!",
+    "vocabulaire": [
+      {"darija": "L-brtou9al", "arabe": "البرتقال", "francais": "Les oranges"},
+      {"darija": "L-banana", "arabe": "البنانة", "francais": "Les bananes"},
+      {"darija": "T-teffah", "arabe": "التفاح", "francais": "Les pommes"},
+      {"darija": "L-kilo", "arabe": "الكيلو", "francais": "Le kilo"},
+      {"darija": "Noss kilo", "arabe": "نص كيلو", "francais": "Un demi-kilo"},
+      {"darija": "Bnin", "arabe": "بنين", "francais": "Bon / Délicieux"},
+      {"darija": "Zid liya", "arabe": "زيد ليا", "francais": "Ajoute-moi"},
+      {"darija": "Rb3a w 3chrin", "arabe": "ربعة و عشرين", "francais": "24 (vingt-quatre)"}
+    ]
+  }
+]

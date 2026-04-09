@@ -1,0 +1,112 @@
+[
+  {
+    "title": "En classe - Est-ce que vous comprenez ?",
+    "objective": "Expressions utilisées en classe par le prof et les étudiants",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "en-classe-comprendre",
+    "grammar_focus": "Wach fhmtou? + réponses + demandes de répétition",
+    "chunk_focus": ["Wach fhmtou?", "Ma fhmt-ch", "3awed 3afak", "Chwiya b chwiya"],
+    "dialogue_darija": "A: Safi, had l-9a3ida mhimma bzzaf. Wach fhmtou?\nB: 3afak a l-oustad, ma fhmt-ch mzyan. Wach ymkn lik t3awed?\nA: Bssah! Ghadi n3awed chwiya b chwiya. Smou 3la khir.\nB: Chokran a l-oustad.\nA: Daba fhmti?\nB: Ah, daba fhmt! Chokran bzzaf.\nA: Mzyan! Ila 3ndkom chi sou2al, goulou liya.\nB: 3afak, kifach ka-nktbou had l-klma?",
+    "dialogue_francais": "A: Bon, cette règle est très importante. Est-ce que vous avez compris ?\nB: S'il vous plaît professeur, j'ai pas bien compris. Vous pouvez répéter ?\nA: Bien sûr ! Je vais répéter petit à petit. Écoutez bien.\nB: Merci professeur.\nA: Maintenant tu as compris ?\nB: Oui, maintenant j'ai compris ! Merci beaucoup.\nA: Bien ! Si vous avez des questions, dites-le moi.\nB: S'il vous plaît, comment on écrit ce mot ?",
+    "dialogue_arabe": "A: صافي، هاد القاعدة مهمة بزاف. واش فهمتو؟\nB: عافاك أ الأستاذ، ما فهمتش مزيان. واش يمكن ليك تعاود؟\nA: بالصح! غادي نعاود شوية بشوية. سمعو على خير.\nB: شكرا أ الأستاذ.\nA: دابا فهمتي؟\nB: آه، دابا فهمت! شكرا بزاف.\nA: مزيان! إلا عندكم شي سؤال، قولو ليا.\nB: عافاك، كيفاش كانكتبو هاد الكلمة؟",
+    "vocabulaire": [
+      {"darija": "Wach fhmtou?", "arabe": "واش فهمتو؟", "francais": "Est-ce que vous avez compris ?"},
+      {"darija": "Ma fhmt-ch", "arabe": "ما فهمتش", "francais": "J'ai pas compris"},
+      {"darija": "3awed 3afak", "arabe": "عاود عافاك", "francais": "Répète s'il te plaît"},
+      {"darija": "L-oustad", "arabe": "الأستاذ", "francais": "Le professeur"},
+      {"darija": "L-9a3ida", "arabe": "القاعدة", "francais": "La règle"},
+      {"darija": "Sou2al", "arabe": "سؤال", "francais": "Une question"},
+      {"darija": "Chwiya b chwiya", "arabe": "شوية بشوية", "francais": "Petit à petit"},
+      {"darija": "Nktbou", "arabe": "نكتبو", "francais": "On écrit / Nous écrivons"}
+    ]
+  },
+  {
+    "title": "Est-ce que tu comprends ? - Entre amis",
+    "objective": "Vérifier la compréhension dans une conversation informelle",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "en-classe-comprendre",
+    "grammar_focus": "Wach fhemti? + ka-nfhem + ma fhmt-ch",
+    "chunk_focus": ["Wach fhemti?", "Ka-nfhem chwiya", "3awed liya", "B darija 3afak"],
+    "dialogue_darija": "A: W dak chi lli glt lik, wach fhemti?\nB: Wllah, fhmt ghir chwiya. Hder b chwiya 3afak!\nA: Wakha wakha! Ana ghadi nhdr b chwiya. Glt lik: ghddwa ghadi nmchiw l-souk.\nB: Ah, daba fhmt! Ghddwa souk. Mzyan.\nA: W bghitek tji m3ana bach nchriw l-khodra.\nB: 3awed had l-klma '3afak'... nchriw?\nA: Nchriw = on achète. Fhemti?\nB: Ah safi, fhmt! Nchriw l-khodra mn s-souk. Mzyan!",
+    "dialogue_francais": "A: Et ce que je t'ai dit, tu as compris ?\nB: Franchement, j'ai compris juste un peu. Parle doucement s'il te plaît !\nA: OK OK ! Je vais parler doucement. Je t'ai dit : demain on va au souk.\nB: Ah, maintenant j'ai compris ! Demain souk. Bien.\nA: Et je veux que tu viennes avec nous pour acheter des légumes.\nB: Répète ce mot 's'il te plaît'... nchriw ?\nA: Nchriw = on achète. Tu comprends ?\nB: Ah OK, j'ai compris ! On achète des légumes au souk. Bien !",
+    "dialogue_arabe": "A: و داك الشي اللي قلت ليك، واش فهمتي؟\nB: والله، فهمت غير شوية. هدر بشوية عافاك!\nA: واخا واخا! أنا غادي نهدر بشوية. قلت ليك: غدا غادي نمشيو للسوق.\nB: آه، دابا فهمت! غدا سوق. مزيان.\nA: و بغيتك تجي معانا باش نشريو الخضرة.\nB: عاود هاد الكلمة عافاك... نشريو؟\nA: نشريو يعني أون ـأشيت. فهمتي؟\nB: آه صافي، فهمت! نشريو الخضرة من السوق. مزيان!",
+    "vocabulaire": [
+      {"darija": "Wach fhemti?", "arabe": "واش فهمتي؟", "francais": "Tu as compris ?"},
+      {"darija": "Fhmt", "arabe": "فهمت", "francais": "J'ai compris"},
+      {"darija": "Hder b chwiya", "arabe": "هدر بشوية", "francais": "Parle doucement"},
+      {"darija": "3awed liya", "arabe": "عاود ليا", "francais": "Répète-moi"},
+      {"darija": "Glt lik", "arabe": "قلت ليك", "francais": "Je t'ai dit"},
+      {"darija": "Nchriw", "arabe": "نشريو", "francais": "On achète"},
+      {"darija": "Tji m3ana", "arabe": "تجي معانا", "francais": "Tu viens avec nous"},
+      {"darija": "B chwiya", "arabe": "بشوية", "francais": "Doucement / Lentement"}
+    ]
+  },
+  {
+    "title": "Cours de darija - Apprendre un nouveau mot",
+    "objective": "Demander le sens d'un mot et apprendre du nouveau vocabulaire",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "en-classe-comprendre",
+    "grammar_focus": "Chnou ma3naha...? + Y3ni + B l-franssawia",
+    "chunk_focus": ["Chnou ma3naha?", "Y3ni...", "B l-franssawia", "Kifach ka-ngoulou?"],
+    "dialogue_darija": "A: 3afak, chnou ma3naha 'mchiti'?\nB: 'Mchiti' y3ni 'tu es allé(e)' b l-franssawia.\nA: Ah wakha! W 'ghadi nmchi'?\nB: 'Ghadi nmchi' y3ni 'je vais aller'. Ghadi = futur.\nA: Mzyan! W kifach ka-ngoulou 'je ne comprends pas'?\nB: Ka-tgoul: 'Ma ka-nfhem-ch'. Ma...ch = négation.\nA: Ma ka-nfhem-ch. Safi, fhmt!\nB: Tbark llah 3lik! Ka-tt3llem bzzaf d-daba.",
+    "dialogue_francais": "A: S'il te plaît, ça veut dire quoi 'mchiti' ?\nB: 'Mchiti' ça veut dire 'tu es allé(e)' en français.\nA: Ah d'accord ! Et 'ghadi nmchi' ?\nB: 'Ghadi nmchi' ça veut dire 'je vais aller'. Ghadi = futur.\nA: Bien ! Et comment on dit 'je ne comprends pas' ?\nB: Tu dis : 'Ma ka-nfhem-ch'. Ma...ch = négation.\nA: Ma ka-nfhem-ch. OK, j'ai compris !\nB: Bravo ! Tu apprends beaucoup maintenant.",
+    "dialogue_arabe": "A: عافاك، شنو معناها مشيتي؟\nB: مشيتي يعني تو إي أليه بالفرانساوية.\nA: آه واخا! و غادي نمشي؟\nB: غادي نمشي يعني جو في أليه. غادي يعني المستقبل.\nA: مزيان! و كيفاش كانقولو جو نو كومبرون با؟\nB: كاتقول: ما كانفهمش. ما...ش يعني النفي.\nA: ما كانفهمش. صافي، فهمت!\nB: تبارك الله عليك! كاتتعلم بزاف دابا.",
+    "vocabulaire": [
+      {"darija": "Chnou ma3naha?", "arabe": "شنو معناها؟", "francais": "Ça veut dire quoi ?"},
+      {"darija": "Y3ni", "arabe": "يعني", "francais": "Ça veut dire / C'est-à-dire"},
+      {"darija": "B l-franssawia", "arabe": "بالفرانساوية", "francais": "En français"},
+      {"darija": "Kifach ka-ngoulou?", "arabe": "كيفاش كانقولو؟", "francais": "Comment on dit ?"},
+      {"darija": "Ka-tt3llem", "arabe": "كاتتعلم", "francais": "Tu apprends"},
+      {"darija": "Ma ka-nfhem-ch", "arabe": "ما كانفهمش", "francais": "Je ne comprends pas"},
+      {"darija": "L-franssawia", "arabe": "الفرانساوية", "francais": "Le français"},
+      {"darija": "D-darija", "arabe": "الدارجة", "francais": "Le darija (dialecte marocain)"}
+    ]
+  },
+  {
+    "title": "Expliquer quelque chose à un ami",
+    "objective": "Expliquer et reformuler quand quelqu'un ne comprend pas",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "en-classe-comprendre",
+    "grammar_focus": "Reformulation + B7al ila... + exemples",
+    "chunk_focus": ["Ma fhmt-ch, chrah liya", "B7al ila...", "Matal", "Daba wdde7?"],
+    "dialogue_darija": "A: Khassek tmchi l-l-consulat bach takhod l-visa.\nB: Chnou l-consulat? Ma fhmt-ch.\nA: L-consulat howa l-mkan fin ka-tmchi bach takhod l-warq dyal s-safar.\nB: Ah, kifach nmchi lhih?\nA: Awl 7aja, 3mmer l-formulaire online. Mn b3d, dir rendez-vous.\nB: W chnou khassni nddi m3aya?\nA: L-passeport dialk, l-photo, w l-warqa dyal l-banque. Fhemti daba?\nB: Ah safi, fhmt! Mzyan, chokran 3la l-chrah.",
+    "dialogue_francais": "A: Tu dois aller au consulat pour obtenir le visa.\nB: C'est quoi le consulat ? Je comprends pas.\nA: Le consulat c'est l'endroit où tu vas pour avoir les papiers de voyage.\nB: Ah, comment j'y vais ?\nA: En premier, remplis le formulaire en ligne. Après, prends rendez-vous.\nB: Et qu'est-ce que je dois amener ?\nA: Ton passeport, la photo, et le relevé bancaire. Tu comprends maintenant ?\nB: Oui c'est bon, j'ai compris ! Bien, merci pour l'explication.",
+    "dialogue_arabe": "A: خاصك تمشي للكونسولا باش تاخد الفيزا.\nB: شنو الكونسولا؟ ما فهمتش.\nA: الكونسولا هو المكان فين كاتمشي باش تاخد الورق ديال السفر.\nB: آه، كيفاش نمشي ليها؟\nA: أول حاجة، عمّر الفورميلير أونلاين. من بعد، دير رنديفو.\nB: و شنو خاصني ندّي معايا؟\nA: الباسبور ديالك، الفوطو، و الورقة ديال البنك. فهمتي دابا؟\nB: آه صافي، فهمت! مزيان، شكرا على الشرح.",
+    "vocabulaire": [
+      {"darija": "Chrah liya", "arabe": "شرح ليا", "francais": "Explique-moi"},
+      {"darija": "Fhemti daba?", "arabe": "فهمتي دابا؟", "francais": "Tu comprends maintenant ?"},
+      {"darija": "L-consulat", "arabe": "الكونسولا", "francais": "Le consulat"},
+      {"darija": "S-safar", "arabe": "السفر", "francais": "Le voyage"},
+      {"darija": "3mmer", "arabe": "عمّر", "francais": "Remplis"},
+      {"darija": "L-warq", "arabe": "الورق", "francais": "Les papiers / Documents"},
+      {"darija": "Rendez-vous", "arabe": "رنديفو", "francais": "Rendez-vous"},
+      {"darija": "L-chrah", "arabe": "الشرح", "francais": "L'explication"}
+    ]
+  },
+  {
+    "title": "Poser des questions en classe - Interaction prof-étudiants",
+    "objective": "Participer activement en classe, poser et répondre aux questions",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "en-classe-comprendre",
+    "grammar_focus": "Questions en classe + impératif pluriel + ka- présent",
+    "chunk_focus": ["Wach 3ndkom chi sou2al?", "3afak a l-oustad", "Wach ymkn...", "Rj3ou l-ssafha..."],
+    "dialogue_darija": "A: Safi, daba ghadi ndirou wa7d t-tamrin. Hllou l-ktab f ssafha 3chrin.\nB: 3afak a l-oustad, wach ymkn t3awed l-consigne?\nA: Tab3an! Qraw n-nass, w jjawbou 3la l-as2ila.\nB: A l-oustad, had l-klma ma 3reft-hach. Chnou ma3naha 'moujtama3'?\nA: 'Moujtama3' y3ni 'société'. Fhmtou?\nB: Ah, chokran!\nA: W sma7 liya, wach had t-tamrin individuel wla b groupe?\nB: B groupe, jouj jouj. Yallah, bdaw!\nA: Chhal 3ndna d l-w9t?\nB: 3chrin d d-9i9a. Bdaw daba!",
+    "dialogue_francais": "A: Bon, maintenant on va faire un exercice. Ouvrez le livre page 20.\nB: S'il vous plaît professeur, vous pouvez répéter la consigne ?\nA: Bien sûr ! Lisez le texte, et répondez aux questions.\nB: Professeur, ce mot je le connais pas. Ça veut dire quoi 'moujtama3' ?\nA: 'Moujtama3' ça veut dire 'société'. Vous avez compris ?\nB: Oui, merci !\nA: Et excusez-moi, c'est un exercice individuel ou en groupe ?\nB: En groupe, par deux. Allez, commencez !\nA: On a combien de temps ?\nB: 20 minutes. Commencez maintenant !",
+    "dialogue_arabe": "A: صافي، دابا غادي نديرو واحد التمرين. حلو الكتاب ف الصفحة عشرين.\nB: عافاك أ الأستاذ، واش يمكن تعاود الكونسين؟\nA: طبعا! قراو النص، و جاوبو على الأسئلة.\nB: أ الأستاذ، هاد الكلمة ما عرفتهاش. شنو معناها مجتمع؟\nA: مجتمع يعني سوسييتي. فهمتو؟\nB: آه، شكرا!\nA: و سمح ليا، واش هاد التمرين إنديفيدويل ولا بكروب؟\nB: بكروب، جوج جوج. يالله، بداو!\nA: شحال عندنا ديال الوقت؟\nB: عشرين دقيقة. بداو دابا!",
+    "vocabulaire": [
+      {"darija": "Wach 3ndkom chi sou2al?", "arabe": "واش عندكم شي سؤال؟", "francais": "Vous avez des questions ?"},
+      {"darija": "T-tamrin", "arabe": "التمرين", "francais": "L'exercice"},
+      {"darija": "L-ktab", "arabe": "الكتاب", "francais": "Le livre"},
+      {"darija": "Ssafha", "arabe": "الصفحة", "francais": "La page"},
+      {"darija": "Qraw", "arabe": "قراو", "francais": "Lisez"},
+      {"darija": "Jjawbou", "arabe": "جاوبو", "francais": "Répondez"},
+      {"darija": "L-as2ila", "arabe": "الأسئلة", "francais": "Les questions"},
+      {"darija": "Bdaw", "arabe": "بداو", "francais": "Commencez"}
+    ]
+  }
+]

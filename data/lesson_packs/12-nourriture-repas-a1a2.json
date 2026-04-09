@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Le petit déjeuner marocain",
+    "objective": "Parler du petit déjeuner et commander le matin",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "nourriture-repas",
+    "grammar_focus": "Chnou ghadi takol? + noms des aliments du matin",
+    "chunk_focus": ["L-ftour", "Chnou bghiti?", "3tini...", "Atay b n-n3na3"],
+    "dialogue_darija": "A: Sbah l-khir! Chnou ghadi takol f l-ftour?\nB: Bghit l-mssemmen m3a l-3ssl w z-zbda.\nA: W chnou ghadi tchreb?\nB: Atay b n-n3na3, kif l-3ada.\nA: Ana bghit l-7rira w l-khobz.\nB: Zwin l-ftour l-maghribi! Bghiti tjouj d l-biydat?\nA: Ah, 3afak. M9liyin.\nB: Safi, ghadi n7aydrou.",
+    "dialogue_francais": "A: Bonjour ! Qu'est-ce que tu vas manger au petit déjeuner ?\nB: Je veux du msemmen avec du miel et du beurre.\nA: Et qu'est-ce que tu vas boire ?\nB: Du thé à la menthe, comme d'habitude.\nA: Moi je veux de la harira et du pain.\nB: C'est bon le petit déj marocain ! Tu veux des œufs ?\nA: Oui, s'il te plaît. Frits.\nB: C'est bon, je vais les préparer.",
+    "dialogue_arabe": "A: صباح الخير! شنو غادي تاكل ف الفطور؟\nB: بغيت المسمن مع العسل و الزبدة.\nA: و شنو غادي تشرب؟\nB: أتاي بالنعناع، كيف العادة.\nA: أنا بغيت الحريرة و الخبز.\nB: زوين الفطور المغربي! بغيتي تجوج ديال البيضات؟\nA: آه، عافاك. مقليين.\nB: صافي، غادي نحيدرو.",
+    "vocabulaire": [
+      {"darija": "L-ftour", "arabe": "الفطور", "francais": "Le petit déjeuner"},
+      {"darija": "L-mssemmen", "arabe": "المسمن", "francais": "Msemmen (crêpe feuilletée)"},
+      {"darija": "L-3ssl", "arabe": "العسل", "francais": "Le miel"},
+      {"darija": "Z-zbda", "arabe": "الزبدة", "francais": "Le beurre"},
+      {"darija": "Atay b n-n3na3", "arabe": "أتاي بالنعناع", "francais": "Thé à la menthe"},
+      {"darija": "L-7rira", "arabe": "الحريرة", "francais": "La harira (soupe)"},
+      {"darija": "L-khobz", "arabe": "الخبز", "francais": "Le pain"},
+      {"darija": "L-biydat", "arabe": "البيضات", "francais": "Les œufs"},
+      {"darija": "M9liyin", "arabe": "مقليين", "francais": "Frits"}
+    ]
+  },
+  {
+    "title": "Déjeuner au restaurant - Le tajine",
+    "objective": "Commander un repas complet au restaurant",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "nourriture-repas",
+    "grammar_focus": "Commander + choisir + quantités",
+    "chunk_focus": ["Chnou 3ndkom?", "3tini...", "Jibli...", "Bssaha w raha"],
+    "dialogue_darija": "A: Salam! Chnou 3ndkom f l-ghda lyoum?\nB: 3ndna tajine dyal d-djaj b z-ztoun, w tajine dyal l-7out, w couscous.\nA: Zwin! 3tini tajine dyal d-djaj.\nB: W l-khouya?\nA: Ana bghit couscous b l-lhem.\nB: Wakha. Bghitou chi salata?\nA: Ah, salata maghribia. W jouj d l-ma.\nB: Safi. L-makla ghadi tkoun f rb3 sa3a.\nA: Bssaha!\nB: Allah y3tik ssaha!",
+    "dialogue_francais": "A: Salut ! Qu'est-ce que vous avez au déjeuner aujourd'hui ?\nB: On a du tajine de poulet aux olives, du tajine de poisson, et du couscous.\nA: Super ! Donne-moi le tajine de poulet.\nB: Et pour monsieur ?\nA: Moi je veux du couscous avec de la viande.\nB: D'accord. Vous voulez une salade ?\nA: Oui, une salade marocaine. Et deux bouteilles d'eau.\nB: C'est bon. Le repas sera prêt dans un quart d'heure.\nA: Bon appétit !\nB: Que Dieu te donne la santé !",
+    "dialogue_arabe": "A: السلام! شنو عندكم ف الغدا اليوم؟\nB: عندنا طاجين ديال الدجاج بالزيتون، و طاجين ديال الحوت، و كسكس.\nA: زوين! عطيني طاجين ديال الدجاج.\nB: و الخويا؟\nA: أنا بغيت كسكس بالالحم.\nB: واخا. بغيتو شي سلاطة؟\nA: آه، سلاطة مغربية. و جوج ديال الما.\nB: صافي. الماكلة غادي تكون ف ربع ساعة.\nA: بالصحة!\nB: الله يعطيك الصحة!",
+    "vocabulaire": [
+      {"darija": "L-ghda", "arabe": "الغدا", "francais": "Le déjeuner"},
+      {"darija": "Tajine", "arabe": "طاجين", "francais": "Tajine (plat)"},
+      {"darija": "D-djaj", "arabe": "الدجاج", "francais": "Le poulet"},
+      {"darija": "Z-ztoun", "arabe": "الزيتون", "francais": "Les olives"},
+      {"darija": "L-7out", "arabe": "الحوت", "francais": "Le poisson"},
+      {"darija": "Couscous", "arabe": "كسكس", "francais": "Le couscous"},
+      {"darija": "L-lhem", "arabe": "الالحم", "francais": "La viande"},
+      {"darija": "Bssaha!", "arabe": "بالصحة!", "francais": "Bon appétit !"},
+      {"darija": "Jibli", "arabe": "جبلي", "francais": "Apporte-moi"}
+    ]
+  },
+  {
+    "title": "Le dîner en famille",
+    "objective": "Parler du dîner et de ce qu'on mange le soir",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "nourriture-repas",
+    "grammar_focus": "L-3cha + passé et futur + nourriture du soir",
+    "chunk_focus": ["Chnou ghadi ndirou f l-3cha?", "Klina...", "Ghadi nt-iyyb...", "Skhoun/bared"],
+    "dialogue_darija": "A: Mama, chnou ghadi ndirou f l-3cha lyoum?\nB: Ghadi nt-iyyb l-7arira w n3mel l-bghrir.\nA: Wa3r! Wach ghadi ndirou chi lhem?\nB: Ah, 3ndi kefta f l-frigo. Ghadi n9liha.\nA: Mzyan! W l-ba?\nB: Bak ghadi yji mn l-khdma f ss-sab3a.\nA: Wakha, ana ghadi n3awnk n7ayder l-ma dyal l-madda.\nB: Allah yrhmk a wlidi. Yallah, bdaw!",
+    "dialogue_francais": "A: Maman, qu'est-ce qu'on fait pour le dîner aujourd'hui ?\nB: Je vais préparer de la harira et faire des baghrirs.\nA: Super ! On va faire de la viande aussi ?\nB: Oui, j'ai de la kefta au frigo. Je vais la frire.\nA: Bien ! Et papa ?\nB: Ton père va rentrer du travail à 7 heures.\nA: D'accord, je vais t'aider à préparer la table.\nB: Que Dieu te bénisse mon fils. Allez, on commence !",
+    "dialogue_arabe": "A: ماما، شنو غادي نديرو ف العشا اليوم؟\nB: غادي نطيّب الحريرة و نعمل البغرير.\nA: واعر! واش غادي نديرو شي لحم؟\nB: آه، عندي كفتة ف الفريجو. غادي نقليها.\nA: مزيان! و البا؟\nB: باك غادي يجي من الخدمة ف السابعة.\nA: واخا، أنا غادي نعاونك نحيدر الما ديال المائدة.\nB: الله يرحمك أ وليدي. يالله، بداو!",
+    "vocabulaire": [
+      {"darija": "L-3cha", "arabe": "العشا", "francais": "Le dîner"},
+      {"darija": "Nt-iyyb", "arabe": "نطيّب", "francais": "Je cuisine / Je prépare"},
+      {"darija": "L-bghrir", "arabe": "البغرير", "francais": "Baghrir (crêpe aux mille trous)"},
+      {"darija": "Kefta", "arabe": "كفتة", "francais": "Kefta (boulettes de viande)"},
+      {"darija": "L-frigo", "arabe": "الفريجو", "francais": "Le frigo"},
+      {"darija": "N3awnk", "arabe": "نعاونك", "francais": "Je t'aide"},
+      {"darija": "N7ayder", "arabe": "نحيدر", "francais": "Je prépare"},
+      {"darija": "Wlidi", "arabe": "وليدي", "francais": "Mon fils (affectueux)"}
+    ]
+  },
+  {
+    "title": "Au café marocain - Commander atay et gâteaux",
+    "objective": "Commander au café et discuter de ce qu'on prend",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "nourriture-repas",
+    "grammar_focus": "Commander au café + choix + payer",
+    "chunk_focus": ["3afak, 3tini...", "Noss noss", "L-addition", "Hak l-flouss"],
+    "dialogue_darija": "A: 3afak, 3tini wa7d atay b n-n3na3.\nB: Kbir wla sghir?\nA: Kbir, 3afak. W nti, chnou bghiti?\nA: Ana bghit noss noss.\nB: W chi 7aja dyal l-makla?\nA: Ah, 3tina jouj d l-mssmmen w chi gâteau.\nB: Wakha. Chi 7aja khra?\nA: La, hadchi safi. Bchhal l-addition?\nB: Tmaniya w 3chrin dirham.\nA: Hak. Chokran!",
+    "dialogue_francais": "A: S'il te plaît, donne-moi un thé à la menthe.\nB: Grand ou petit ?\nA: Grand, s'il te plaît. Et toi, tu veux quoi ?\nA: Moi je veux un café au lait.\nB: Et quelque chose à manger ?\nA: Oui, donne-nous deux msemmens et un gâteau.\nB: D'accord. Autre chose ?\nA: Non, c'est tout. Combien l'addition ?\nB: 28 dirhams.\nA: Tiens. Merci !",
+    "dialogue_arabe": "A: عافاك، عطيني واحد أتاي بالنعناع.\nB: كبير ولا صغير?\nA: كبير، عافاك. و نتي، شنو بغيتي?\nA: أنا بغيت نص نص.\nB: و شي حاجة ديال الماكلة?\nA: آه، عطينا جوج ديال المسمن و شي كاتو.\nB: واخا. شي حاجة خرا؟\nA: لا، هادشي صافي. بشحال الأديسيون؟\nB: تمنية و عشرين درهم.\nA: هاك. شكرا!",
+    "vocabulaire": [
+      {"darija": "Noss noss", "arabe": "نص نص", "francais": "Café au lait (moitié-moitié)"},
+      {"darija": "Kbir", "arabe": "كبير", "francais": "Grand"},
+      {"darija": "Sghir", "arabe": "صغير", "francais": "Petit"},
+      {"darija": "L-addition", "arabe": "الأديسيون", "francais": "L'addition"},
+      {"darija": "Chi 7aja", "arabe": "شي حاجة", "francais": "Quelque chose"},
+      {"darija": "L-flouss", "arabe": "الفلوس", "francais": "L'argent"},
+      {"darija": "Hadchi", "arabe": "هادشي", "francais": "Ça / Tout ça"},
+      {"darija": "Khra", "arabe": "خرا", "francais": "Autre"}
+    ]
+  },
+  {
+    "title": "Commander au fast food - Sandwich et jus",
+    "objective": "Commander dans un snack ou fast food marocain",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "nourriture-repas",
+    "grammar_focus": "Commande rapide + ingrédients + emporter",
+    "chunk_focus": ["3tini wa7d...", "Bla...", "Zid...", "Hna wla machi?"],
+    "dialogue_darija": "A: Salam! 3tini wa7d sandwich dyal l-kefta.\nB: B ketchup w mayonnaise?\nA: Ah, w zid l-frittes 3afak.\nB: Kbir wla normal?\nA: Normal. W wa7d l-3ssir dyal l-limoun.\nB: Hna wla machi?\nA: Machi, emporter 3afak.\nB: Safi. Khamsa w tlatin dirham.\nA: Hak. W chhal d l-w9t?\nB: 3chra d d-9ay9.",
+    "dialogue_francais": "A: Salut ! Donne-moi un sandwich de kefta.\nB: Avec ketchup et mayonnaise ?\nA: Oui, et ajoute des frites s'il te plaît.\nB: Grand ou normal ?\nA: Normal. Et un jus de citron.\nB: Sur place ou à emporter ?\nA: À emporter s'il te plaît.\nB: C'est bon. 35 dirhams.\nA: Tiens. Et c'est dans combien de temps ?\nB: 10 minutes.",
+    "dialogue_arabe": "A: السلام! عطيني واحد سانويتش ديال الكفتة.\nB: بالكاتشاب و المايونيز?\nA: آه، و زيد الفريت عافاك.\nB: كبير ولا نورمال?\nA: نورمال. و واحد العصير ديال الليمون.\nB: هنا ولا ماشي?\nA: ماشي، أمبورتي عافاك.\nB: صافي. خمسة و تلاتين درهم.\nA: هاك. و شحال ديال الوقت?\nB: عشرة دقايق.",
+    "vocabulaire": [
+      {"darija": "Sandwich", "arabe": "سانويتش", "francais": "Sandwich"},
+      {"darija": "L-frittes", "arabe": "الفريت", "francais": "Les frites"},
+      {"darija": "L-3ssir", "arabe": "العصير", "francais": "Le jus"},
+      {"darija": "L-limoun", "arabe": "الليمون", "francais": "Le citron"},
+      {"darija": "Zid", "arabe": "زيد", "francais": "Ajoute"},
+      {"darija": "Hna wla machi?", "arabe": "هنا ولا ماشي؟", "francais": "Sur place ou à emporter ?"},
+      {"darija": "Emporter", "arabe": "أمبورتي", "francais": "À emporter"},
+      {"darija": "Bla", "arabe": "بلا", "francais": "Sans"}
+    ]
+  }
+]

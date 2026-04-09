@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Analyse politique et médias au Maroc",
+    "objective": "Analyser des sujets complexes avec un vocabulaire avancé et des arguments structurés",
+    "estimated_minutes": 8,
+    "cefr_level": "C1",
+    "theme": "politique-medias",
+    "grammar_focus": "Structures complexes (7it...fa... + lli ka-ykhllik + hypothétiques composés)",
+    "chunk_focus": ["L-msa2la hiya...", "Ila chddna n-nadar...", "Machi darouri...", "3la 7ssab...", "F n-nihaya..."],
+    "dialogue_darija": "A: Chnou ra2yk f l-i3lam l-maghribi daba? Wach ka-y9dm l-ma3louma b chi misdaqiya?\nB: L-msa2la machi bsita. 3ndna chi journaux w sites lli ka-ykhdmou b l-mihniya, walakin l-aghlabia ka-tlahth wra l-buzz bla ma tvérifiw.\nA: Hadchi s7i7. W m3a s-social media, wlla s3ib t-frr9 bin l-khabar s-s7i7 w l-ishaaat.\nB: Exactement. L-mochkila hiya blli n-nas wllaw ka-yt-ti9ou f chi comptes lli ma 3ndhom 7tta misdaqiya, hssen mn l-i3lam r-rasmi.\nA: Ila chddna n-nadar l l-mossala mn jwha okhra, l-i3lam r-rasmi 3ndou tani l-mchakil dyalou. Ka-ykhdm bzzaf 3la l-7izb lli 7akm w ma ka-y3tich l-perspectif kaml.\nB: 3ndk l-7qq. F n-nihaya, l-7ll howa t-tarbiya 3la l-esprit critique. Khass n-nas yt3allmou kif y-analysiw l-akhbar.\nA: W kif ghadi ndiru hadchi? L-mdrassa ma ka-t3llmch had l-maharat.\nB: 3la 7ssab lli ka-nchof, khass nddkhlou had chi f l-programme scolaire mn l-lyci. W zid 3lih, khass l-journalistes ykounou mstqilin w ma ytb3ouch l-agenda dyal chi 7izb.",
+    "dialogue_francais": "A: Qu'est-ce que tu penses des médias marocains actuellement ? Est-ce qu'ils présentent l'information avec crédibilité ?\nB: La question n'est pas simple. On a certains journaux et sites qui travaillent avec professionnalisme, mais la majorité court après le buzz sans vérifier.\nA: C'est vrai. Et avec les réseaux sociaux, c'est devenu difficile de distinguer la vraie info des rumeurs.\nB: Exactement. Le problème c'est que les gens font davantage confiance à des comptes sans aucune crédibilité qu'aux médias officiels.\nA: Si on regarde la question sous un autre angle, les médias officiels ont aussi leurs problèmes. Ils travaillent beaucoup pour le parti au pouvoir et ne donnent pas la perspective complète.\nB: T'as raison. En fin de compte, la solution c'est l'éducation à l'esprit critique. Les gens doivent apprendre à analyser les infos.\nA: Et comment on fait ça ? L'école n'enseigne pas ces compétences.\nB: D'après ce que je vois, il faut intégrer ça dans le programme scolaire dès le lycée. Et en plus, les journalistes doivent être indépendants et ne pas suivre l'agenda d'un parti.",
+    "dialogue_arabe": "A: شنو رأيك ف الإعلام المغربي دابا؟ واش كايقدم المعلومة بشي مصداقية؟\nB: المسألة ماشي بسيطة. عندنا شي جورنو و سيتات اللي كايخدمو بالمهنية، ولاكن الأغلبية كاتلهث ورا البوز بلا ما تفريفيو.\nA: هادشي صحيح. و مع السوسيال ميديا، ولى صعيب تفرق بين الخبار الصحيح و الإشاعات.\nB: إگزاكتمون. المشكيلة هيا بللي الناس ولاو كايتيقو ف شي كونطات اللي ما عندهم حتا مصداقية، حسن من الإعلام الرسمي.\nA: إلا شدينا النظر للمسألة من جوهة أخرى، الإعلام الرسمي عندو تاني المشاكل ديالو. كايخدم بزاف على الحزب اللي حاكم و ما كايعطيش البرسبيكتيف كامل.\nB: عندك الحق. ف النهاية، الحل هوا التربية على الإسبري كريتيك. خاص الناس يتعلمو كيف يأناليسيو الأخبار.\nA: و كيف غادي نديرو هادشي؟ المدرسة ما كاتعلمش هاد المهارات.\nB: على حساب اللي كانشوف، خاص ندخلو هادشي ف البروگرام سكولير من الليسي. و زيد عليه، خاص الجورناليست يكونو مستقلين و ما يتبعوش الأجندا ديال شي حزب.",
+    "vocabulaire": [
+      {"darija": "L-msa2la", "arabe": "المسألة", "francais": "La question / Le sujet"},
+      {"darija": "Misdaqiya", "arabe": "مصداقية", "francais": "Crédibilité"},
+      {"darija": "L-ishaaat", "arabe": "الإشاعات", "francais": "Les rumeurs"},
+      {"darija": "Ila chddna n-nadar", "arabe": "إلا شدينا النظر", "francais": "Si on regarde / considère"},
+      {"darija": "L-esprit critique", "arabe": "الإسبري كريتيك", "francais": "L'esprit critique (emprunt)"},
+      {"darija": "Mstqil", "arabe": "مستقل", "francais": "Indépendant"},
+      {"darija": "3la 7ssab", "arabe": "على حساب", "francais": "D'après / Selon"},
+      {"darija": "F n-nihaya", "arabe": "ف النهاية", "francais": "En fin de compte"}
+    ]
+  },
+  {
+    "title": "Humour, proverbes et sagesse populaire",
+    "objective": "Maîtriser les expressions idiomatiques, proverbes et jeux de mots en darija",
+    "estimated_minutes": 8,
+    "cefr_level": "C2",
+    "theme": "culture-expressions",
+    "grammar_focus": "Proverbes, métaphores, registres de langue (soutenu vs familier), ironie",
+    "chunk_focus": ["Lli bgha l-3ssl...", "Koll chi b wqtou zwin", "3la 9dd l-7af", "7tt lih f rassu", "Dreb 7did w huwa s-khoun"],
+    "dialogue_darija": "A: A sa7bi, bghit nft7 restaurant walakin khayf.\nB: Ach mn khawf? 3lach? Kima ka-y9oulou: \"Lli bgha l-3ssl, yssber l-9rss d n-n7l.\"\nA: Walakin f had l-wqt? L-i9tissad machi f 7alou!\nB: Sma3 liya mzyan: \"Dreb l-7did w huwa s-khoun.\" Ila 3ndk l-fikra w l-7massa, twnns biha daba.\nA: Wa nta 3arf, l-mghrib fih restaurant f koll zn9a.\nB: \"Koll chi b wqtou zwin.\" Ila l-makla dyalk mzyana w l-khedma n9iya, n-nas ghadi tji.\nA: Hhh, nta dima 3ndk le mot juste. W kif ka-y9oulou jdoudna: \"Lli fat mat.\"\nB: Exactement! W zid 3liha: \"3la 9dd l-7af mdd rjlik.\" Bda b chi 7aja sghira w kbbr m3a l-wqt.\nA: 3ndk l-7qq. \"Lli daz 3lih l-bhar, ma y-khaf mn l-wad.\" Mchit fih!\nB: Hadi hiya r-rouh! \"7tt f balak, lli ka-yt3llm mn ghltato, ka-ytssar fih!\"",
+    "dialogue_francais": "A: Mon ami, je veux ouvrir un restaurant mais j'ai peur.\nB: Peur de quoi ? Pourquoi ? Comme on dit : \"Celui qui veut le miel doit supporter les piqûres d'abeilles.\"\nA: Mais en ce moment ? L'économie ne va pas bien !\nB: Écoute-moi bien : \"Bats le fer tant qu'il est chaud.\" Si t'as l'idée et la passion, lance-toi maintenant.\nA: Mais tu sais, au Maroc il y a un restaurant à chaque coin de rue.\nB: \"Chaque chose en son temps est belle.\" Si ta cuisine est bonne et le service impeccable, les gens viendront.\nA: Haha, toi t'as toujours le mot juste. Et comme disaient nos ancêtres : \"Ce qui est passé est mort.\"\nB: Exactement ! Et j'ajoute : \"Étends tes pieds selon la taille de ta couverture.\" Commence petit et grandis avec le temps.\nA: T'as raison. \"Celui qui a traversé la mer ne craint pas la rivière.\" J'y vais !\nB: Voilà l'esprit ! \"Retiens bien, celui qui apprend de ses erreurs y gagne !\"",
+    "dialogue_arabe": "A: أ صاحبي، بغيت نفتح ريسطورو ولاكن خايف.\nB: آش من خوف؟ علاش؟ كيما كايقولو: \"اللي بغا العسل، يصبر القرص ديال النحل.\"\nA: ولاكن ف هاد الوقت؟ الإقتصاد ماشي ف حالو!\nB: سمع ليا مزيان: \"ضرب الحديد و هو سخون.\" إلا عندك الفيكرة و الحماسة، توّنس بيها دابا.\nA: وا نتا عارف، المغرب فيه ريسطورو ف كل زنقة.\nB: \"كولشي بوقتو زوين.\" إلا الماكلة ديالك مزيانة و الخدمة نقية، الناس غادي تجي.\nA: ههه، نتا ديما عندك لو مو جوست. و كيف كايقولو جدودنا: \"اللي فات مات.\"\nB: إگزاكتمون! و زيد عليها: \"على قد الحاف مدّ رجليك.\" بدا بشي حاجة صغيرة و كبّر مع الوقت.\nA: عندك الحق. \"اللي داز عليه البحر، ما يخاف من الواد.\" مشيت فيه!\nB: هادي هيا الروح! \"حط ف بالك، اللي كايتعلم من غلتاتو، كايتصار فيه!\"",
+    "vocabulaire": [
+      {"darija": "Lli bgha l-3ssl, yssber l-9rss d n-n7l", "arabe": "اللي بغا العسل، يصبر القرص ديال النحل", "francais": "Qui veut le miel supporte les piqûres (pas de gain sans effort)"},
+      {"darija": "Dreb l-7did w huwa s-khoun", "arabe": "ضرب الحديد و هو سخون", "francais": "Bats le fer tant qu'il est chaud"},
+      {"darija": "Koll chi b wqtou zwin", "arabe": "كولشي بوقتو زوين", "francais": "Chaque chose en son temps"},
+      {"darija": "3la 9dd l-7af mdd rjlik", "arabe": "على قد الحاف مدّ رجليك", "francais": "Vis selon tes moyens"},
+      {"darija": "Lli fat mat", "arabe": "اللي فات مات", "francais": "Le passé est le passé"},
+      {"darija": "Lli daz 3lih l-bhar, ma ykhaf mn l-wad", "arabe": "اللي داز عليه البحر، ما يخاف من الواد", "francais": "Qui a traversé la mer ne craint pas la rivière"},
+      {"darija": "Twnns", "arabe": "توّنس", "francais": "S'amuser / Se lancer avec enthousiasme"},
+      {"darija": "7tt f balk", "arabe": "حط ف بالك", "francais": "Retiens bien / Garde en tête"}
+    ]
+  }
+]

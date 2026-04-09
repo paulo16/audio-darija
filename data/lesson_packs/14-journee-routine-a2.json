@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Comment se passe ta journée ?",
+    "objective": "Raconter et demander comment se passe la journée",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "journee-routine",
+    "grammar_focus": "Ka-ndir + activités quotidiennes + temps de la journée",
+    "chunk_focus": ["Kifach dayz m3ak nhar?", "F ssba7", "F l-3chiya", "N3ss"],
+    "dialogue_darija": "A: Ahlan! Kifach dayz m3ak nhar?\nB: Wllah, nhar twil lyoum. N9t f s-sab3a d ssba7, mchit l-khdma.\nA: W f l-khdma, koulchi mzyan?\nB: L-khdma bzzaf lyoum. Ma w9f-tch mn ss-sba7 htta l-jouj.\nA: W daba, chnou ghadi dir?\nB: Daba ghadi nmchi l-dar, nakhod douche, w nrtah chwiya.\nA: W f l-lil?\nB: Ghadi ntfrj f chi film w n3ss bkri. And nta, chnou drti lyoum?\nA: Ana? Ma drt walo! N3sst bzzaf hhhh.",
+    "dialogue_francais": "A: Salut ! Comment se passe ta journée ?\nB: Franchement, journée longue aujourd'hui. Je me suis levé à 7h, je suis allé au travail.\nA: Et au travail, tout va bien ?\nB: Beaucoup de travail aujourd'hui. J'ai pas arrêté du matin jusqu'à 14h.\nA: Et maintenant, tu vas faire quoi ?\nB: Maintenant je vais rentrer à la maison, prendre une douche, et me reposer un peu.\nA: Et le soir ?\nB: Je vais regarder un film et dormir tôt. Et toi, t'as fait quoi aujourd'hui ?\nA: Moi ? J'ai rien fait ! J'ai beaucoup dormi hahaha.",
+    "dialogue_arabe": "A: أهلا! كيفاش دايز معاك نهار؟\nB: والله، نهار طويل اليوم. نقت ف السابعة ديال الصباح، مشيت للخدمة.\nA: و ف الخدمة، كلشي مزيان؟\nB: الخدمة بزاف اليوم. ما وقفتش من الصباح حتى لجوج.\nA: و دابا، شنو غادي دير؟\nB: دابا غادي نمشي للدار، ناخد دوش، و نرتاح شوية.\nA: و ف الليل؟\nB: غادي نتفرج ف شي فيلم و نعس بكري. و نتا، شنو درتي اليوم؟\nA: أنا؟ ما درت والو! نعست بزاف هههه.",
+    "vocabulaire": [
+      {"darija": "Kifach dayz m3ak nhar?", "arabe": "كيفاش دايز معاك نهار؟", "francais": "Comment se passe ta journée ?"},
+      {"darija": "N9t", "arabe": "نقت", "francais": "Je me suis levé(e)"},
+      {"darija": "Nrtah", "arabe": "نرتاح", "francais": "Je me repose"},
+      {"darija": "Ntfrj", "arabe": "نتفرج", "francais": "Je regarde (TV/film)"},
+      {"darija": "N3ss", "arabe": "نعس", "francais": "Dormir"},
+      {"darija": "Bkri", "arabe": "بكري", "francais": "Tôt"},
+      {"darija": "L-dar", "arabe": "الدار", "francais": "La maison"},
+      {"darija": "Ma drt walo", "arabe": "ما درت والو", "francais": "J'ai rien fait"}
+    ]
+  },
+  {
+    "title": "J'ai mal dormi - Fatigue et sommeil",
+    "objective": "Exprimer la fatigue, mal dormir, et les problèmes de sommeil",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "journee-routine",
+    "grammar_focus": "Ma + verbe + ch (négation) + expressions de fatigue",
+    "chunk_focus": ["Ma n3sst-ch mzyan", "3yyan", "Ka-n7ss b...", "N3ass bzzaf"],
+    "dialogue_darija": "A: Sbah l-khir... chnou bik lyoum? Ka-tban 3yyan.\nB: Wllah ma n3sst-ch mzyan l-bareh. Bqit n-galb f l-frach htta l-tlata d l-lil.\nA: 3lach? Chnou wq3?\nB: Ma 3rft-ch. Rab-bma l-9hwa lli chrebt f l-3chiya.\nA: Ah, l-9hwa f l-lil ma mzyana-ch! Jerb chamomille.\nB: W zid, kan l-7al skhoun bzzaf, ma 9drt-ch n3ss.\nA: Nta khassek climatiseur!\nB: Wllah, 3ndek l-7a99. Daba, ghadi nmchi nakhod chi noss noss bach n-fi9.",
+    "dialogue_francais": "A: Bonjour... qu'est-ce que tu as aujourd'hui ? Tu as l'air fatigué.\nB: J'ai pas bien dormi hier soir. Je me suis retourné dans le lit jusqu'à 3h du matin.\nA: Pourquoi ? Il s'est passé quoi ?\nB: Je sais pas. Peut-être le café que j'ai bu le soir.\nA: Ah, le café le soir c'est pas bon ! Essaie la camomille.\nB: Et en plus, il faisait trop chaud, j'arrivais pas à dormir.\nA: Toi tu as besoin de la clim !\nB: C'est vrai, t'as raison. Maintenant, je vais aller boire un café au lait pour me réveiller.",
+    "dialogue_arabe": "A: صباح الخير... شنو بيك اليوم؟ كاتبان عيّان.\nB: والله ما نعستش مزيان البارح. بقيت نڭلب ف الفراش حتى لتلاتة ديال الليل.\nA: علاش؟ شنو وقع؟\nB: ما عرفتش. ربما القهوة اللي شربت ف العشية.\nA: آه، القهوة ف الليل ما مزيانةش! جرب شاموميل.\nB: و زيد، كان الحال سخون بزاف، ما قدرتش نعس.\nA: نتا خاصك كليماتيزور!\nB: والله، عندك الحق. دابا، غادي نمشي ناخد شي نص نص باش نفيق.",
+    "vocabulaire": [
+      {"darija": "Ma n3sst-ch mzyan", "arabe": "ما نعستش مزيان", "francais": "J'ai pas bien dormi"},
+      {"darija": "3yyan", "arabe": "عيّان", "francais": "Fatigué / Malade"},
+      {"darija": "L-bareh", "arabe": "البارح", "francais": "Hier soir"},
+      {"darija": "N-galb f l-frach", "arabe": "نڭلب ف الفراش", "francais": "Se retourner dans le lit"},
+      {"darija": "Skhoun", "arabe": "سخون", "francais": "Chaud"},
+      {"darija": "N-fi9", "arabe": "نفيق", "francais": "Se réveiller"},
+      {"darija": "Ma 9drt-ch", "arabe": "ما قدرتش", "francais": "J'ai pas pu"},
+      {"darija": "Rab-bma", "arabe": "ربما", "francais": "Peut-être"}
+    ]
+  },
+  {
+    "title": "Ma routine du matin",
+    "objective": "Décrire sa routine matinale étape par étape",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "journee-routine",
+    "grammar_focus": "Ka-ndir + séquence d'actions + l'heure",
+    "chunk_focus": ["Ka-nfi9 f...", "Ka-nakhod douche", "Ka-nftour", "Ka-nkhrej mn d-dar"],
+    "dialogue_darija": "A: Nta, f chal ka-tfi9 f sba7?\nB: Ka-nfi9 f stta w noss. W nta?\nA: Ana f tmnya. Ana ka-n7bb n3ss bzzaf!\nB: W chnou ka-dir mlli ka-tfi9?\nA: L-awwl, ka-nakhod wa7d d-douche. Mn b3d, ka-nlbss.\nB: W l-ftour?\nA: Ka-nftour f d-dar. Khobz, zbda, w atay.\nB: Ana ka-nftour f t-tri9! Ka-nakhod croissant mn l-boulangerie 7da d-dar.\nA: W imta ka-tkhrej l-khdma?\nB: Ka-nkhrej f sab3a w rb3. W nta?\nA: Ana f tss3a. L-khdma diali 9riba.",
+    "dialogue_francais": "A: Toi, tu te lèves à quelle heure le matin ?\nB: Je me lève à 6h30. Et toi ?\nA: Moi à 8h. J'adore dormir !\nB: Et tu fais quoi quand tu te lèves ?\nA: D'abord, je prends une douche. Après, je m'habille.\nB: Et le petit déj ?\nA: Je déjeune à la maison. Pain, beurre, et thé.\nB: Moi je déjeune en chemin ! Je prends un croissant de la boulangerie à côté de la maison.\nA: Et tu sors au travail à quelle heure ?\nB: Je sors à 7h15. Et toi ?\nA: Moi à 9h. Mon travail est proche.",
+    "dialogue_arabe": "A: نتا، ف شحال كاتفيق ف صباح؟\nB: كانفيق ف ستة و نص. و نتا؟\nA: أنا ف تمنية. أنا كانحب نعس بزاف!\nB: و شنو كادير ملّي كاتفيق؟\nA: الأول، كاناخد واحد الدوش. من بعد، كانلبس.\nB: و الفطور؟\nA: كانفطور ف الدار. خبز، زبدة، و أتاي.\nB: أنا كانفطور ف الطريق! كاناخد كرواسون من البولانجري حدا الدار.\nA: و إمتى كاتخرج للخدمة؟\nB: كانخرج ف سابعة و ربع. و نتا؟\nA: أنا ف تسعة. الخدمة ديالي قريبة.",
+    "vocabulaire": [
+      {"darija": "Ka-nfi9", "arabe": "كانفيق", "francais": "Je me lève / Je me réveille"},
+      {"darija": "Ka-nakhod douche", "arabe": "كاناخد دوش", "francais": "Je prends une douche"},
+      {"darija": "Ka-nlbss", "arabe": "كانلبس", "francais": "Je m'habille"},
+      {"darija": "Ka-nftour", "arabe": "كانفطور", "francais": "Je prends le petit déj"},
+      {"darija": "Ka-nkhrej", "arabe": "كانخرج", "francais": "Je sors"},
+      {"darija": "L-boulangerie", "arabe": "البولانجري", "francais": "La boulangerie"},
+      {"darija": "9rib/9riba", "arabe": "قريب/قريبة", "francais": "Proche"},
+      {"darija": "Mlli", "arabe": "ملّي", "francais": "Quand / Lorsque"}
+    ]
+  },
+  {
+    "title": "Après le travail - Le soir à la maison",
+    "objective": "Parler de ce qu'on fait après le travail",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "journee-routine",
+    "grammar_focus": "Passé récent + futur proche + loisirs",
+    "chunk_focus": ["Rj3t mn l-khdma", "Ghadi ndir...", "3yit", "Ka-ntfrj f..."],
+    "dialogue_darija": "A: Wllah 3yit! Rj3t mn l-khdma tw-a.\nB: Mskin! Aji, gales. Bghiti chi atay?\nA: Ah, 3afak. Mzyan l-atay mn b3d nhar twil.\nB: Chnou drti f l-khdma lyoum?\nA: Bzzaf d l-réunions. Khllaw rassi.\nB: W daba, chnou ghadi dir?\nA: Ghadi nrtah chwiya, ntfrj f télé, w n3ss bkri.\nB: Ma bghitich tkhrej? Ndirou chi promenade?\nA: La, lyoum la! 3yit bzzaf. Ghddwa nchallah.",
+    "dialogue_francais": "A: Oh je suis crevé ! Je viens de rentrer du travail.\nB: Pauvre ! Viens, assieds-toi. Tu veux du thé ?\nA: Oui, s'il te plaît. C'est bon le thé après une longue journée.\nB: T'as fait quoi au travail aujourd'hui ?\nA: Beaucoup de réunions. Ça m'a pris la tête.\nB: Et maintenant, tu vas faire quoi ?\nA: Je vais me reposer un peu, regarder la télé, et dormir tôt.\nB: Tu veux pas sortir ? On fait une promenade ?\nA: Non, pas aujourd'hui ! Je suis trop fatigué. Demain inchallah.",
+    "dialogue_arabe": "A: والله عييت! رجعت من الخدمة تو-ا.\nB: مسكين! أجي، جالس. بغيتي شي أتاي؟\nA: آه، عافاك. مزيان الأتاي من بعد نهار طويل.\nB: شنو درتي ف الخدمة اليوم؟\nA: بزاف ديال الريونيون. خلاو راسي.\nB: و دابا، شنو غادي دير؟\nA: غادي نرتاح شوية، نتفرج ف تيلي، و نعس بكري.\nB: ما بغيتيش تخرج؟ نديرو شي بروميناد؟\nA: لا، اليوم لا! عييت بزاف. غدا إن شاء الله.",
+    "vocabulaire": [
+      {"darija": "3yit", "arabe": "عييت", "francais": "Je suis fatigué(e) / crevé(e)"},
+      {"darija": "Rj3t", "arabe": "رجعت", "francais": "Je suis rentré(e)"},
+      {"darija": "Tw-a", "arabe": "تو-ا", "francais": "À l'instant / Maintenant"},
+      {"darija": "Mskin", "arabe": "مسكين", "francais": "Pauvre (compassion)"},
+      {"darija": "Khllaw rassi", "arabe": "خلاو راسي", "francais": "Ça m'a pris la tête"},
+      {"darija": "Tkhrej", "arabe": "تخرج", "francais": "Sortir"},
+      {"darija": "Ghddwa", "arabe": "غدا", "francais": "Demain"},
+      {"darija": "Nchallah", "arabe": "إن شاء الله", "francais": "Si Dieu le veut"}
+    ]
+  },
+  {
+    "title": "Le week-end - Qu'est-ce qu'on fait ?",
+    "objective": "Planifier et raconter son week-end",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "journee-routine",
+    "grammar_focus": "Futur avec ghadi + suggestions + loisirs",
+    "chunk_focus": ["Nhar s-sbt", "Chnou ghadi ndirou?", "Yallah nmchiw", "3ndi plan"],
+    "dialogue_darija": "A: Nhar s-sbt, chnou ghadi ndirou?\nB: Ma 3ndi ta plan. Nta 3ndek chi fikra?\nA: Ila l-jaw zwin, yallah nmchiw l-l-b7ar!\nB: Ain Diab? Fikra mzyana! W n-nhar dyal l-7dd?\nA: Nhar l-7dd, bghit nrtah. Rab-bma ntfrj f chi series.\nB: Ana bghit nmchi l-souk l-7dd. Khassni nchri l-khodra dyal s-simana.\nA: Mzyan. Nmchiw m3a b3diyatna s-sbt, w l-7dd koll wa7d ydirha kif bgha.\nB: Top! L-w9t dyal s-sbt?\nA: F l-3chra d sba7, yallah!\nB: Safi, deal!",
+    "dialogue_francais": "A: Samedi, on fait quoi ?\nB: J'ai aucun plan. Toi, t'as une idée ?\nA: Si le temps est beau, on va à la plage !\nB: Ain Diab ? Bonne idée ! Et le dimanche ?\nA: Dimanche, je veux me reposer. Peut-être regarder une série.\nB: Moi je veux aller au souk dimanche. Je dois acheter les légumes de la semaine.\nA: Bien. On sort ensemble samedi, et dimanche chacun fait ce qu'il veut.\nB: Top ! L'heure pour samedi ?\nA: À 10h du matin, allez !\nB: OK, deal !",
+    "dialogue_arabe": "A: نهار السبت، شنو غادي نديرو؟\nB: ما عندي تا بلان. نتا عندك شي فكرة؟\nA: إلا الجو زوين، يالله نمشيو للبحر!\nB: عين الذياب؟ فكرة مزيانة! و النهار ديال الحد؟\nA: نهار الحد، بغيت نرتاح. ربما نتفرج ف شي سيريس.\nB: أنا بغيت نمشي للسوق الحد. خاصني نشري الخضرة ديال السيمانة.\nA: مزيان. نمشيو مع بعضياتنا السبت، و الحد كل واحد يديرها كيف بغا.\nB: توب! الوقت ديال السبت؟\nA: ف العشرة ديال الصباح، يالله!\nB: صافي، ديل!",
+    "vocabulaire": [
+      {"darija": "Nhar s-sbt", "arabe": "نهار السبت", "francais": "Samedi"},
+      {"darija": "Nhar l-7dd", "arabe": "نهار الحد", "francais": "Dimanche"},
+      {"darija": "L-b7ar", "arabe": "البحر", "francais": "La mer / La plage"},
+      {"darija": "L-jaw", "arabe": "الجو", "francais": "Le temps / La météo"},
+      {"darija": "S-simana", "arabe": "السيمانة", "francais": "La semaine"},
+      {"darija": "Nchri", "arabe": "نشري", "francais": "J'achète"},
+      {"darija": "M3a b3diyatna", "arabe": "مع بعضياتنا", "francais": "Ensemble"},
+      {"darija": "Fikra", "arabe": "فكرة", "francais": "Une idée"}
+    ]
+  }
+]

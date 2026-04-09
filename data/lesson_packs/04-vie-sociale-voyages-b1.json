@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Raconter son week-end entre amis",
+    "objective": "Parler au passé et décrire des activités de loisirs",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "vie-sociale-loisirs",
+    "grammar_focus": "Passé (mchit, drt, kllit) + connecteurs temporels (l-awwl, mn b3d, f l-akher)",
+    "chunk_focus": ["Chnou drti f weekend?", "Mchit l-...", "Kenna ka-n...", "Kana waer!", "3jbni bzzaf"],
+    "dialogue_darija": "A: Salam Fatima! Kif dayra? Chnou drti f l-weekend?\nB: Salam Amina! L-weekend kana wa3r! Nhar s-sbt mchit m3a sahbati l-corniche. Tlna 3la l-b7r w klina l-7out.\nA: Wa3r! W nhar l-7dd?\nB: Nhar l-7dd bqit f d-dar. Tfrjt f wahd l-film jadid 3la Netflix. W ila b3d tyybt l-7rira.\nA: Mmmm l-7rira! 3lach ma ddtich 3liya? Knt bghit ntfd m3ak.\nB: Hhhh la mra jay! W nti, chnou drti?\nA: Ana mchit l-Marjane bach nchri l-hwayj l l-3id. L9it chi hwayj zwnin.\nB: Wah zwin! Ghadi tkoni top f l-3id!\nA: Nchallah! Yallah ntla9aw had s-simana nn3tqoush?",
+    "dialogue_francais": "A: Salut Fatima ! Comment tu vas ? Qu'est-ce que t'as fait ce week-end ?\nB: Salut Amina ! Le week-end était super ! Samedi je suis allée avec mes amies à la corniche. On s'est baladées au bord de la mer et on a mangé du poisson.\nA: Super ! Et dimanche ?\nB: Dimanche je suis restée à la maison. J'ai regardé un nouveau film sur Netflix. Et après j'ai préparé la harira.\nA: Mmmm la harira ! Pourquoi tu ne m'as pas invitée ? J'aurais bien aimé traîner avec toi.\nB: Hahaha la prochaine fois ! Et toi, t'as fait quoi ?\nA: Moi je suis allée à Marjane pour acheter des vêtements pour le Aïd. J'ai trouvé de jolies choses.\nB: Oh joli ! Tu vas être au top pour le Aïd !\nA: Inchallah ! Allez, on se voit cette semaine pour papoter ?",
+    "dialogue_arabe": "A: السلام فاطمة! كيف دايرة؟ شنو درتي ف الويكند؟\nB: السلام أمينة! الويكند كان واعر! نهار السبت مشيت مع صحباتي للكورنيش. تلعنا على البحر و كلينا الحوت.\nA: واعر! و نهار الحد؟\nB: نهار الحد بقيت ف الدار. تفرجت ف واحد الفيلم جديد على نتفلكس. و إلى بعد طيبت الحريرة.\nA: ممم الحريرة! علاش ما دديتيش عليا؟ كنت بغيت نتفد معاك.\nB: ههه لا مرة جاي! و نتي، شنو درتي؟\nA: أنا مشيت لمرجان باش نشري الحوايج للعيد. لقيت شي حوايج زوينين.\nB: واه زوين! غادي تكوني طوپ ف العيد!\nA: إن شاء الله! يالله نتلاقاو هاد السيمانا نعتقوش؟",
+    "vocabulaire": [
+      {"darija": "Chnou drti?", "arabe": "شنو درتي؟", "francais": "Qu'est-ce que t'as fait ?"},
+      {"darija": "Mchit", "arabe": "مشيت", "francais": "Je suis allé(e)"},
+      {"darija": "Kenna ka-n...", "arabe": "كنا كا ن...", "francais": "On était en train de..."},
+      {"darija": "Waer / Wa3r", "arabe": "واعر", "francais": "Super / Génial"},
+      {"darija": "Bqit f d-dar", "arabe": "بقيت ف الدار", "francais": "Je suis resté(e) à la maison"},
+      {"darija": "Tyybt", "arabe": "طيبت", "francais": "J'ai cuisiné"},
+      {"darija": "L-7rira", "arabe": "الحريرة", "francais": "Harira (soupe traditionnelle)"},
+      {"darija": "Ntla9aw", "arabe": "نتلاقاو", "francais": "On se retrouve"},
+      {"darija": "Nn3tqoush", "arabe": "نعتقوش", "francais": "On papote / On bavarde"}
+    ]
+  },
+  {
+    "title": "Planifier un voyage à Chefchaouen",
+    "objective": "Organiser un voyage, discuter des options de transport et d'hébergement",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "voyages-tourisme",
+    "grammar_focus": "Futur (ghadi + verbe) + propositions (wach bghiti...?)",
+    "chunk_focus": ["Ghadi nmchiw l-...", "Wach bghiti...?", "Hssen lina...", "Khass ndiru...", "Ma nnsawch..."],
+    "dialogue_darija": "A: A sa7bi, 3ndi fikra! Wach bghiti nmchiw l-Chefchaouen had l-weekend?\nB: Chefchaouen? Wa3r! Ana 3mri ma mchit tmma. Ghadi nmchiw b l-kar wla b t-tomobil?\nA: Hssen lina nmchiw b t-tomobil. L-kar ka-yakhod bzzaf d l-wqt.\nB: S7i7. W fin ghadi nbatu?\nA: L9it wahd riad zwin f l-medina l-9dima. B khams mia d dryal l-lila l jouj.\nB: Mzyan! W chnou ghadi ndiru tmma?\nA: Ghadi ntmchaw f l-mdina z-zr9a, nchoufu l-chllalat, w nchriw chi hwayj mn s-souk.\nB: W l-makla? Sma3t blli l-makla tmma bnina bzzaf.\nA: Iyeh! Khass njrrbu l-bstilla w tajine l-maa3za. Ma nnsawch n-photoyiw bzzaf d t-tsawer!\nB: Hhh yallah! Imta ghadi nhar9ou?",
+    "dialogue_francais": "A: Hey mon ami, j'ai une idée ! Tu veux qu'on aille à Chefchaouen ce week-end ?\nB: Chefchaouen ? Trop bien ! J'y suis jamais allé. On y va en bus ou en voiture ?\nA: Mieux vaut y aller en voiture. Le bus prend trop de temps.\nB: C'est vrai. Et on dort où ?\nA: J'ai trouvé un joli riad dans la médina. 500 dirhams la nuit pour deux.\nB: Super ! Et on fait quoi là-bas ?\nA: On se balade dans la ville bleue, on voit les cascades, et on achète des trucs au souk.\nB: Et la bouffe ? J'ai entendu que c'est super bon là-bas.\nA: Oui ! Faut qu'on goûte la pastilla et le tajine de chèvre. Et faut pas oublier de prendre plein de photos !\nB: Haha allez ! On part quand ?",
+    "dialogue_arabe": "A: أ صاحبي، عندي فيكرا! واش بغيتي نمشيو لشفشاون هاد الويكند؟\nB: شفشاون؟ واعر! أنا عمري ما مشيت تمّا. غادي نمشيو بالكار ولا بالطوموبيل؟\nA: حسن لينا نمشيو بالطوموبيل. الكار كياخد بزاف د الوقت.\nB: صحيح. و فين غادي نباتو؟\nA: لقيت واحد الرياض زوين ف المدينة القديمة. بخمس مية د الدريال الليلة ل جوج.\nB: مزيان! و شنو غادي نديرو تمّا؟\nA: غادي نتمشاو ف المدينة الزرقا، نشوفو الشلالات، و نشريو شي حوايج من السوق.\nB: و الماكلة؟ سمعت بللي الماكلة تمّا بنينة بزاف.\nA: إيه! خاص نجربو البسطيلة و طاجين المعزة. ما ننساوش نفوتويو بزاف د التصاور!\nB: ههه يالله! إمتى غادي نهرقو؟",
+    "vocabulaire": [
+      {"darija": "Ghadi nmchiw", "arabe": "غادي نمشيو", "francais": "On va aller"},
+      {"darija": "L-kar", "arabe": "الكار", "francais": "Le bus / Le car"},
+      {"darija": "T-tomobil", "arabe": "الطوموبيل", "francais": "La voiture"},
+      {"darija": "Nbatu", "arabe": "نباتو", "francais": "On dort / On passe la nuit"},
+      {"darija": "Riad", "arabe": "الرياض", "francais": "Riad (maison traditionnelle)"},
+      {"darija": "L-mdina z-zr9a", "arabe": "المدينة الزرقا", "francais": "La ville bleue"},
+      {"darija": "Bstilla / Pastilla", "arabe": "البسطيلة", "francais": "Pastilla (pâtisserie salée)"},
+      {"darija": "Nhar9ou", "arabe": "نهرقو", "francais": "On part / On décolle (argot)"}
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Commander au café marocain",
+    "objective": "Savoir commander un thé, un café et des pâtisseries",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "nourriture-boissons",
+    "grammar_focus": "Bghit + nom (je veux + nom)",
+    "chunk_focus": ["Bghit...", "3afak", "Chhal?", "Zid...", "Safi, chokran"],
+    "dialogue_darija": "A: Salam! Bghit wahd atay b na3na3, 3afak.\nB: Mrhba! Atay kbir wla sghir?\nA: Kbir, 3afak. W wahd l-msimn.\nB: Bghiti chi haja khra?\nA: Iyeh, wahd l-qhwa noss noss.\nB: Safi. Atay, qhwa noss noss, w msimn. Tlt3in d dryal.\nA: Hak. Chokran!\nB: Bsaha w raha!",
+    "dialogue_francais": "A: Salut ! Je voudrais un thé à la menthe, s'il te plaît.\nB: Bienvenue ! Thé grand ou petit ?\nA: Grand, s'il te plaît. Et un msemen.\nB: Tu veux autre chose ?\nA: Oui, un café moitié-moitié (café au lait).\nB: C'est bon. Thé, café au lait, et msemen. 30 dirhams.\nA: Tiens. Merci !\nB: Bon appétit !",
+    "dialogue_arabe": "A: السلام! بغيت واحد أتاي بالنعناع، عافاك.\nB: مرحبا! أتاي كبير ولا صغير؟\nA: كبير، عافاك. و واحد المسمن.\nB: بغيتي شي حاجة خرا؟\nA: إيه، واحد القهوة نص نص.\nB: صافي. أتاي، قهوة نص نص، و مسمن. تلاتين د الدريال.\nA: هاك. شكرا!\nB: بصحة و راحة!",
+    "vocabulaire": [
+      {"darija": "Atay", "arabe": "أتاي", "francais": "Thé à la menthe"},
+      {"darija": "Na3na3", "arabe": "النعناع", "francais": "Menthe"},
+      {"darija": "Qhwa", "arabe": "القهوة", "francais": "Café"},
+      {"darija": "Noss noss", "arabe": "نص نص", "francais": "Moitié-moitié (café au lait)"},
+      {"darija": "Msimn / Msemen", "arabe": "المسمن", "francais": "Crêpe feuilletée marocaine"},
+      {"darija": "Bghit", "arabe": "بغيت", "francais": "Je veux / Je voudrais"},
+      {"darija": "Bsaha w raha", "arabe": "بصحة و راحة", "francais": "Bon appétit"},
+      {"darija": "Kbir / Sghir", "arabe": "كبير / صغير", "francais": "Grand / Petit"}
+    ]
+  },
+  {
+    "title": "Au restaurant - Commander un tajine",
+    "objective": "Commander un repas complet et demander l'addition",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "nourriture-boissons",
+    "grammar_focus": "3ndkom...? (vous avez ?) + Bghit + choix",
+    "chunk_focus": ["3ndkom...?", "Chnou kayn lyoum?", "Jib liya...", "L-hssab 3afak"],
+    "dialogue_darija": "A: Salam! 3ndkom chi tabla fargha?\nB: Iyeh, t3al hna. Hak l-menu.\nA: Chokran. Chnou kayn lyoum?\nB: Kayn tajine b l-hout, tajine b d-djaj, w couscous.\nA: Bghit tajine b d-djaj. W wahd salata mchawiya.\nB: W l-machroub?\nA: Wahd l-ma, 3afak.\nB: Safi, ghadi y-ji f 3achrine d d-dqiqa.\n... (b3d l-makla) ...\nA: Kana bnin bzzaf! L-hssab, 3afak.\nB: Mia d dryal.\nA: Hak. Chokran! Saha ftourek!\nB: Allah y3tik saha!",
+    "dialogue_francais": "A: Salut ! Vous avez une table libre ?\nB: Oui, viens ici. Tiens le menu.\nA: Merci. Qu'est-ce qu'il y a aujourd'hui ?\nB: Il y a un tajine au poisson, tajine au poulet, et couscous.\nA: Je voudrais un tajine au poulet. Et une salade grillée.\nB: Et la boisson ?\nA: Une eau, s'il te plaît.\nB: C'est bon, ça arrive dans 20 minutes.\n... (après le repas) ...\nA: C'était très bon ! L'addition, s'il vous plaît.\nB: 100 dirhams.\nA: Tiens. Merci ! Bon appétit !\nB: Que Dieu te donne la santé !",
+    "dialogue_arabe": "A: السلام! عندكم شي طابلا فارغة؟\nB: إيه، تعال هنا. هاك المونو.\nA: شكرا. شنو كاين ليوم؟\nB: كاين طاجين بالحوت، طاجين بالدجاج، و كسكس.\nA: بغيت طاجين بالدجاج. و واحد سلاطة مشوية.\nB: و المشروب؟\nA: واحد الما، عافاك.\nB: صافي، غادي يجي ف عشرين د الدقيقة.\nA: كان بنين بزاف! الحساب، عافاك.\nB: مية د الدريال.\nA: هاك. شكرا! صحة فتورك!\nB: الله يعطيك الصحة!",
+    "vocabulaire": [
+      {"darija": "Tajine", "arabe": "طاجين", "francais": "Tajine (plat traditionnel)"},
+      {"darija": "Djaj", "arabe": "الدجاج", "francais": "Poulet"},
+      {"darija": "L-hout", "arabe": "الحوت", "francais": "Poisson"},
+      {"darija": "Couscous / Ksskss", "arabe": "كسكس", "francais": "Couscous"},
+      {"darija": "Bnin", "arabe": "بنين", "francais": "Délicieux"},
+      {"darija": "L-hssab", "arabe": "الحساب", "francais": "L'addition"},
+      {"darija": "3ndkom?", "arabe": "عندكم؟", "francais": "Vous avez ?"},
+      {"darija": "Kayn", "arabe": "كاين", "francais": "Il y a"}
+    ]
+  }
+]

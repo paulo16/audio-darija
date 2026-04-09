@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Mon premier jour à Casablanca",
+    "cefr_level": "A1",
+    "theme": "histoires",
+    "estimated_minutes": 4,
+    "description": "Une histoire simple sur l'arrivée au Maroc - vocabulaire de base",
+    "story_darija": "Ana smiti Paul. Ana mn Fransa. Lyoum, ana f Casablanca!\n\nMchit l-l-hôtel. Glt l-rajl: 'Salam! 3ndi réservation.'\nRajl gal liya: 'Mrhba! Smitk?'\nAna glt: 'Paul Dupont.'\nRajl gal: 'Ah, mrhba bik f Casa! Hak l-mfta7 dyal l-bit.'\n\nTl3t l-l-bit. L-bit kbir w zwin!\nMn b3d, mchit l-café. Glt: '3afak, wa7d atay b n-n3na3.'\nAtay kan bnin bzzaf!\n\nAna ferhane. Casa mdina kbira w zwina.",
+    "story_francais": "Je m'appelle Paul. Je suis de France. Aujourd'hui, je suis à Casablanca !\n\nJe suis allé à l'hôtel. J'ai dit à l'homme : 'Bonjour ! J'ai une réservation.'\nL'homme m'a dit : 'Bienvenue ! Votre nom ?'\nJ'ai dit : 'Paul Dupont.'\nL'homme a dit : 'Ah, bienvenue à Casa ! Voici la clé de la chambre.'\n\nJe suis monté à la chambre. La chambre est grande et belle !\nAprès, je suis allé au café. J'ai dit : 'S'il vous plaît, un thé à la menthe.'\nLe thé était très bon !\n\nJe suis content. Casa est une grande et belle ville.",
+    "story_arabe": "أنا سميتي بول. أنا من فرانسا. اليوم، أنا ف كازابلانكا!\n\nمشيت للأوتيل. قلت للراجل: السلام! عندي ريزرفاسيون.\nالراجل قال ليا: مرحبا! سميتك؟\nأنا قلت: بول دوبون.\nالراجل قال: آه، مرحبا بيك ف كازا! هاك المفتاح ديال البيت.\n\nطلعت للبيت. البيت كبير و زوين!\nمن بعد، مشيت للكافي. قلت: عافاك، واحد أتاي بالنعناع.\nالأتاي كان بنين بزاف!\n\nأنا فرحان. كازا مدينة كبيرة و زوينة.",
+    "vocabulaire_cle": [
+      {"darija": "L-hôtel", "francais": "L'hôtel"},
+      {"darija": "L-mfta7", "francais": "La clé"},
+      {"darija": "L-bit", "francais": "La chambre"},
+      {"darija": "Tl3t", "francais": "Je suis monté"},
+      {"darija": "Ferhane", "francais": "Content / Heureux"},
+      {"darija": "Mdina", "francais": "Ville"}
+    ]
+  },
+  {
+    "title": "Perdre son chemin dans la médina",
+    "cefr_level": "A2",
+    "theme": "histoires",
+    "estimated_minutes": 5,
+    "description": "Se perdre dans la médina et demander de l'aide - directions et interactions",
+    "story_darija": "Wa7d n-nhar, mchit l-médina l-9dima f Fes. Kont bghit nchri chi 7waj mn s-souk.\n\nDkhlt f d-droub... w tlaht! Ma 3rft fin ana. Koll d-droub ka-ytshabhou!\n\nChft wa7d d-drri sghir. Glt lih: '3afak, fin l-bab l-kbir?'\nD-drri gal: 'B3id! Sir nishan, mn b3d dour 3la liser, w mn b3d soul wa7d khor.'\n\nMchit... walakin tlaht marra khra! Daba bdit ka-nkhaf chwiya.\n\nChft wa7d l-3joz. Glt liha: 'Mama, ana tlah, 3awnini!'\nL-3joz dh9at w galat: 'Aji m3aya a wlidi, ana ghadi nwrrihalk.'\n\nMchat m3aya htta l-bab. Glt liha: 'Chokran bzzaf mama!'\nGalat: 'Bla jmil a wlidi. L-marra j-jaya, khod guide!'",
+    "story_francais": "Un jour, je suis allé à la vieille médina de Fès. Je voulais acheter des vêtements au souk.\n\nJe suis entré dans les ruelles... et je me suis perdu ! Je ne savais plus où j'étais. Toutes les ruelles se ressemblent !\n\nJ'ai vu un petit garçon. Je lui ai dit : 'S'il te plaît, où est la grande porte ?'\nLe garçon a dit : 'C'est loin ! Va tout droit, puis tourne à gauche, et après demande à quelqu'un d'autre.'\n\nJ'ai marché... mais je me suis perdu encore ! Là j'ai commencé à avoir un peu peur.\n\nJ'ai vu une vieille dame. Je lui ai dit : 'Madame, je suis perdu, aidez-moi !'\nLa vieille dame a ri et a dit : 'Viens avec moi mon fils, je vais te montrer.'\n\nElle a marché avec moi jusqu'à la porte. Je lui ai dit : 'Merci beaucoup madame !'\nElle a dit : 'De rien mon fils. La prochaine fois, prends un guide !'",
+    "story_arabe": "واحد النهار، مشيت للمدينة القديمة ف فاس. كنت بغيت نشري شي حوايج من السوق.\n\nدخلت ف الدروب... و تلاهيت! ما عرفت فين أنا. كل الدروب كايتشابهو!\n\nشفت واحد الدري صغير. قلت ليه: عافاك، فين الباب الكبير؟\nالدري قال: بعيد! سير نيشان، من بعد دور على ليسر، و من بعد سول واحد خور.\n\nمشيت... ولاكين تلاهيت مرة خرا! دابا بديت كانخاف شوية.\n\nشفت واحد العجوز. قلت ليها: ماما، أنا تلاه، عاوننيني!\nالعجوز ضحكات و قالت: أجي معايا أ وليدي، أنا غادي نوريهالك.\n\nمشات معايا حتى للباب. قلت ليها: شكرا بزاف ماما!\nقالت: بلا جميل أ وليدي. المرة الجاية، خد كيد!",
+    "vocabulaire_cle": [
+      {"darija": "Tlaht/Tlah", "francais": "Je me suis perdu(e)"},
+      {"darija": "D-droub", "francais": "Les ruelles"},
+      {"darija": "L-bab l-kbir", "francais": "La grande porte"},
+      {"darija": "L-3joz", "francais": "La vieille dame"},
+      {"darija": "3awnini", "francais": "Aide-moi"},
+      {"darija": "Ka-nkhaf", "francais": "J'ai peur"},
+      {"darija": "Nwrrihalk", "francais": "Je vais te montrer"},
+      {"darija": "L-marra j-jaya", "francais": "La prochaine fois"}
+    ]
+  },
+  {
+    "title": "Une journée au travail à Rabat",
+    "cefr_level": "B1",
+    "theme": "histoires",
+    "estimated_minutes": 7,
+    "description": "Une journée type au bureau - routine, collègues, problèmes quotidiens",
+    "story_darija": "N9t f s-stta d ssba7, kif l-3ada. Khddit douche, lbsst w khrejt mn d-dar bla ma nftour 7it kant m3tl.\n\nRkbt f t-tram l-Agdal. Kant zzh9a bzzaf! N-nas koll-hom ka-ymchiw l-khdma f nfs l-w9t.\n\nWsalt l-l-bureau f tmnya w rb3. L-patron diiali kan 3ssbi lyoum. Gal lina: 'Khassna nkmlou l-projet 9bl nhar l-jm3a!'\n\nKhdmt bzzaf. F jjouj, mklit wa7d sandwich 7da l-ordinateur 7it ma kan 3ndi w9t.\n\nF l-3chiya, wa7d l-collègue dyali gal liya: 'A khouya, wach bghiti nmchiw nchrbou chi 9hwa mn b3d l-khdma?'\nGlt lih: 'Top! Khassni nkhrej mn had l-bureau.'\n\nMchina l-café f Hay Riad. Hderna, dh9na, w nsina stress dyal l-khdma.\n\nRj3t l-dar f s-sab3a w noss. 3yyan walakin content. Had-chi howa l-7ayat dyal koll nhar.",
+    "story_francais": "Je me suis levé à 6h du matin, comme d'habitude. J'ai pris une douche, je me suis habillé et je suis sorti de la maison sans petit-déjeuner parce que j'étais en retard.\n\nJ'ai pris le tram vers Agdal. C'était bondé ! Tout le monde va au travail en même temps.\n\nJe suis arrivé au bureau à 8h15. Mon patron était stressé aujourd'hui. Il nous a dit : 'Il faut finir le projet avant vendredi !'\n\nJ'ai beaucoup travaillé. À 14h, j'ai mangé un sandwich devant l'ordinateur parce que j'avais pas le temps.\n\nLe soir, un collègue m'a dit : 'Mon frère, tu veux qu'on aille boire un café après le travail ?'\nJe lui ai dit : 'Super ! Faut que je sorte de ce bureau.'\n\nOn est allés au café à Hay Riad. On a parlé, on a ri, et on a oublié le stress du travail.\n\nJe suis rentré à la maison à 19h30. Fatigué mais content. C'est ça la vie de tous les jours.",
+    "story_arabe": "نقت ف الستة ديال الصباح، كيف العادة. خديت دوش، لبست و خرجت من الدار بلا ما نفطور حيت كنت معطل.\n\nركبت ف الطرام للأكدال. كانت الزحقة بزاف! الناس كلهم كايمشيو للخدمة ف نفس الوقت.\n\nوصلت للبيرو ف تمنية و ربع. الباطرون ديالي كان عصبي اليوم. قال لينا: خاصنا نكملو البروجي قبل نهار الجمعة!\n\nخدمت بزاف. ف جوج، مكليت واحد السانويتش حدا الأورديناتور حيت ما كان عندي وقت.\n\nف العشية، واحد الكوليڭ ديالي قال ليا: أ خويا، واش بغيتي نمشيو نشربو شي قهوة من بعد الخدمة؟\nقلت ليه: توب! خاصني نخرج من هاد البيرو.\n\nمشينا للكافي ف حي الرياض. هدرنا، ضحكنا، و نسينا ستريس ديال الخدمة.\n\nرجعت للدار ف السابعة و نص. عيّان ولاكين كونتون. هادشي هو الحياة ديال كل نهار.",
+    "vocabulaire_cle": [
+      {"darija": "M3tl", "francais": "En retard"},
+      {"darija": "Zzh9a", "francais": "Bondé / Affluence"},
+      {"darija": "L-patron", "francais": "Le patron"},
+      {"darija": "3ssbi", "francais": "Stressé / Nerveux"},
+      {"darija": "L-khdma", "francais": "Le travail"},
+      {"darija": "Dh9na", "francais": "On a ri"},
+      {"darija": "Nsina", "francais": "On a oublié"},
+      {"darija": "L-7ayat", "francais": "La vie"}
+    ]
+  },
+  {
+    "title": "Le mariage de mon ami Ahmed",
+    "cefr_level": "B1",
+    "theme": "histoires",
+    "estimated_minutes": 7,
+    "description": "Assister à un mariage marocain traditionnel - culture et traditions",
+    "story_darija": "S7abi Ahmed t-zwwj l-bareh! Kanat 3rss kbira bzzaf f Marrakech.\n\nL-3rss bdat f l-3chiya. L-3roussa - smitha Khadija - kanat lbla l-9eftan l-7mr mzyan bzzaf. Ahmed kan lbs djellaba bayda.\n\nKan l-3cha f riad kbir. Klina couscous b l-lhem, pastilla, w tajine. L-makla kanat bnina bzzaf!\n\nMn b3d, jat l-neggafa w bdaw l-3yalat ka-yzghrttou. L-mou9sisyin bdaw ka-yl3bou chaabi.\n\nAna w s7abi drabna w rq9na htta l-jouj d l-lil! 3yinna walakin f9rina bzzaf.\n\nAhmed gal liya: 'Khouya, chokran lli jiti. Nta mn l-a7bab diali.'\nGlt lih: 'Allah ybarek l-3mrek! Nchallah t-fre7 dima.'\n\nRj3t l-l-hôtel 3yyan walakin ferhane. 3rss maghribia = 7fla kbira!",
+    "story_francais": "Mon ami Ahmed s'est marié hier ! C'était un grand mariage à Marrakech.\n\nLe mariage a commencé le soir. La mariée - elle s'appelle Khadija - portait un beau caftan rouge. Ahmed portait une djellaba blanche.\n\nLe dîner était dans un grand riad. On a mangé du couscous avec de la viande, de la pastilla, et du tajine. La nourriture était délicieuse !\n\nAprès, la neggafa est arrivée et les femmes ont commencé à pousser des youyous. Les musiciens ont commencé à jouer du chaabi.\n\nMes amis et moi, on a dansé et on s'est amusés jusqu'à 2h du matin ! On était fatigués mais on s'è bien éclatés.\n\nAhmed m'a dit : 'Mon frère, merci d'être venu. Tu fais partie de mes proches.'\nJe lui ai dit : 'Que Dieu bénisse ta vie ! En espérant que tu sois toujours heureux.'\n\nJe suis rentré à l'hôtel fatigué mais heureux. Un mariage marocain = une grande fête !",
+    "story_arabe": "صحابي أحمد تزوج البارح! كانت عرس كبيرة بزاف ف مراكش.\n\nالعرس بدات ف العشية. العروسة ـ سميتها خديجة ـ كانت لابسة القفطان الأحمر مزيان بزاف. أحمد كان لابس جلابة بيضا.\n\nكان العشا ف رياض كبير. كلينا كسكس بالالحم، بسطيلة، و طاجين. الماكلة كانت بنينة بزاف!\n\nمن بعد، جات النقافة و بداو العيالات كايزغرتو. الموسيقيين بداو كايلعبو شعبي.\n\nأنا و صحابي دربنا و رقصنا حتى لجوج ديال الليل! عيّينا ولاكين فقرينا بزاف.\n\nأحمد قال ليا: خويا، شكرا اللي جيتي. نتا من الاحباب ديالي.\nقلت ليه: الله يبارك لعمرك! إن شاء الله تفرح ديما.\n\nرجعت للأوتيل عيّان ولاكين فرحان. عرس مغربية يساوي حفلة كبيرة!",
+    "vocabulaire_cle": [
+      {"darija": "L-3rss", "francais": "Le mariage / La fête"},
+      {"darija": "L-3roussa", "francais": "La mariée"},
+      {"darija": "L-9eftan", "francais": "Le caftan"},
+      {"darija": "Djellaba", "francais": "Djellaba (vêtement traditionnel)"},
+      {"darija": "L-neggafa", "francais": "La neggafa (habille la mariée)"},
+      {"darija": "Ka-yzghrttou", "francais": "Poussent des youyous"},
+      {"darija": "Rq9na", "francais": "On a dansé"},
+      {"darija": "Allah ybarek l-3mrek", "francais": "Que Dieu bénisse ta vie"}
+    ]
+  }
+]

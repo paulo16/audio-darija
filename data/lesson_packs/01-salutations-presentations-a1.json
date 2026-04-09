@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Première rencontre au café",
+    "objective": "Apprendre à se présenter et saluer en darija",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "salutations-presentations",
+    "grammar_focus": "Pronoms personnels + verbe être (ana, nta/nti, huwa/hiya)",
+    "chunk_focus": ["Salam!", "Kif dayer/dayra?", "Ana smiti...", "Mcharfin", "Bslama"],
+    "dialogue_darija": "A: Salam! Kif dayer?\nB: Salam! Labas, lhamdullah. W nta?\nA: Ana labas. Ana smiti Youssef. W nta, chnou smitk?\nB: Ana smiti Karim. Mcharfin!\nA: Mcharfin! Nta mn fin?\nB: Ana mn Casa. W nta?\nA: Ana mn Rabat. Ferhane bla tla9itek!\nB: Ana tani. Bslama!",
+    "dialogue_francais": "A: Salut ! Comment vas-tu ?\nB: Salut ! Ça va, grâce à Dieu. Et toi ?\nA: Je vais bien. Je m'appelle Youssef. Et toi, comment tu t'appelles ?\nB: Je m'appelle Karim. Enchanté !\nA: Enchanté ! Tu viens d'où ?\nB: Je suis de Casa. Et toi ?\nA: Je suis de Rabat. Content de te rencontrer !\nB: Moi aussi. Au revoir !",
+    "dialogue_arabe": "A: السلام! كيف داير؟\nB: السلام! لاباس، الحمد لله. و نتا؟\nA: أنا لاباس. أنا سميتي يوسف. و نتا، شنو سميتك؟\nB: أنا سميتي كريم. مشرفين!\nA: مشرفين! نتا من فين؟\nB: أنا من كازا. و نتا؟\nA: أنا من الرباط. فرحان بلا تلاقيتك!\nB: أنا تاني. بسلامة!",
+    "vocabulaire": [
+      {"darija": "Salam", "arabe": "السلام", "francais": "Salut / Bonjour"},
+      {"darija": "Kif dayer/dayra", "arabe": "كيف داير/دايرة", "francais": "Comment vas-tu ? (m/f)"},
+      {"darija": "Labas", "arabe": "لاباس", "francais": "Ça va / Bien"},
+      {"darija": "Lhamdullah", "arabe": "الحمد لله", "francais": "Grâce à Dieu"},
+      {"darija": "Smiti", "arabe": "سميتي", "francais": "Mon nom / Je m'appelle"},
+      {"darija": "Mcharfin", "arabe": "مشرفين", "francais": "Enchanté(e)"},
+      {"darija": "Mn fin?", "arabe": "من فين؟", "francais": "D'où ?"},
+      {"darija": "Bslama", "arabe": "بسلامة", "francais": "Au revoir"}
+    ]
+  },
+  {
+    "title": "Au souk - acheter des légumes",
+    "objective": "Demander le prix et négocier au marché",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "salutations-presentations",
+    "grammar_focus": "Questions simples + nombres basiques",
+    "chunk_focus": ["Bchhal?", "Ghali bzzaf!", "3tini...", "Chokran bzzaf", "Safi"],
+    "dialogue_darija": "A: Salam khouya! 3afak, bchhal l-kilo dyal t-tomaticha?\nB: B khamsa d dryal, a khouya.\nA: Ghali bzzaf! Nqss liya chwiya?\nB: Akhir taman, rb3a d dryal.\nA: Wakha. 3tini jouj kilo.\nB: Hak, khouya. Chhal hadi? 3echra d dryal.\nA: Hak. Chokran bzzaf!\nB: Bla jmil. Bslama!",
+    "dialogue_francais": "A: Salut mon frère ! S'il te plaît, c'est combien le kilo de tomates ?\nB: C'est 5 dirhams, mon frère.\nA: C'est trop cher ! Tu peux baisser un peu ?\nB: Dernier prix, 4 dirhams.\nA: D'accord. Donne-moi 2 kilos.\nB: Tiens, mon frère. Combien ça fait ? 10 dirhams.\nA: Tiens. Merci beaucoup !\nB: De rien. Au revoir !",
+    "dialogue_arabe": "A: السلام خويا! عافاك، بشحال الكيلو ديال الطماطيشا؟\nB: بخمسة د الدريال، أ خويا.\nA: غالي بزاف! نقص ليا شوية؟\nB: آخر تمن، ربعة د الدريال.\nA: واخا. عطيني جوج كيلو.\nB: هاك، خويا. شحال هادي؟ عشرة د الدريال.\nA: هاك. شكرا بزاف!\nB: بلا جميل. بسلامة!",
+    "vocabulaire": [
+      {"darija": "Khouya", "arabe": "خويا", "francais": "Mon frère (terme amical)"},
+      {"darija": "3afak", "arabe": "عافاك", "francais": "S'il te plaît"},
+      {"darija": "Bchhal?", "arabe": "بشحال؟", "francais": "Combien ?"},
+      {"darija": "Ghali", "arabe": "غالي", "francais": "Cher"},
+      {"darija": "Bzzaf", "arabe": "بزاف", "francais": "Beaucoup / Trop"},
+      {"darija": "3tini", "arabe": "عطيني", "francais": "Donne-moi"},
+      {"darija": "Wakha", "arabe": "واخا", "francais": "D'accord"},
+      {"darija": "Chokran", "arabe": "شكرا", "francais": "Merci"}
+    ]
+  },
+  {
+    "title": "Prendre un taxi à Casablanca",
+    "objective": "Savoir donner une destination et négocier le prix du taxi",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "salutations-presentations",
+    "grammar_focus": "Impératif simple + directions basiques",
+    "chunk_focus": ["Wssalni l-...", "Bchhal?", "Sir nishan", "3la limen/liser", "Wa9f hna"],
+    "dialogue_darija": "A: Salam khouya! Taxi! Wssalni l-derb Sultan.\nB: Ahlan. Bchhal t3ti?\nA: 3echra d dryal?\nB: La, khamstach.\nA: Tnach? Safi?\nB: Wakha, t3al rkeb.\nA: Chokran. Sir nishan, w men b3d dour 3la limen.\nB: Hana wsalna. Tnach d dryal.\nA: Hak. Chokran khouya!\nB: Bslama!",
+    "dialogue_francais": "A: Salut mon frère ! Taxi ! Emmène-moi à Derb Sultan.\nB: Bienvenue. Combien tu donnes ?\nA: 10 dirhams ?\nB: Non, 15.\nA: 12 ? C'est bon ?\nB: D'accord, monte.\nA: Merci. Va tout droit, et après tourne à droite.\nB: On est arrivés. 12 dirhams.\nA: Tiens. Merci mon frère !\nB: Au revoir !",
+    "dialogue_arabe": "A: السلام خويا! طاكسي! وصلني لدرب السلطان.\nB: أهلا. بشحال تعطي؟\nA: عشرة د الدريال؟\nB: لا، خمستاش.\nA: طناش؟ صافي؟\nB: واخا، تعال اركب.\nA: شكرا. سير نيشان، ومن بعد دور على ليمن.\nB: هانا وصلنا. طناش د الدريال.\nA: هاك. شكرا خويا!\nB: بسلامة!",
+    "vocabulaire": [
+      {"darija": "Wssalni", "arabe": "وصلني", "francais": "Emmène-moi"},
+      {"darija": "Sir nishan", "arabe": "سير نيشان", "francais": "Va tout droit"},
+      {"darija": "Dour 3la limen", "arabe": "دور على ليمن", "francais": "Tourne à droite"},
+      {"darija": "Dour 3la liser", "arabe": "دور على ليسر", "francais": "Tourne à gauche"},
+      {"darija": "Wa9f hna", "arabe": "وقف هنا", "francais": "Arrête-toi ici"},
+      {"darija": "Wsalna", "arabe": "وصلنا", "francais": "On est arrivés"},
+      {"darija": "Rkeb", "arabe": "اركب", "francais": "Monte (dans le véhicule)"},
+      {"darija": "T3al", "arabe": "تعال", "francais": "Viens"}
+    ]
+  }
+]

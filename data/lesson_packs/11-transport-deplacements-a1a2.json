@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Taxi vers Hay Riad",
+    "objective": "Prendre un taxi et donner sa destination dans un quartier connu",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "transport-deplacements",
+    "grammar_focus": "Wssalni l- + négociation du prix",
+    "chunk_focus": ["Wssalni l-...", "Bchhal?", "Ghali!", "Nqss chwiya"],
+    "dialogue_darija": "A: Salam khouya! Taxi! Wssalni l-Hay Riad.\nB: Hay Riad? 3chrin d dirham.\nA: 3chrin?! Ghali bzzaf khouya! Khmstach?\nB: La la, akhir taman tmntach.\nA: Wakha, yallah. Dkhol mn t-tri9 dyal l-autoroute.\nB: Safi, rkeb.\nA: Chokran. Wa9f hna 3afak, 7da l-mall.\nB: Hak, wsalna. Tmntach d dirham.",
+    "dialogue_francais": "A: Salut mon frère ! Taxi ! Emmène-moi à Hay Riad.\nB: Hay Riad ? 20 dirhams.\nA: 20 ?! C'est trop cher mon frère ! 15 ?\nB: Non non, dernier prix 18.\nA: D'accord, allez. Passe par la route de l'autoroute.\nB: C'est bon, monte.\nA: Merci. Arrête-toi ici s'il te plaît, à côté du mall.\nB: Tiens, on est arrivés. 18 dirhams.",
+    "dialogue_arabe": "A: السلام خويا! طاكسي! وصلني لحي الرياض.\nB: حي الرياض؟ عشرين درهم.\nA: عشرين؟! غالي بزاف خويا! خمستاش؟\nB: لا لا، آخر تمن تمنتاش.\nA: واخا، يالله. دخل من الطريق ديال الأوطوروت.\nB: صافي، اركب.\nA: شكرا. وقف هنا عافاك، حدا المّول.\nB: هاك، وصلنا. تمنتاش درهم.",
+    "vocabulaire": [
+      {"darija": "Wssalni l-...", "arabe": "وصلني ل...", "francais": "Emmène-moi à..."},
+      {"darija": "Hay Riad", "arabe": "حي الرياض", "francais": "Quartier Hay Riad (Rabat)"},
+      {"darija": "Ghali bzzaf", "arabe": "غالي بزاف", "francais": "Trop cher"},
+      {"darija": "Akhir taman", "arabe": "آخر تمن", "francais": "Dernier prix"},
+      {"darija": "T-tri9", "arabe": "الطريق", "francais": "La route / Le chemin"},
+      {"darija": "7da", "arabe": "حدا", "francais": "À côté de"},
+      {"darija": "Wa9f", "arabe": "وقف", "francais": "Arrête-toi"},
+      {"darija": "Dirham", "arabe": "درهم", "francais": "Dirham (monnaie)"}
+    ]
+  },
+  {
+    "title": "Aller à Salé en petit taxi",
+    "objective": "Aller d'un quartier à une ville voisine en taxi",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "transport-deplacements",
+    "grammar_focus": "Directions + prix + négociation",
+    "chunk_focus": ["Ghadi l-...", "Bchhal l-course?", "B l-compteur", "Dkhol mn..."],
+    "dialogue_darija": "A: Salam! Wach ghadi l-Sla?\nB: Ah, rkeb. L-fin f Sla?\nA: L-hay Salam. Bchhal l-course?\nB: B l-compteur, wla bghiti b smiya?\nA: B l-compteur 3afak.\nB: Wakha. Safi, yallah.\nA: 3afak, dkhol mn l-pont Hassan II.\nB: Hana wsalna l-hay Salam. L-compteur: khamsa w 3chrin dirham.\nA: Hak. Chokran bzzaf!\nB: Bla jmil, bslama!",
+    "dialogue_francais": "A: Salut ! Tu vas à Salé ?\nB: Oui, monte. Où à Salé ?\nA: À Hay Salam. C'est combien la course ?\nB: Au compteur, ou tu veux un prix fixe ?\nA: Au compteur s'il te plaît.\nB: D'accord. C'est bon, allez.\nA: S'il te plaît, passe par le pont Hassan II.\nB: On est arrivés à Hay Salam. Le compteur : 25 dirhams.\nA: Tiens. Merci beaucoup !\nB: De rien, au revoir !",
+    "dialogue_arabe": "A: السلام! واش غادي لسلا؟\nB: آه، اركب. لفين ف سلا؟\nA: لحي السلام. بشحال الكورس؟\nB: بالكونتور، ولا بغيتي بالسمية؟\nA: بالكونتور عافاك.\nB: واخا. صافي، يالله.\nA: عافاك، دخل من البون حسن الثاني.\nB: هانا وصلنا لحي السلام. الكونتور: خمسة و عشرين درهم.\nA: هاك. شكرا بزاف!\nB: بلا جميل، بسلامة!",
+    "vocabulaire": [
+      {"darija": "Sla / Salé", "arabe": "سلا", "francais": "Salé (ville voisine de Rabat)"},
+      {"darija": "L-course", "arabe": "الكورس", "francais": "La course (trajet taxi)"},
+      {"darija": "L-compteur", "arabe": "الكونتور", "francais": "Le compteur (taximeter)"},
+      {"darija": "B smiya", "arabe": "بالسمية", "francais": "Prix fixe / forfait"},
+      {"darija": "L-pont", "arabe": "البون", "francais": "Le pont"},
+      {"darija": "L-fin?", "arabe": "لفين؟", "francais": "Où ? / Vers où ?"},
+      {"darija": "Ghadi l-...", "arabe": "غادي ل...", "francais": "Je vais à..."},
+      {"darija": "Sla", "arabe": "سلا", "francais": "Salé"}
+    ]
+  },
+  {
+    "title": "Prendre le tram à Casablanca",
+    "objective": "Acheter un ticket et prendre le tram",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "transport-deplacements",
+    "grammar_focus": "Questions pratiques + acheter un ticket",
+    "chunk_focus": ["Fin l-ma7tta?", "Bchhal t-ticket?", "Had t-tram ghadi l-...?", "Nzl f..."],
+    "dialogue_darija": "A: 3afak, fin l-ma7tta dyal t-tram?\nB: Sir nishan, w dour 3la liser. Ghadi tl9aha f khmsa d d-9ay9.\nA: Chokran! W bchhal t-ticket?\nB: Stta d dirham l-wa7d.\nA: 3afak, had t-tram ghadi l-Ain Diab?\nB: Ah, had l-khat ghadi l-Ain Diab. Rkeb.\nA: Chokran. Fin ghadi nnzl l-corniche?\nB: Nzl f ma7tta 'Ain Diab'. Hiya t-talta mn hna.",
+    "dialogue_francais": "A: S'il te plaît, où est la station du tram ?\nB: Va tout droit, et tourne à gauche. Tu la trouveras dans 5 minutes.\nA: Merci ! Et combien le ticket ?\nB: 6 dirhams le ticket.\nA: S'il te plaît, ce tram va à Ain Diab ?\nB: Oui, cette ligne va à Ain Diab. Monte.\nA: Merci. Où je descends pour la corniche ?\nB: Descends à la station 'Ain Diab'. C'est la troisième d'ici.",
+    "dialogue_arabe": "A: عافاك، فين المحطة ديال الطرام؟\nB: سير نيشان، و دور على ليسر. غادي تلقاها ف خمسة د الدقايق.\nA: شكرا! و بشحال التيكي؟\nB: ستة درهم الواحد.\nA: عافاك، هاد الطرام غادي لعين الذياب؟\nB: آه، هاد الخط غادي لعين الذياب. اركب.\nA: شكرا. فين غادي ننزل للكورنيش؟\nB: نزل ف محطة عين الذياب. هي التالتة من هنا.",
+    "vocabulaire": [
+      {"darija": "T-tram", "arabe": "الطرام", "francais": "Le tram / Le tramway"},
+      {"darija": "L-ma7tta", "arabe": "المحطة", "francais": "La station / L'arrêt"},
+      {"darija": "T-ticket", "arabe": "التيكي", "francais": "Le ticket"},
+      {"darija": "L-khat", "arabe": "الخط", "francais": "La ligne"},
+      {"darija": "Nnzl", "arabe": "ننزل", "francais": "Je descends"},
+      {"darija": "D-9ay9", "arabe": "الدقايق", "francais": "Les minutes"},
+      {"darija": "T-talta", "arabe": "التالتة", "francais": "La troisième"},
+      {"darija": "Tl9aha", "arabe": "تلقاها", "francais": "Tu la trouveras"}
+    ]
+  },
+  {
+    "title": "Demander le chemin vers la gare",
+    "objective": "S'orienter en ville et demander des directions détaillées",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "transport-deplacements",
+    "grammar_focus": "Directions détaillées + distances + repères",
+    "chunk_focus": ["Fin kayna...?", "B3id wla 9rib?", "Sir nishan htta l-...", "3la limen/liser"],
+    "dialogue_darija": "A: 3afak khouya, fin kayna la gare?\nB: La gare? B3ida chwiya mn hna. Ma ymknch tmchi b rjlik.\nA: W kifach nmchi lhih? B taxi wla b bus?\nB: Akhod l-bus numero 30. L-ma7tta hna 9dam l-pharmacie.\nA: W bchhal t-ticket dyal l-bus?\nB: B 4 d dirham. Nzl f la gare, hiya l-ma7tta t-tassa3a.\nA: Chokran bzzaf khouya! W chhal d l-w9t ka-yakhod?\nB: Chi rb3in d d-9i9a.",
+    "dialogue_francais": "A: S'il te plaît mon frère, où est la gare ?\nB: La gare ? C'est un peu loin d'ici. Tu ne peux pas y aller à pied.\nA: Et comment j'y vais ? En taxi ou en bus ?\nB: Prends le bus numéro 30. L'arrêt est ici devant la pharmacie.\nA: Et combien le ticket du bus ?\nB: 4 dirhams. Descends à la gare, c'est le 9ème arrêt.\nA: Merci beaucoup mon frère ! Et ça prend combien de temps ?\nB: Environ 40 minutes.",
+    "dialogue_arabe": "A: عافاك خويا، فين كاينة لاغار؟\nB: لاغار؟ بعيدة شوية من هنا. ما يمكنش تمشي برجليك.\nA: و كيفاش نمشي ليها؟ بطاكسي ولا ببوس؟\nB: آخد البوس نوميرو تلاتين. المحطة هنا قدام الفارماسي.\nA: و بشحال التيكي ديال البوس؟\nB: بأربعة درهم. نزل ف لاغار، هي المحطة التاسعة.\nA: شكرا بزاف خويا! و شحال ديال الوقت كاياخد؟\nB: شي ربعين دقيقة.",
+    "vocabulaire": [
+      {"darija": "La gare", "arabe": "لاغار", "francais": "La gare"},
+      {"darija": "B3id/B3ida", "arabe": "بعيد/بعيدة", "francais": "Loin"},
+      {"darija": "9rib/9riba", "arabe": "قريب/قريبة", "francais": "Proche"},
+      {"darija": "B rjlik", "arabe": "برجليك", "francais": "À pied"},
+      {"darija": "Akhod", "arabe": "آخد", "francais": "Prends"},
+      {"darija": "L-bus", "arabe": "البوس", "francais": "Le bus"},
+      {"darija": "9dam", "arabe": "قدام", "francais": "Devant"},
+      {"darija": "L-w9t", "arabe": "الوقت", "francais": "Le temps"}
+    ]
+  },
+  {
+    "title": "Négocier un grand taxi vers Marrakech",
+    "objective": "Prendre un grand taxi interurbain et négocier le prix",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "transport-deplacements",
+    "grammar_focus": "Grand taxi vs petit taxi + prix par place + négociation",
+    "chunk_focus": ["Grand taxi l-...", "Bchhal l-blasssa?", "Imta ghadi ymchi?", "Mli ktml dyal n-nas"],
+    "dialogue_darija": "A: Salam! Bghit grand taxi l-Marrakech. Bchhal l-blasssa?\nB: Mi dirham l-blasssa.\nA: Ghali! Ma ymknch tmnin?\nB: La khouya, l-benzin ghali. Mi dirham akhir taman.\nA: Wakha. W imta ghadi ymchi?\nB: Mli ktml dyal n-nas. Bqaw jouj d l-blassat.\nA: Safi, ntsnnaw. Chhal d l-w9t l-Marrakech?\nB: Tlat swayy3, b la volonté d llah.\nA: Yallah, ntsnnaw.",
+    "dialogue_francais": "A: Salut ! Je veux un grand taxi pour Marrakech. C'est combien la place ?\nB: 100 dirhams la place.\nA: Cher ! C'est pas possible 80 ?\nB: Non mon frère, l'essence est chère. 100 dirhams dernier prix.\nA: D'accord. Et quand ça part ?\nB: Quand c'est plein. Il reste 2 places.\nA: OK, on attend. C'est combien de temps jusqu'à Marrakech ?\nB: 3 heures, si Dieu le veut.\nA: Allez, on attend.",
+    "dialogue_arabe": "A: السلام! بغيت كْران طاكسي لمراكش. بشحال البلاصة؟\nB: مية درهم البلاصة.\nA: غالي! ما يمكنش تمانين؟\nB: لا خويا، البنزين غالي. مية درهم آخر تمن.\nA: واخا. و إمتى غادي يمشي؟\nB: ملي كتمل ديال الناس. بقاو جوج ديال البلاصات.\nA: صافي، نتسناو. شحال ديال الوقت لمراكش؟\nB: تلات سوايع، بلا فولونتي ديال الله.\nA: يالله، نتسناو.",
+    "vocabulaire": [
+      {"darija": "Grand taxi", "arabe": "كْران طاكسي", "francais": "Grand taxi (interurbain)"},
+      {"darija": "L-blasssa", "arabe": "البلاصة", "francais": "La place (siège)"},
+      {"darija": "Ktml", "arabe": "كتمل", "francais": "Il se remplit"},
+      {"darija": "Bqaw", "arabe": "بقاو", "francais": "Il reste"},
+      {"darija": "Ntsnnaw", "arabe": "نتسناو", "francais": "On attend"},
+      {"darija": "Swayy3", "arabe": "سوايع", "francais": "Heures"},
+      {"darija": "L-benzin", "arabe": "البنزين", "francais": "L'essence"},
+      {"darija": "Imta?", "arabe": "إمتى؟", "francais": "Quand ?"}
+    ]
+  }
+]

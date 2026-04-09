@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Audio generated files
+data/lesson_audio/**/*.mp3
+data/ai_lessons_audio/
+data/connected_speech_audio/
+data/podcast_audio/
+data/story_audio/
+data/vocab_audio/
+
+# User data
+user_conversations/audio/
+user_conversations/sessions/
+user_conversations/shadowing/audio/

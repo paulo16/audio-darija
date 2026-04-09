@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Discussion sur le travail et les projets",
+    "objective": "Parler de son parcours professionnel et discuter de projets futurs",
+    "estimated_minutes": 7,
+    "cefr_level": "B2",
+    "theme": "travail-professionnel",
+    "grammar_focus": "Conditionnel (koun knt...) + subordonnées (7it, bach, 3lach)",
+    "chunk_focus": ["Ka-nkhdem f...", "Koun knt...", "Khasni...", "F l-moustaqbal", "Daba wlit ka-n..."],
+    "dialogue_darija": "A: Fin ka-tkhdem daba a Said?\nB: Daba wlit ka-nkhdem f wahd start-up dyal tech f Casa. Ka-ndiru t-tassmi dyal l-applications.\nA: Mzyan! W kif dayer m3ahom?\nB: L-khdma mzyana, walakin s-salaire machi kif ma bghit. Ka-nfkkr nbddl.\nA: 3lach? Wach 3ndk chi fikra?\nB: Iyeh, bghit nftah l-projet dyali. 3ndi wahd fikra dyal application bach t3awn n-nas ytssrfou f l-flouss dyalhom.\nA: Wa3r l-fikra! Walakin khass lik t-tamwil, la?\nB: S7i7. Koun knt nl9a chi investor, koun bdit mn daba. Daba ka-n7awl nkoun l-business plan.\nA: Sma3, ana 3ndi wahd sahbi ka-ykhdem f wahd banque d'investissement. Nqddmk lih?\nB: Wallah? Hadchi lli knt ka-ntsnna! 3afak dir liya had l-ma3rouf.\nA: Bla jmil. Ghadi n3yytlou ghda w n3tik l-khabar.",
+    "dialogue_francais": "A: Où tu travailles maintenant Saïd ?\nB: Maintenant je travaille dans une startup tech à Casa. On fait du design d'applications.\nA: Bien ! Et comment ça se passe avec eux ?\nB: Le boulot est bien, mais le salaire est pas comme je voudrais. Je pense à changer.\nA: Pourquoi ? T'as une idée ?\nB: Oui, je veux lancer mon propre projet. J'ai une idée d'appli pour aider les gens à gérer leur argent.\nA: Super idée ! Mais il te faut du financement, non ?\nB: C'est vrai. Si j'avais trouvé un investisseur, j'aurais déjà commencé. Là je prépare le business plan.\nA: Écoute, j'ai un ami qui bosse dans une banque d'investissement. Je te le présente ?\nB: Sérieux ? C'est exactement ce que j'attendais ! S'il te plaît fais-moi cette faveur.\nA: De rien. Je l'appelle demain et je te tiens au courant.",
+    "dialogue_arabe": "A: فين كاتخدم دابا أ سعيد؟\nB: دابا وليت كانخدم ف واحد ستارت أب ديال تيك ف كازا. كانديرو التصميم ديال التطبيقات.\nA: مزيان! و كيف داير معاهم؟\nB: الخدمة مزيانة، ولاكن السالير ماشي كيف ما بغيت. كانفكر نبدل.\nA: علاش؟ واش عندك شي فيكرة؟\nB: إيه، بغيت نفتح لبروجي ديالي. عندي واحد فيكرة ديال تطبيقة باش تعاون الناس يتصرفو ف الفلوس ديالهم.\nA: واعر الفيكرة! ولاكن خاص ليك التمويل، لا؟\nB: صحيح. كون كنت نلقى شي أنفستور، كون بديت من دابا. دابا كانحاول نكون لبيزنس بلان.\nA: سمع، أنا عندي واحد صاحبي كايخدم ف واحد بنك ديال الاستثمار. نقدمك ليه؟\nB: والله؟ هادشي اللي كنت كانتسنا! عافاك دير ليا هاد المعروف.\nA: بلا جميل. غادي نعيطلو غدا و نعطيك الخبار.",
+    "vocabulaire": [
+      {"darija": "Ka-nkhdem", "arabe": "كانخدم", "francais": "Je travaille"},
+      {"darija": "Start-up", "arabe": "ستارت أب", "francais": "Startup (emprunt)"},
+      {"darija": "S-salaire", "arabe": "السالير", "francais": "Le salaire (emprunt français)"},
+      {"darija": "Nbddl", "arabe": "نبدل", "francais": "Changer"},
+      {"darija": "Koun knt...", "arabe": "كون كنت...", "francais": "Si j'avais... (conditionnel)"},
+      {"darija": "T-tamwil", "arabe": "التمويل", "francais": "Le financement"},
+      {"darija": "L-ma3rouf", "arabe": "المعروف", "francais": "La faveur / Le service"},
+      {"darija": "N3tik l-khabar", "arabe": "نعطيك الخبار", "francais": "Je te tiens au courant"}
+    ]
+  },
+  {
+    "title": "Débat sur l'éducation au Maroc",
+    "objective": "Exprimer des opinions nuancées et débattre poliment",
+    "estimated_minutes": 7,
+    "cefr_level": "B2",
+    "theme": "societe-opinions",
+    "grammar_focus": "Expression d'opinion (ka-ndn / f ra2yi) + concession (walakin, m3a hadak...)",
+    "chunk_focus": ["F ra2yi...", "Ma mttaf9ch m3ak", "3ndk l-7qq walakin...", "L-mochkil howa...", "Khasna..."],
+    "dialogue_darija": "A: F ra2yi, l-ta3lim f l-Maroc khasso yt-bddl mn l-asas. L-brogramat 9dam w ma ka-yw3jbouch l-wlad.\nB: 3ndk l-7qq f chi 7wayj, walakin l-mochkil machi ghir l-brogramat. L-mochkil howa l-infrastricture w l-modir.\nA: Iyeh, walakin ila ma bddlnash l-tri9a lli ka-n3llmou biha, l-wlad machi ghadi yst3mlou dakchi lli t3llmouh.\nB: Sma3, ana ka-nchof blli l-moustaqbal f t-tknolojiya. Khass nddkhloha f koll chi.\nA: M3a hadak, machi koll chi yq9dr yt3llmou 3la l-internet. L-wlad khashom l-contact humain.\nB: Ma mqttaf9ch m3ak tmamat. L-contact muhim, walakin l-outils numériques ka-y3awnou bzzaf.\nA: Yqdar ykon. L-muhim howa n-naw3ou w ma nkhlliwch had l-fjo2a bin l-mdoun w l-bradi.\nB: Hna mttaf9in! L-3adala f t-ta3lim hiya l-asas.",
+    "dialogue_francais": "A: À mon avis, l'éducation au Maroc doit changer fondamentalement. Les programmes sont vieux et n'intéressent pas les enfants.\nB: T'as raison sur certains points, mais le problème c'est pas que les programmes. C'est l'infrastructure et la gestion.\nA: Oui, mais si on change pas la façon dont on enseigne, les enfants utiliseront jamais ce qu'ils apprennent.\nB: Écoute, moi je vois que l'avenir est dans la technologie. Il faut l'intégrer partout.\nA: Cela dit, tout ne peut pas s'apprendre sur internet. Les enfants ont besoin de contact humain.\nB: Je suis pas tout à fait d'accord. Le contact est important, mais les outils numériques aident beaucoup.\nA: Peut-être. L'essentiel c'est de diversifier et de ne pas laisser ce fossé entre les villes et les campagnes.\nB: Là on est d'accord ! L'égalité dans l'éducation est fondamentale.",
+    "dialogue_arabe": "A: ف رأيي، التعليم ف المغرب خاصو يتبدل من الأساس. البروغرامات قدام و ما كايعجبوش الولاد.\nB: عندك الحق ف شي حوايج، ولاكن المشكل ماشي غير البروغرامات. المشكل هوا الأنفراستريكتور و المودير.\nA: إيه، ولاكن إلا ما بدلناش الطريقة اللي كانعلمو بيها، الولاد ماشي غادي يستعملو داكشي اللي تعلموه.\nB: سمع، أنا كانشوف بللي المستقبل ف التكنولوجيا. خاص ندخلوها ف كولشي.\nA: مع هاداك، ماشي كولشي يقدر يتعلمو على الأنترنيت. الولاد خاصهم الكونتاكت هومان.\nB: ما مقتافقش معاك تماما. الكونتاكت مهم، ولاكن الأدوات النوميريك كايعاونو بزاف.\nA: يقدر يكون. المهم هوا ننوعو و ما نخليوش هاد الفجوة بين المدون و البرادي.\nB: هنا متافقين! العدالة ف التعليم هيا الأساس.",
+    "vocabulaire": [
+      {"darija": "F ra2yi", "arabe": "ف رأيي", "francais": "À mon avis"},
+      {"darija": "Ma mttaf9ch m3ak", "arabe": "ما متافقش معاك", "francais": "Je ne suis pas d'accord avec toi"},
+      {"darija": "M3a hadak", "arabe": "مع هاداك", "francais": "Cela dit / Néanmoins"},
+      {"darija": "L-mochkil", "arabe": "المشكل", "francais": "Le problème"},
+      {"darija": "Khasna", "arabe": "خاصنا", "francais": "Il faut qu'on..."},
+      {"darija": "L-bradi", "arabe": "البرادي", "francais": "La campagne / Les zones rurales"},
+      {"darija": "L-3adala", "arabe": "العدالة", "francais": "L'égalité / La justice"},
+      {"darija": "L-fjo2a", "arabe": "الفجوة", "francais": "Le fossé / L'écart"}
+    ]
+  }
+]
