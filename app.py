@@ -202,6 +202,51 @@ st.markdown(
         padding: 10px 0;
         z-index: 10;
     }
+
+    /* Loop audio button */
+    .audio-loop-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 6px 0;
+    }
+    .audio-loop-container audio {
+        flex: 1;
+        min-width: 0;
+        height: 40px;
+    }
+    .loop-btn {
+        background: #f0f0f0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex-shrink: 0;
+    }
+    .loop-btn:hover { background: #e0e0e0; }
+    .loop-btn.active {
+        background: #c1272d;
+        color: white;
+        border-color: #c1272d;
+    }
+
+    /* Playlist */
+    .playlist-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        margin: 4px 0;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 4px solid #1976d2;
+    }
+    .playlist-item.now-playing {
+        background: #e8f5e9;
+        border-left-color: #2e7d32;
+    }
 </style>
 """,
     unsafe_allow_html=True,
@@ -472,12 +517,24 @@ def audio_exists(lesson: dict) -> bool:
     return get_audio_path(lesson).exists()
 
 
-def display_audio_player(audio_path: Path):
-    """Affiche un lecteur audio si le fichier existe"""
+def display_audio_player(audio_path: Path, key: str = ""):
+    """Affiche un lecteur audio HTML avec bouton boucle si le fichier existe"""
     if audio_path.exists():
         with open(audio_path, "rb") as f:
-            audio_bytes = f.read()
-        st.audio(audio_bytes, format="audio/mp3")
+            audio_b64 = base64.b64encode(f.read()).decode()
+        uid = key or hashlib.md5(str(audio_path).encode()).hexdigest()[:10]
+        html = f'''
+        <div class="audio-loop-container">
+            <audio id="audio_{uid}" controls src="data:audio/mp3;base64,{audio_b64}"
+                   style="width:100%;height:40px;"></audio>
+            <button class="loop-btn" id="loopbtn_{uid}" onclick="
+                var a=document.getElementById('audio_{uid}');
+                a.loop=!a.loop;
+                this.classList.toggle('active',a.loop);
+                this.title=a.loop?'Boucle activée':'Boucle désactivée';
+            " title="Boucle désactivée">🔁</button>
+        </div>'''
+        st.markdown(html, unsafe_allow_html=True)
         return True
     return False
 
@@ -2065,8 +2122,7 @@ def page_histoires():
             # Audio
             if audio_path.exists():
                 st.markdown("### 🔊 Écouter l'histoire")
-                with open(audio_path, "rb") as af:
-                    st.audio(af.read(), format="audio/mp3")
+                display_audio_player(audio_path, key=f"story_{i}")
                 if st.button("🔄 Regénérer l'audio", key=f"regen_story_audio_{i}"):
                     audio_path.unlink(missing_ok=True)
                     st.rerun()
@@ -2182,7 +2238,7 @@ def page_conversation():
         )
 
     # ── En-tête compact ──
-    hcol1, hcol2, hcol3 = st.columns([5, 3, 2])
+    hcol1, hcol2, hcol3, hcol4 = st.columns([5, 3, 1, 1])
     with hcol1:
         st.markdown("## 🎙️ Conversation Interactive")
     with hcol2:
@@ -2193,7 +2249,12 @@ def page_conversation():
         else:
             st.caption("⚠️ Aucune leçon en cours")
     with hcol3:
-        if st.button("🗑️ Effacer", key="clear_chat", help="Effacer la conversation"):
+        if st.button("🔄", key="restart_chat_top", help="Recommencer la conversation"):
+            st.session_state.chat_history = []
+            save_conversation_history(profile.get("id", "default"), [])
+            st.rerun()
+    with hcol4:
+        if st.button("🗑️", key="clear_chat", help="Effacer la conversation"):
             st.session_state.chat_history = []
             save_conversation_history(profile.get("id", "default"), [])
             st.rerun()
@@ -2236,7 +2297,17 @@ def page_conversation():
                             audio_b64 = base64.b64encode(af.read()).decode()
                         is_last = msg is st.session_state.chat_history[-1]
                         autoplay_attr = "autoplay" if is_last else ""
-                        chat_html += f'<audio controls {autoplay_attr} style="width:100%;max-width:350px;height:32px;margin:4px 0 8px 0;" src="data:audio/mp3;base64,{audio_b64}"></audio>'
+                        uid = msg['audio_id']
+                        chat_html += f'''<div class="audio-loop-container">
+                            <audio id="chat_audio_{uid}" controls {autoplay_attr}
+                                   style="width:100%;max-width:350px;height:32px;margin:4px 0 8px 0;"
+                                   src="data:audio/mp3;base64,{audio_b64}"></audio>
+                            <button class="loop-btn" id="loopbtn_chat_{uid}" onclick="
+                                var a=document.getElementById(\'chat_audio_{uid}\');
+                                a.loop=!a.loop;
+                                this.classList.toggle(\'active\',a.loop);
+                            " title="Boucle">🔁</button>
+                        </div>'''
     chat_html += "</div>"
     # Auto-scroll vers le bas
     chat_html += '<script>var cb=document.getElementById("chat-box");if(cb)cb.scrollTop=cb.scrollHeight;</script>'
@@ -2257,12 +2328,15 @@ def page_conversation():
         fin_col1, fin_col2 = st.columns(2)
         with fin_col1:
             eval_clicked = st.button(
-                "📊 Évaluer ma conversation", key="eval_conv", type="primary",
+                "📊 Évaluer ma conversation",
+                key="eval_conv",
+                type="primary",
                 use_container_width=True,
             )
         with fin_col2:
             restart_clicked = st.button(
-                "🔄 Recommencer une conversation", key="restart_conv",
+                "🔄 Recommencer une conversation",
+                key="restart_conv",
                 use_container_width=True,
             )
         if eval_clicked:
@@ -2291,7 +2365,9 @@ def page_conversation():
         # Compteur d'échanges restants
         remaining = MAX_EXCHANGES - user_msg_count
         if user_msg_count > 0:
-            st.caption(f"💬 {user_msg_count}/{MAX_EXCHANGES} échanges · {remaining} restant(s)")
+            st.caption(
+                f"💬 {user_msg_count}/{MAX_EXCHANGES} échanges · {remaining} restant(s)"
+            )
 
         st.markdown("")  # petit espace
         input_col1, input_col2 = st.columns([1, 4])
@@ -2372,7 +2448,9 @@ def page_conversation():
                 )
             with eval_col2:
                 eval_clicked = st.button(
-                    "📊 Évaluer ma conversation", key="eval_conv_early", type="secondary"
+                    "📊 Évaluer ma conversation",
+                    key="eval_conv_early",
+                    type="secondary",
                 )
             if eval_clicked:
                 with st.spinner("📊 Évaluation en cours..."):
@@ -2395,6 +2473,167 @@ def page_conversation():
 
 
 # ============================================================
+# PAGE PLAYLIST
+# ============================================================
+def page_playlist():
+    """Page playlist — rejouer les leçons en cours / terminées par thème ou aléatoirement."""
+    import random as _rnd
+
+    st.markdown("# 🎵 Playlist Audio")
+    st.markdown("Réécoute tes leçons en boucle, par thème ou en mode aléatoire.")
+
+    all_lessons = load_all_lessons()
+    profiles = load_profiles()
+    profile = profiles[0] if profiles else None
+    lesson_status = profile.get("lesson_status", {}) if profile else {}
+
+    # ── Filtres ──
+    st.markdown("### 🎛️ Filtres")
+    fcol1, fcol2, fcol3 = st.columns(3)
+    with fcol1:
+        status_filter = st.selectbox(
+            "📋 Statut",
+            ["Toutes (avec audio)", "En cours", "Terminées", "En cours + Terminées"],
+            key="pl_status",
+        )
+    with fcol2:
+        theme_keys = sorted(THEMES.keys())
+        theme_options = ["Tous les thèmes"] + [
+            THEMES[k]["nom"] for k in theme_keys
+        ]
+        selected_theme = st.selectbox("🏷️ Thème", theme_options, key="pl_theme")
+    with fcol3:
+        level_options = ["Tous"] + ["A1", "A2", "B1", "B2", "C1", "C2"]
+        selected_level = st.selectbox("📊 Niveau", level_options, key="pl_level")
+
+    # ── Filtrage ──
+    # Avec audio seulement
+    playlist = [l for l in all_lessons if audio_exists(l)]
+
+    # Par statut
+    if status_filter != "Toutes (avec audio)":
+        filtered_ids = set()
+        for lid, st_val in lesson_status.items():
+            if status_filter == "En cours" and st_val == "en_cours":
+                filtered_ids.add(lid)
+            elif status_filter == "Terminées" and st_val == "termine":
+                filtered_ids.add(lid)
+            elif status_filter == "En cours + Terminées" and st_val in (
+                "en_cours",
+                "termine",
+            ):
+                filtered_ids.add(lid)
+        playlist = [
+            l
+            for l in playlist
+            if f"{l['_source_file']}:{l['title']}" in filtered_ids
+        ]
+
+    # Par thème
+    if selected_theme != "Tous les thèmes":
+        theme_key = None
+        for k in theme_keys:
+            if THEMES[k]["nom"] == selected_theme:
+                theme_key = k
+                break
+        if theme_key:
+            playlist = [l for l in playlist if l.get("theme") == theme_key]
+
+    # Par niveau
+    if selected_level != "Tous":
+        playlist = [l for l in playlist if l.get("cefr_level") == selected_level]
+
+    # ── Mode aléatoire ──
+    shuffle = st.checkbox("🔀 Mode aléatoire", key="pl_shuffle")
+    if shuffle:
+        if "pl_shuffled_order" not in st.session_state or st.button(
+            "🔀 Re-mélanger", key="pl_reshuffle"
+        ):
+            order = list(range(len(playlist)))
+            _rnd.shuffle(order)
+            st.session_state.pl_shuffled_order = order
+        order = st.session_state.get("pl_shuffled_order", list(range(len(playlist))))
+        # Clamp to available playlist length
+        order = [i for i in order if i < len(playlist)]
+        playlist = [playlist[i] for i in order]
+
+    if not playlist:
+        st.info(
+            "Aucune leçon ne correspond à ces filtres. "
+            "Assure-toi d'avoir des leçons avec audio générés et des leçons commencées/terminées."
+        )
+        return
+
+    st.markdown(f"**🎧 {len(playlist)} leçon(s) dans la playlist**")
+    st.markdown("---")
+
+    # ── Lecture enchaînée (JavaScript) ──
+    play_all = st.checkbox("▶️ Lecture enchaînée (passe automatiquement à la suivante)", key="pl_chain")
+    loop_all = st.checkbox("🔁 Boucler toute la playlist", key="pl_loop_all")
+
+    # ── Affichage de la playlist ──
+    audio_ids = []
+    for idx, lesson in enumerate(playlist):
+        level = lesson.get("cefr_level", "?")
+        level_class = f"level-{level.lower()}"
+        lid = f"{lesson['_source_file']}:{lesson['title']}"
+        ls = lesson_status.get(lid)
+        status_icon = "📖" if ls == "en_cours" else ("✅" if ls == "termine" else "")
+
+        audio_path = get_audio_path(lesson)
+        with open(audio_path, "rb") as f:
+            audio_b64 = base64.b64encode(f.read()).decode()
+
+        uid = f"pl_{idx}"
+        audio_ids.append(uid)
+
+        st.markdown(
+            f'<span class="level-badge {level_class}">{level}</span> '
+            f"{status_icon} **{lesson['title']}**",
+            unsafe_allow_html=True,
+        )
+
+        html = f'''<div class="audio-loop-container">
+            <audio id="audio_{uid}" controls src="data:audio/mp3;base64,{audio_b64}"
+                   style="width:100%;height:40px;" class="playlist-audio"></audio>
+            <button class="loop-btn" id="loopbtn_{uid}" onclick="
+                var a=document.getElementById('audio_{uid}');
+                a.loop=!a.loop;
+                this.classList.toggle('active',a.loop);
+            " title="Boucle">🔁</button>
+        </div>'''
+        st.markdown(html, unsafe_allow_html=True)
+
+    # ── Script de lecture enchaînée ──
+    if play_all and len(audio_ids) > 1:
+        ids_js = ",".join(f"'audio_{uid}'" for uid in audio_ids)
+        loop_flag = "true" if loop_all else "false"
+        chain_script = f"""
+        <script>
+        (function() {{
+            var ids = [{ids_js}];
+            var loopAll = {loop_flag};
+            for (var i = 0; i < ids.length; i++) {{
+                (function(idx) {{
+                    var el = document.getElementById(ids[idx]);
+                    if (!el) return;
+                    el.addEventListener('ended', function() {{
+                        if (el.loop) return;  // skip if individual loop is on
+                        var next = idx + 1;
+                        if (next < ids.length) {{
+                            document.getElementById(ids[next]).play();
+                        }} else if (loopAll) {{
+                            document.getElementById(ids[0]).play();
+                        }}
+                    }});
+                }})(i);
+            }}
+        }})();
+        </script>"""
+        st.markdown(chain_script, unsafe_allow_html=True)
+
+
+# ============================================================
 # NAVIGATION
 # ============================================================
 def main():
@@ -2409,7 +2648,8 @@ def main():
             [
                 "🏠 Accueil",
                 "🎧 Leçons (Écoute)",
-                "🎙️ Conversation IA",
+                "� Playlist",
+                "�🎙️ Conversation IA",
                 "📖 Histoires",
                 "🎯 Shadowing",
                 "📚 Vocabulaire & Flashcards",
@@ -2461,7 +2701,9 @@ def main():
         page_accueil()
     elif page == "🎧 Leçons (Écoute)":
         page_lecons()
-    elif page == "🎙️ Conversation IA":
+    elif page == "� Playlist":
+        page_playlist()
+    elif page == "�🎙️ Conversation IA":
         page_conversation()
     elif page == "📖 Histoires":
         page_histoires()
