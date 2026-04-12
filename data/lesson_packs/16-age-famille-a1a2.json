@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Chhal f 3omrek ? - Parler de son âge",
+    "objective": "Apprendre à demander et dire son âge en darija",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "age-famille",
+    "grammar_focus": "Les nombres + 3and (avoir) + f 3omri (dans mon âge)",
+    "chunk_focus": ["Chhal f 3omrek?", "3andi ... 3am", "Kbar/sghir", "Twelder f..."],
+    "dialogue_darija": "A: Salam Fatima! Chhal f 3omrek?\nB: 3andi 25 3am. W nta Youssef?\nA: Ana 3andi 28 3am.\nB: Nta kbar menni b 3 snin!\nA: Iyeh, chway. W khtk, chhal f 3omrha?\nB: Khtei sghira, 3andha 18 3am. Hiya f l-jami3a.\nA: Mezyan! W mmak?\nB: Mmei 3andha 52 3am, lhamdullah bkhir.\nA: Llah ykhellih lik!",
+    "dialogue_francais": "A: Salut Fatima ! Quel âge tu as ?\nB: J'ai 25 ans. Et toi Youssef ?\nA: J'ai 28 ans.\nB: Tu es plus grand que moi de 3 ans !\nA: Oui, un peu. Et ta sœur, elle a quel âge ?\nB: Ma sœur est petite, elle a 18 ans. Elle est à l'université.\nA: Bien ! Et ta mère ?\nB: Ma mère a 52 ans, elle va bien grâce à Dieu.\nA: Que Dieu te la garde !",
+    "dialogue_arabe": "A: السلام فاطمة! شحال ف عمرك؟\nB: عندي 25 عام. و نتا يوسف؟\nA: أنا عندي 28 عام.\nB: نتا كبر مني ب 3 سنين!\nA: إيه، شوية. و ختك، شحال ف عمرها؟\nB: ختي صغيرة، عندها 18 عام. هيا ف الجامعة.\nA: مزيان! و مّك؟\nB: مّي عندها 52 عام، الحمد لله بخير.\nA: الله يخلّيها ليك!",
+    "vocabulaire": [
+      {"darija": "Chhal f 3omrek?", "arabe": "شحال ف عمرك؟", "francais": "Quel âge as-tu ?"},
+      {"darija": "3andi ... 3am", "arabe": "عندي ... عام", "francais": "J'ai ... ans"},
+      {"darija": "Kbar", "arabe": "كبر", "francais": "Grand / plus âgé"},
+      {"darija": "Sghir/sghira", "arabe": "صغير/صغيرة", "francais": "Petit(e) / jeune"},
+      {"darija": "Khti/khtei", "arabe": "ختي", "francais": "Ma sœur"},
+      {"darija": "Mmei", "arabe": "مّي", "francais": "Ma mère"},
+      {"darija": "Snin", "arabe": "سنين", "francais": "Années"},
+      {"darija": "Llah ykhellih lik", "arabe": "الله يخلّيه ليك", "francais": "Que Dieu te le/la garde"}
+    ]
+  },
+  {
+    "title": "L-3a2ila dyali - Présenter sa famille",
+    "objective": "Apprendre à parler de sa famille en darija",
+    "estimated_minutes": 6,
+    "cefr_level": "A1",
+    "theme": "age-famille",
+    "grammar_focus": "Possessifs (dyali, dyalk) + membres de la famille",
+    "chunk_focus": ["L-3a2ila dyali", "Bba/mma", "Khoya/khti", "Mzewwej/mzewwja"],
+    "dialogue_darija": "A: 3andek l-kht ola l-kho?\nB: 3andi jouj khout w wehda l-kht.\nA: Chhal homa f 3omrhom?\nB: Khoya l-kbir 3ando 32 3am, huwa mzewwej w 3ando 2 d drari. L-khor 3ando 22 3am.\nA: W l-kht?\nB: Khti 3andha 15 3am, mazal f l-lysi.\nA: W bbak, chnou kaydir?\nB: Bba kaykhdem f l-banka. W mmei kaybat f dar.\nA: Llah ykhellihom lik. W nta, mzewwej?\nB: La, mazal. W nta?\nA: Ana khetbt had l-3am, nchallah n3ars s-sana j-jayya!",
+    "dialogue_francais": "A: Tu as des frères ou sœurs ?\nB: J'ai deux frères et une sœur.\nA: Ils ont quel âge ?\nB: Mon grand frère a 32 ans, il est marié et a 2 enfants. L'autre a 22 ans.\nA: Et la sœur ?\nB: Ma sœur a 15 ans, elle est encore au lycée.\nA: Et ton père, il fait quoi ?\nB: Mon père travaille à la banque. Et ma mère est femme au foyer.\nA: Que Dieu te les garde. Et toi, tu es marié ?\nB: Non, pas encore. Et toi ?\nA: Je me suis fiancé cette année, inchallah le mariage l'année prochaine !",
+    "dialogue_arabe": "A: عندك الخت ولا الخو؟\nB: عندي جوج خوت و وحدة الخت.\nA: شحال هما ف عمرهم؟\nB: خويا الكبير عندو 32 عام، هوا مزوّج و عندو 2 د الدراري. الخور عندو 22 عام.\nA: و الخت؟\nB: ختي عندها 15 عام، مازال ف الليسي.\nA: و بّاك، شنو كيدير؟\nB: بّا كيخدم ف البنكة. و مّي كتبات ف الدار.\nA: الله يخلّيهم ليك. و نتا، مزوّج؟\nB: لا، مازال. و نتا؟\nA: أنا خطبت هاد العام، إن شاء الله نعرّس السنة الجاية!",
+    "vocabulaire": [
+      {"darija": "L-3a2ila", "arabe": "العائلة", "francais": "La famille"},
+      {"darija": "Bba", "arabe": "بّا", "francais": "Mon père"},
+      {"darija": "Mma/mmei", "arabe": "مّا/مّي", "francais": "Ma mère"},
+      {"darija": "Khoya", "arabe": "خويا", "francais": "Mon frère"},
+      {"darija": "Khti", "arabe": "ختي", "francais": "Ma sœur"},
+      {"darija": "Mzewwej/mzewwja", "arabe": "مزوّج/مزوّجة", "francais": "Marié(e)"},
+      {"darija": "Drari", "arabe": "الدراري", "francais": "Enfants"},
+      {"darija": "Khetbt", "arabe": "خطبت", "francais": "Je me suis fiancé"},
+      {"darija": "N3ars", "arabe": "نعرّس", "francais": "Je me marie"}
+    ]
+  },
+  {
+    "title": "3id milad - L'anniversaire",
+    "objective": "Parler des anniversaires et des célébrations d'âge",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "age-famille",
+    "grammar_focus": "Futur proche (ghadi) + nombres ordinaux",
+    "chunk_focus": ["3id milad sa3id!", "Chhal ghadi ddir?", "Ghadi n3ayyto l...", "Cadeau"],
+    "dialogue_darija": "A: Ghda 3id milad Samira!\nB: Bssah? Chhal ghadi ddir?\nA: Ghadi ddir 30 3am.\nB: Waw, tlatin! Ghadi tdirou chi haja?\nA: Iyeh, ghadi n3ayyto l s-shab bach yjiw l-dar.\nB: Mezyan! Chnou ghadi tjib liha cadeau?\nA: Bghit nchri liha chi sac zwina.\nB: Fikra mezyana. Ana ghadi njib liha l-gateau.\nA: Top! Aji m3aya l s-soug l-3chiya.\nB: Wakha, nlt9aw f 5!",
+    "dialogue_francais": "A: Demain c'est l'anniversaire de Samira !\nB: C'est vrai ? Elle va avoir quel âge ?\nA: Elle va avoir 30 ans.\nB: Waouh, trente ! Vous allez faire quelque chose ?\nA: Oui, on va inviter les amis à la maison.\nB: Super ! Qu'est-ce que tu vas lui acheter comme cadeau ?\nA: Je veux lui acheter un beau sac.\nB: Bonne idée. Moi je vais apporter le gâteau.\nA: Top ! Viens avec moi au marché cet après-midi.\nB: D'accord, on se retrouve à 17h !",
+    "dialogue_arabe": "A: غدا عيد ميلاد سميرة!\nB: بصّح؟ شحال غادي دّير؟\nA: غادي دّير 30 عام.\nB: واو، تلاتين! غادي ديرو شي حاجة؟\nA: إيه، غادي نعيّطو ل الصحاب باش يجيو للدار.\nB: مزيان! شنو غادي تجيب ليها كادو؟\nA: بغيت نشري ليها شي ساك زوينة.\nB: فكرة مزيانة. أنا غادي نجيب ليها الگاطو.\nA: طوب! اجي معايا ل السوق العشية.\nB: واخا، نلتقاو ف 5!",
+    "vocabulaire": [
+      {"darija": "3id milad", "arabe": "عيد ميلاد", "francais": "Anniversaire"},
+      {"darija": "3id milad sa3id", "arabe": "عيد ميلاد سعيد", "francais": "Joyeux anniversaire"},
+      {"darija": "Cadeau/kado", "arabe": "كادو", "francais": "Cadeau"},
+      {"darija": "N3ayyto l", "arabe": "نعيّطو ل", "francais": "On invite / on appelle"},
+      {"darija": "S-shab", "arabe": "الصحاب", "francais": "Les amis"},
+      {"darija": "Nchri", "arabe": "نشري", "francais": "J'achète"},
+      {"darija": "L-gateau", "arabe": "الگاطو", "francais": "Le gâteau"},
+      {"darija": "L-3chiya", "arabe": "العشية", "francais": "L'après-midi / le soir"}
+    ]
+  }
+]

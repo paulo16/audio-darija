@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Chnou katdir f l-wa9t l-hor ? - Les hobbies",
+    "objective": "Apprendre à parler de ses passions et loisirs",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "passions-loisirs",
+    "grammar_focus": "Kanebghi (j'aime) + verbes de loisirs au présent",
+    "chunk_focus": ["Kanebghi...", "L-wa9t l-hor", "Chnou katdir?", "Hobby dyali"],
+    "dialogue_darija": "A: Chnou katdir f l-wa9t l-hor dyalk?\nB: Kanebghi n9ra l-ktub. W nta?\nA: Ana kanebghi l-musique. Kanl3ab l-guitare.\nB: Bssah? Hadi zwin! Mn imta w nta katl3ab?\nA: Mn 3andi 15 3am. W nta, chmen ktub kat9ra?\nB: Kanebghi les romans. Bzzaf kat3ajbni l-qissa.\nA: Ana tani kanebghi nchouf l-aflam.\nB: Iyeh, ana kanchouf l-aflam l-maghribiya.\nA: Yallah ndirou chi plan nhar s-sebt!\nB: Fikra mezyana, nmchiw l cinema!",
+    "dialogue_francais": "A: Qu'est-ce que tu fais pendant ton temps libre ?\nB: J'aime lire des livres. Et toi ?\nA: Moi j'aime la musique. Je joue de la guitare.\nB: C'est vrai ? C'est beau ! Depuis quand tu en joues ?\nA: Depuis que j'ai 15 ans. Et toi, quel genre de livres tu lis ?\nB: J'aime les romans. Les histoires me plaisent beaucoup.\nA: Moi aussi j'aime regarder les films.\nB: Oui, moi je regarde les films marocains.\nA: Allez, on fait un plan samedi !\nB: Bonne idée, on va au ciné !",
+    "dialogue_arabe": "A: شنو كتدير ف الوقت الحر ديالك؟\nB: كنبغي نقرا الكتب. و نتا؟\nA: أنا كنبغي الموسيقى. كنلعب الگيتار.\nB: بصّح؟ هادي زوين! من إمتا و نتا كتلعب؟\nA: من عندي 15 عام. و نتا، شمن كتب كتقرا؟\nB: كنبغي ليزوغون. بزّاف كتعجبني القيصة.\nA: أنا تاني كنبغي نشوف الأفلام.\nB: إيه، أنا كنشوف الأفلام المغربية.\nA: يالله نديرو شي بلان نهار السبت!\nB: فكرة مزيانة، نمشيو ل سينما!",
+    "vocabulaire": [
+      {"darija": "L-wa9t l-hor", "arabe": "الوقت الحر", "francais": "Le temps libre"},
+      {"darija": "Kanebghi", "arabe": "كنبغي", "francais": "J'aime"},
+      {"darija": "N9ra", "arabe": "نقرا", "francais": "Je lis / j'étudie"},
+      {"darija": "Kanl3ab", "arabe": "كنلعب", "francais": "Je joue"},
+      {"darija": "L-musique", "arabe": "الموسيقى", "francais": "La musique"},
+      {"darija": "L-ktub", "arabe": "الكتب", "francais": "Les livres"},
+      {"darija": "L-aflam", "arabe": "الأفلام", "francais": "Les films"},
+      {"darija": "Fikra mezyana", "arabe": "فكرة مزيانة", "francais": "Bonne idée"}
+    ]
+  },
+  {
+    "title": "Match dyal l-kora - Le football",
+    "objective": "Parler du football et des matchs en darija",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "passions-loisirs",
+    "grammar_focus": "Passé (daz, rb7, khr) + expressions sportives",
+    "chunk_focus": ["L-match", "Rb7/khr", "Goal", "L-farqa dyali"],
+    "dialogue_darija": "A: Chefti l-match l-bar7?\nB: Iyeh, Raja ddat 3la Wydad 2 l wahed!\nA: Waw! Chkoun drab l-goal?\nB: Rahimi drab jouj goals. Kan f l-forme!\nA: L-match kan hami bezaf. Chefti dak penalty?\nB: Iyeh, l-hakam 3tah f d-dqiqa 80. Kan sa7i7.\nA: Nta m3a chmen farqa?\nB: Ana rajawi mn sghri! W nta?\nA: Ana wydadi. Walakin l-match kan zwine.\nB: Hadi hiya l-kora! N-nhar j-jay derby f l-ملعب, ghadi tmchi?\nA: B-ssif! Ghadi nchri t-ticket daba.",
+    "dialogue_francais": "A: Tu as vu le match hier ?\nB: Oui, Raja a battu Wydad 2 à 1 !\nA: Waouh ! Qui a marqué ?\nB: Rahimi a marqué deux goals. Il était en forme !\nA: Le match était très chaud. Tu as vu ce penalty ?\nB: Oui, l'arbitre l'a donné à la 80ème minute. C'était justifié.\nA: Tu es pour quelle équipe ?\nB: Je suis Rajawi depuis tout petit ! Et toi ?\nA: Je suis Wydadi. Mais le match était beau.\nB: C'est ça le foot ! Le prochain derby au stade, tu y vas ?\nA: Bien sûr ! Je vais acheter le ticket maintenant.",
+    "dialogue_arabe": "A: شفتي الماتش البارح؟\nB: إيه، الرجا دّات على الوداد 2 ل واحد!\nA: واو! شكون ضرب الگول؟\nB: رحيمي ضرب جوج گولات. كان ف الفورم!\nA: الماتش كان حامي بزاف. شفتي داك البينالتي؟\nB: إيه، الحكم عطاه ف الدقيقة 80. كان صحيح.\nA: نتا مع شمن فرقة؟\nB: أنا رجاوي من صغري! و نتا؟\nA: أنا ودادي. ولكن الماتش كان زوين.\nB: هادي هيا الكورة! النهار الجاي ديربي ف الملعب، غادي تمشي؟\nA: بالسيف! غادي نشري التيكي دابا.",
+    "vocabulaire": [
+      {"darija": "L-match", "arabe": "الماتش", "francais": "Le match"},
+      {"darija": "L-kora", "arabe": "الكورة", "francais": "Le football / le ballon"},
+      {"darija": "Goal/gol", "arabe": "الگول", "francais": "But (goal)"},
+      {"darija": "Rb7", "arabe": "ربح", "francais": "Gagner"},
+      {"darija": "Khr/khser", "arabe": "خسر", "francais": "Perdre"},
+      {"darija": "L-farqa", "arabe": "الفرقة", "francais": "L'équipe"},
+      {"darija": "L-hakam", "arabe": "الحكم", "francais": "L'arbitre"},
+      {"darija": "L-mal3ab", "arabe": "الملعب", "francais": "Le stade"},
+      {"darija": "Derby", "arabe": "ديربي", "francais": "Le derby"},
+      {"darija": "B-ssif", "arabe": "بالسيف", "francais": "Bien sûr / obligé"}
+    ]
+  },
+  {
+    "title": "Kanl3ab kora m3a s-shab - Jouer au foot entre amis",
+    "objective": "Organiser une partie de foot entre amis",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "passions-loisirs",
+    "grammar_focus": "Impératif (yallah, aji) + futur proche (ghadi)",
+    "chunk_focus": ["Yallah nl3bo", "F jouj farqat", "Chkoun m3aya?", "L-terrain"],
+    "dialogue_darija": "A: Salam khouya! Ghadi nl3bo kora l-3chiya?\nB: Iyeh! F ayna terrain?\nA: F terrain li hdaya l-7ay. Aji m3a 4 d n-nas.\nB: Wakha. Ghadi n3ayyat l Amine w Mehdi.\nA: Ana ghadi njib Rachid w Omar. Haka 3andna 6.\nB: Mezyan! Ghadi nl3bo 3 dyal 3. F chhal?\nA: Aji f 5 d l-3chiya. Jib l-ballon.\nB: Ballon 3andi jdid! W jib l-ma, ghadi ykoun s-shmes.\nA: Wakha. Yallah, ntsennawk f terrain!\nB: Nchallah ma nt2akharch. Bslama!",
+    "dialogue_francais": "A: Salut mon frère ! On joue au foot cet après-midi ?\nB: Oui ! Sur quel terrain ?\nA: Sur le terrain à côté du quartier. Viens avec 4 personnes.\nB: D'accord. Je vais appeler Amine et Mehdi.\nA: Moi je vais amener Rachid et Omar. Comme ça on est 6.\nB: Super ! On joue 3 contre 3. À quelle heure ?\nA: Viens à 17h. Amène le ballon.\nB: J'ai un ballon tout neuf ! Et amène de l'eau, il va faire soleil.\nA: D'accord. Allez, on t'attend au terrain !\nB: Inchallah je ne serai pas en retard. Au revoir !",
+    "dialogue_arabe": "A: سلام خويا! غادي نلعبو كورة العشية؟\nB: إيه! ف أينا تيران؟\nA: ف تيران لي حدايا الحي. اجي معا 4 د الناس.\nB: واخا. غادي نعيّط ل أمين و مهدي.\nA: أنا غادي نجيب رشيد و عمر. هاكا عندنا 6.\nB: مزيان! غادي نلعبو 3 ديال 3. ف شحال؟\nA: اجي ف 5 د العشية. جيب البالون.\nB: بالون عندي جديد! و جيب الما، غادي يكون الشمس.\nA: واخا. يالله، نتسنّاوك ف تيران!\nB: إن شاء الله ما نتأخّرش. بسلامة!",
+    "vocabulaire": [
+      {"darija": "Nl3bo kora", "arabe": "نلعبو كورة", "francais": "On joue au foot"},
+      {"darija": "Terrain", "arabe": "تيران", "francais": "Le terrain"},
+      {"darija": "L-ballon", "arabe": "البالون", "francais": "Le ballon"},
+      {"darija": "Farqat", "arabe": "فرقات", "francais": "Équipes"},
+      {"darija": "N3ayyat l", "arabe": "نعيّط ل", "francais": "J'appelle"},
+      {"darija": "Jib", "arabe": "جيب", "francais": "Amène / apporte"},
+      {"darija": "L-7ay", "arabe": "الحي", "francais": "Le quartier"},
+      {"darija": "Nt2akharch", "arabe": "نتأخّرش", "francais": "Je suis en retard (négatif)"}
+    ]
+  },
+  {
+    "title": "Passion dyal t-tswira - La photographie et les hobbies créatifs",
+    "objective": "Parler de passions créatives : photo, dessin, musique",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "passions-loisirs",
+    "grammar_focus": "Kanebghi + verbes d'action créative + depuis (mn)",
+    "chunk_focus": ["Kanebghi n-...", "Passion dyali", "Kanshark f...", "Kat3ajbni"],
+    "dialogue_darija": "A: 3andek chi passion?\nB: Iyeh, kanebghi n-tswira bzzaf. Kantsawwar kol chi.\nA: Bssah? B t-téléphone wla b camera?\nB: B camera. 3andi Canon, chrit-ha mn 3amain.\nA: Chnou kat-tsawwar?\nB: Kantsawwar n-nas f z-zen9a, w l-medina l-9dima.\nA: Hadi zwina! Ana passion dyali hiya r-rsm.\nB: Katarsam b chnou? L-9lam wla l-lwane?\nA: B l-lwane d l-ma. Kanarsam l-mnadar.\nB: Yallah ndirou chi project m3a b3diyatna! Nta tarsam, w ana n-tsawwar.\nA: Fikra top! Nmchiw l Chefchaouen, hiya mezyana l-had chi!",
+    "dialogue_francais": "A: Tu as une passion ?\nB: Oui, j'adore la photographie. Je photographie tout.\nA: C'est vrai ? Avec le téléphone ou avec un appareil photo ?\nB: Avec un appareil. J'ai un Canon, je l'ai acheté il y a 2 ans.\nA: Tu photographies quoi ?\nB: Je photographie les gens dans la rue, et la vieille médina.\nA: C'est beau ! Moi ma passion c'est le dessin.\nB: Tu dessines avec quoi ? Crayon ou peinture ?\nA: À l'aquarelle. Je dessine les paysages.\nB: Allez, on fait un projet ensemble ! Toi tu dessines, et moi je photographie.\nA: Idée top ! On va à Chefchaouen, c'est bien pour ça !",
+    "dialogue_arabe": "A: عندك شي باسيون؟\nB: إيه، كنبغي التصويرة بزاف. كنتصوّر كلشي.\nA: بصّح؟ ب التيليفون ولا ب كاميرا؟\nB: ب كاميرا. عندي كانون، شريتها من عامين.\nA: شنو كتتصوّر؟\nB: كنتصوّر الناس ف الزنقة، و المدينة القديمة.\nA: هادي زوينة! أنا باسيون ديالي هيا الرسم.\nB: كترسم ب شنو؟ القلم ولا اللوان؟\nA: ب اللوان د الما. كنرسم المناظر.\nB: يالله نديرو شي بروجي معا بعضياتنا! نتا ترسم، و أنا نتصوّر.\nA: فكرة طوب! نمشيو ل شفشاون، هيا مزيانة لهادشي!",
+    "vocabulaire": [
+      {"darija": "Passion", "arabe": "باسيون", "francais": "Passion"},
+      {"darija": "T-tswira", "arabe": "التصويرة", "francais": "La photographie"},
+      {"darija": "Kantsawwar", "arabe": "كنتصوّر", "francais": "Je photographie"},
+      {"darija": "R-rsm", "arabe": "الرسم", "francais": "Le dessin"},
+      {"darija": "Kanarsam", "arabe": "كنرسم", "francais": "Je dessine"},
+      {"darija": "L-lwane", "arabe": "اللوان", "francais": "Les couleurs / la peinture"},
+      {"darija": "L-mnadar", "arabe": "المناظر", "francais": "Les paysages"},
+      {"darija": "Project", "arabe": "بروجي", "francais": "Projet"}
+    ]
+  },
+  {
+    "title": "L-Mondial - Le Maroc en Coupe du Monde",
+    "objective": "Discuter de la Coupe du Monde et de l'équipe nationale",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "passions-loisirs",
+    "grammar_focus": "Passé composé + expressions d'émotion + conditionnel",
+    "chunk_focus": ["L-montakhab", "Daro tarikh", "Fkharna bihoum", "Nchallah"],
+    "dialogue_darija": "A: T-fakkart f l-Mondial 2022?\nB: Iyeh khouya! Ma ghadi nensa-h 3mri! l-Magrib dar tarikh.\nA: Rb7na 3la Bljika w Spanya w l-Bortugal! Ma kanou 7ed kaytsannahom.\nB: W dak l-match m3a Spanya f l-penalties... 3ayacht mn l-far7a!\nA: Bounou kan mur! Wqaf kol chi.\nB: W Hakimi dak penalty d l-panenka... l-3alam kamlo t-choqa!\nA: Fkharna b l-montakhab dyalna. Dima Maghrib!\nB: Nchallah f 2030 ghadi ndiro l-Mondial 3andna.\nA: Ghadi tkoun haja kbira! L-Magrib, Spanya w l-Bortugal.\nB: Khassna ndirou l-mal3ab kbar w nwajdo mezyan.\nA: Nchallah nwaslo l final!",
+    "dialogue_francais": "A: Tu te souviens du Mondial 2022 ?\nB: Oui mon frère ! Je ne l'oublierai jamais ! Le Maroc a fait l'histoire.\nA: On a battu la Belgique, l'Espagne et le Portugal ! Personne ne s'y attendait.\nB: Et ce match contre l'Espagne aux penalties... J'ai crié de joie !\nA: Bounou était un mur ! Il a tout arrêté.\nB: Et Hakimi ce penalty en panenka... le monde entier était choqué !\nA: On était fiers de notre équipe nationale. Toujours le Maroc !\nB: Inchallah en 2030 on va organiser le Mondial chez nous.\nA: Ça va être énorme ! Le Maroc, l'Espagne et le Portugal.\nB: Il faut qu'on construise de grands stades et qu'on se prépare bien.\nA: Inchallah on arrive en finale !",
+    "dialogue_arabe": "A: تفكّرت ف المونديال 2022؟\nB: إيه خويا! ما غادي ننساه عمري! المغرب دار تاريخ.\nA: ربحنا على بلجيكا و سبانيا و البرتغال! ما كانو حد كيتسنّاهم.\nB: و داك الماتش مع سبانيا ف البينالتيات... عيّشت من الفرحة!\nA: بونو كان مور! وقف كلشي.\nB: و حكيمي داك البينالتي د البانينكا... العالم كاملو تشوقا!\nA: فخرنا ب المنتخب ديالنا. ديما مغرب!\nB: إن شاء الله ف 2030 غادي نديرو المونديال عندنا.\nA: غادي تكون حاجة كبيرة! المغرب، سبانيا و البرتغال.\nB: خصّنا نديرو الملاعب كبار و نوجدو مزيان.\nA: إن شاء الله نوصلو ل فينال!",
+    "vocabulaire": [
+      {"darija": "L-montakhab", "arabe": "المنتخب", "francais": "L'équipe nationale"},
+      {"darija": "L-Mondial", "arabe": "المونديال", "francais": "La Coupe du Monde"},
+      {"darija": "Dar tarikh", "arabe": "دار تاريخ", "francais": "A fait l'histoire"},
+      {"darija": "Rb7na", "arabe": "ربحنا", "francais": "On a gagné"},
+      {"darija": "Fkharna", "arabe": "فخرنا", "francais": "On est fiers"},
+      {"darija": "L-far7a", "arabe": "الفرحة", "francais": "La joie"},
+      {"darija": "Dima Maghrib", "arabe": "ديما مغرب", "francais": "Toujours le Maroc"},
+      {"darija": "Nwajdo", "arabe": "نوجدو", "francais": "On se prépare"},
+      {"darija": "Final", "arabe": "فينال", "francais": "Finale"}
+    ]
+  }
+]

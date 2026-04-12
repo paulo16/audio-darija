@@ -14,7 +14,11 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import requests
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ============================================================
 # CONFIGURATION
@@ -47,9 +51,29 @@ for d in [
 ]:
     d.mkdir(parents=True, exist_ok=True)
 
-# Voix Edge TTS marocaines
+# Voix Edge TTS marocaines (fallback)
 VOICE_MALE = "ar-MA-JamalNeural"
 VOICE_FEMALE = "ar-MA-MounaNeural"
+
+# ElevenLabs TTS config
+ELEVENLABS_API_KEY = os.getenv("EVEN_LAB_KEY", "")
+ELEVENLABS_MODEL = "eleven_v3"
+ELEVENLABS_VOICE_ID = os.getenv(
+    "ELEVENLABS_VOICE_ID", "pNInz6obpgDQGcFmaJgB"
+)  # Adam (default multilingual voice)
+ELEVENLABS_VOICE_ID_FEMALE = os.getenv(
+    "ELEVENLABS_VOICE_ID_FEMALE", "EXAVITQu4vr4xnSDxMaL"
+)  # Sarah
+
+# OpenRouter config (STT + Chat AI)
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_STT_MODEL = os.getenv("OPENROUTER_STT_MODEL", "google/gemini-2.5-flash")
+OPENROUTER_CHAT_MODEL = os.getenv("OPENROUTER_CHAT_MODEL", "openai/gpt-4o-mini")
+OPENROUTER_EVAL_MODEL = os.getenv("OPENROUTER_EVAL_MODEL", "openai/gpt-4o")
+CONVERSATION_DIR = APP_DIR / "user_conversations" / "sessions"
+CONVERSATION_AUDIO_DIR = APP_DIR / "user_conversations" / "audio"
+for d in [CONVERSATION_DIR, CONVERSATION_AUDIO_DIR]:
+    d.mkdir(parents=True, exist_ok=True)
 
 # Configuration de la page
 st.set_page_config(
@@ -138,6 +162,46 @@ st.markdown(
     }
     .speaker-a { background: #e3f2fd; border-left: 3px solid #1565c0; }
     .speaker-b { background: #f3e5f5; border-left: 3px solid #7b1fa2; }
+
+    /* Chat conversation IA */
+    .chat-container {
+        max-height: 55vh;
+        overflow-y: auto;
+        padding: 10px 5px;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        background: #fafafa;
+        margin-bottom: 10px;
+    }
+    .chat-bubble {
+        padding: 10px 14px;
+        border-radius: 12px;
+        margin: 6px 0;
+        max-width: 85%;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+    .chat-user {
+        background: #e3f2fd;
+        margin-left: auto;
+        border-bottom-right-radius: 4px;
+        text-align: right;
+    }
+    .chat-ai {
+        background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+        border-bottom-left-radius: 4px;
+        border-left: 3px solid #2e7d32;
+    }
+    .chat-ai .darija-part { font-weight: bold; color: #1a472a; font-size: 1.05em; }
+    .chat-ai .french-part { color: #666; font-style: italic; font-size: 0.92em; }
+
+    /* Audio player sticky dans les leçons */
+    .sticky-audio-wrapper {
+        position: sticky;
+        top: 0;
+        padding: 10px 0;
+        z-index: 10;
+    }
 </style>
 """,
     unsafe_allow_html=True,
@@ -418,18 +482,94 @@ def display_audio_player(audio_path: Path):
     return False
 
 
-async def generate_audio_for_lesson(lesson: dict) -> bool:
-    """Génère l'audio pour une leçon (appel Edge TTS)"""
+def elevenlabs_tts(
+    text: str, output_path: Path, voice_id: str = None
+) -> tuple[bool, str]:
+    """Génère un audio via ElevenLabs API. Retourne (success, motif)."""
+    if not ELEVENLABS_API_KEY:
+        return False, "no_key"
+    if voice_id is None:
+        voice_id = ELEVENLABS_VOICE_ID
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+    headers = {
+        "xi-api-key": ELEVENLABS_API_KEY,
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "text": text,
+        "model_id": ELEVENLABS_MODEL,
+        "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
+    }
     try:
-        import edge_tts
-    except ImportError:
-        st.error("❌ edge_tts non installé. Lancez: pip install edge-tts")
-        return False
+        resp = requests.post(url, headers=headers, json=payload, timeout=60)
+        if resp.status_code == 200:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, "wb") as f:
+                f.write(resp.content)
+            return True, "ok"
+        elif resp.status_code in (402, 429):
+            return False, "quota"
+        else:
+            return False, f"error_{resp.status_code}"
+    except Exception as e:
+        return False, f"exception_{e}"
 
+
+def get_elevenlabs_quota() -> dict | None:
+    """Vérifie le quota ElevenLabs. Retourne dict avec infos ou None."""
+    if not ELEVENLABS_API_KEY:
+        return None
+    try:
+        r = requests.get(
+            "https://api.elevenlabs.io/v1/user",
+            headers={"xi-api-key": ELEVENLABS_API_KEY},
+            timeout=10,
+        )
+        if r.status_code == 200:
+            sub = r.json().get("subscription", {})
+            return {
+                "tier": sub.get("tier", "free"),
+                "used": sub.get("character_count", 0),
+                "limit": sub.get("character_limit", 0),
+                "remaining": sub.get("character_limit", 0)
+                - sub.get("character_count", 0),
+            }
+    except Exception:
+        pass
+    return None
+
+
+async def _edge_tts_save(text: str, voice: str, output_path: Path):
+    """Fallback: génère l'audio via Edge TTS."""
+    import edge_tts
+
+    communicate = edge_tts.Communicate(text, voice)
+    await communicate.save(str(output_path))
+
+
+def tts_generate(text: str, output_path: Path, speaker: str = "A") -> tuple[bool, str]:
+    """Génère un audio: ElevenLabs en priorité, Edge TTS en fallback.
+    Retourne (success, engine_used) où engine = 'elevenlabs', 'edge_tts', ou 'failed'.
+    """
+    voice_id = ELEVENLABS_VOICE_ID if speaker == "A" else ELEVENLABS_VOICE_ID_FEMALE
+    success, reason = elevenlabs_tts(text, output_path, voice_id)
+    if success:
+        return True, "elevenlabs"
+    # Fallback Edge TTS
+    voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
+    try:
+        asyncio.run(_edge_tts_save(text, voice, output_path))
+        return True, f"edge_tts:{reason}"
+    except Exception:
+        return False, "failed"
+
+
+async def generate_audio_for_lesson(lesson: dict) -> tuple[bool, str]:
+    """Génère l'audio pour une leçon. Retourne (success, engine_info)."""
     output_file = get_audio_path(lesson)
     dialogue_arabe = lesson.get("dialogue_arabe", "")
     if not dialogue_arabe:
-        return False
+        return False, "failed"
 
     lines = dialogue_arabe.strip().split("\n")
     parts = []
@@ -446,19 +586,22 @@ async def generate_audio_for_lesson(lesson: dict) -> bool:
                 parts.append({"speaker": speaker, "text": text})
 
     if not parts:
-        return False
+        return False, "failed"
 
-    voice_map = {"A": VOICE_MALE, "B": VOICE_FEMALE}
     temp_dir = output_file.parent / "_temp"
     temp_dir.mkdir(exist_ok=True)
     temp_files = []
+    engines_used = set()
 
     for i, part in enumerate(parts):
-        voice = voice_map.get(part["speaker"], VOICE_MALE)
         temp_file = temp_dir / f"part_{i:03d}.mp3"
-        communicate = edge_tts.Communicate(part["text"], voice)
-        await communicate.save(str(temp_file))
-        temp_files.append(temp_file)
+        success, engine = tts_generate(part["text"], temp_file, part["speaker"])
+        engines_used.add(engine)
+        if temp_file.exists():
+            temp_files.append(temp_file)
+
+    if not temp_files:
+        return False, "failed"
 
     # Combiner
     with open(output_file, "wb") as outf:
@@ -474,7 +617,10 @@ async def generate_audio_for_lesson(lesson: dict) -> bool:
     except OSError:
         pass
 
-    return True
+    # Déterminer le moteur principal utilisé
+    if any("edge_tts" in e for e in engines_used):
+        return True, "edge_tts_fallback"
+    return True, "elevenlabs"
 
 
 def load_profiles() -> list:
@@ -587,6 +733,264 @@ def format_dialogue_html(
             html += "</div>"
 
     return html
+
+
+# ============================================================
+# CONVERSATION IA — STT / Chat / TTS
+# ============================================================
+
+
+def stt_transcribe(audio_bytes: bytes) -> str:
+    """Transcrit l'audio en texte via OpenRouter (Gemini Flash multimodal)."""
+    if not OPENROUTER_API_KEY:
+        return ""
+    audio_b64 = base64.b64encode(audio_bytes).decode("utf-8")
+    resp = requests.post(
+        "https://openrouter.ai/api/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": OPENROUTER_STT_MODEL,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": (
+                                "Transcris exactement ce que dit cette personne. "
+                                "Elle parle en darija marocain (dialecte arabe marocain) "
+                                "ou en français. Retourne UNIQUEMENT la transcription, "
+                                "rien d'autre. Si c'est du darija, écris en lettres latines "
+                                "(translittération avec 3, 7, 9, kh, gh, sh, ch)."
+                            ),
+                        },
+                        {
+                            "type": "input_audio",
+                            "input_audio": {
+                                "data": audio_b64,
+                                "format": "wav",
+                            },
+                        },
+                    ],
+                }
+            ],
+        },
+        timeout=30,
+    )
+    if resp.status_code == 200:
+        return resp.json()["choices"][0]["message"]["content"].strip()
+    return ""
+
+
+def _get_lesson_context_for_ai(profile: dict, all_lessons: list) -> str:
+    """Construit le contexte des leçons en_cours et terminées pour le prompt IA."""
+    lesson_status = profile.get("lesson_status", {})
+    en_cours = []
+    terminees = []
+    for lesson in all_lessons:
+        lid = f"{lesson['_source_file']}:{lesson['title']}"
+        status = lesson_status.get(lid)
+        if status == "en_cours":
+            en_cours.append(lesson)
+        elif status == "termine":
+            terminees.append(lesson)
+
+    ctx = ""
+    if en_cours:
+        ctx += "\n## LEÇONS EN COURS (priorité haute — l'élève les apprend en ce moment) :\n"
+        for l in en_cours:
+            ctx += f"\n### {l['title']} (niveau {l.get('cefr_level', '?')})\n"
+            ctx += f"Thème: {l.get('theme', '?')}\n"
+            ctx += f"Objectif: {l.get('objective', '')}\n"
+            ctx += f"Expressions clés: {', '.join(l.get('chunk_focus', []))}\n"
+            vocab_str = ", ".join(
+                f"{m['darija']} = {m['francais']}" for m in l.get("vocabulaire", [])
+            )
+            ctx += f"Vocabulaire: {vocab_str}\n"
+            ctx += f"Exemple dialogue:\n{l.get('dialogue_darija', '')[:300]}\n"
+
+    if terminees:
+        ctx += "\n## LEÇONS TERMINÉES (l'élève connaît déjà ce vocabulaire) :\n"
+        for l in terminees:
+            ctx += f"- {l['title']} ({l.get('cefr_level', '?')}): "
+            vocab_str = ", ".join(f"{m['darija']}" for m in l.get("vocabulaire", []))
+            ctx += f"{vocab_str}\n"
+
+    return ctx
+
+
+def ai_chat(
+    user_message: str, profile: dict, all_lessons: list, chat_history: list
+) -> str:
+    """Envoie un message à l'IA et retourne la réponse en darija + français."""
+    if not OPENROUTER_API_KEY:
+        return "❌ Clé API OpenRouter non configurée."
+
+    level = profile.get("target_cefr", "A1")
+    lesson_ctx = _get_lesson_context_for_ai(profile, all_lessons)
+
+    system_prompt = f"""Tu es un professeur de darija marocain bienveillant et patient.
+Tu parles avec un élève de niveau {level}.
+
+RÈGLES STRICTES :
+1. Réponds TOUJOURS en darija marocain (translittération latine avec 3, 7, 9, kh, gh, sh, ch) PUIS donne la traduction en français entre parenthèses.
+2. Adapte ton vocabulaire au niveau {level} de l'élève.
+3. Base tes questions et réponses sur les leçons que l'élève est en train d'apprendre (EN COURS) ou qu'il a terminées.
+4. NE PAS utiliser de vocabulaire ou thèmes trop éloignés des leçons connues.
+5. Pose des questions simples pour faire pratiquer l'élève sur ce qu'il apprend.
+6. Si l'élève fait des erreurs, corrige-les gentiment en darija.
+7. Utilise des variations des expressions des leçons pour enrichir la pratique.
+8. Garde un ton naturel et encourageant, comme un ami marocain.
+9. Réponses courtes (2-4 phrases max). Ne fais pas de longs discours.
+10. Si l'élève parle en français, réponds-lui en darija en l'encourageant à essayer en darija.
+
+{lesson_ctx}
+
+Si l'élève n'a aucune leçon en cours, commence par des salutations simples (salam, labass, kif dayr/dayra) et suggère-lui de marquer des leçons "en cours" pour personnaliser la conversation."""
+
+    messages = [{"role": "system", "content": system_prompt}]
+    # Garder les 20 derniers messages pour le contexte
+    for msg in chat_history[-20:]:
+        messages.append({"role": msg["role"], "content": msg["content"]})
+    messages.append({"role": "user", "content": user_message})
+
+    try:
+        resp = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": OPENROUTER_CHAT_MODEL,
+                "messages": messages,
+                "temperature": 0.8,
+                "max_tokens": 300,
+            },
+            timeout=30,
+        )
+        if resp.status_code == 200:
+            return resp.json()["choices"][0]["message"]["content"].strip()
+        return f"❌ Erreur API ({resp.status_code})"
+    except Exception as e:
+        return f"❌ Erreur : {e}"
+
+
+def tts_for_conversation(text: str, msg_id: str) -> Path | None:
+    """Génère un audio TTS pour une réponse de conversation. Retourne le path ou None."""
+    # Extraire seulement la partie darija (avant les parenthèses)
+    darija_text = re.sub(r"\(.*?\)", "", text)
+    darija_text = re.sub(r"[#*_\[\]]", "", darija_text).strip()
+    if not darija_text:
+        return None
+    output_path = CONVERSATION_AUDIO_DIR / f"reply_{msg_id}.mp3"
+    if output_path.exists():
+        return output_path
+    success, _ = tts_generate(darija_text, output_path, speaker="A")
+    return output_path if success else None
+
+
+def load_conversation_history(profile_id: str) -> list:
+    """Charge l'historique de conversation."""
+    path = CONVERSATION_DIR / f"{profile_id}_chat.json"
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_conversation_history(profile_id: str, history: list):
+    """Sauvegarde l'historique de conversation."""
+    path = CONVERSATION_DIR / f"{profile_id}_chat.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False, indent=2)
+
+
+def ai_evaluate_conversation(
+    profile: dict, all_lessons: list, chat_history: list
+) -> str:
+    """Évalue la conversation de l'élève et retourne un bilan avec note /20."""
+    if not OPENROUTER_API_KEY:
+        return "❌ Clé API non configurée."
+    if len([m for m in chat_history if m["role"] == "user"]) < 2:
+        return "⚠️ Il faut au moins 2 messages de ta part pour évaluer la conversation."
+
+    level = profile.get("target_cefr", "A1")
+    lesson_ctx = _get_lesson_context_for_ai(profile, all_lessons)
+
+    # Reconstituer la conversation
+    conv_text = ""
+    for msg in chat_history:
+        role_label = "ÉLÈVE" if msg["role"] == "user" else "PROF IA"
+        conv_text += f"{role_label}: {msg['content']}\n"
+
+    system_prompt = f"""Tu es un évaluateur expert de darija marocain.
+L'élève est de niveau {level}.
+
+Voici le contexte des leçons qu'il étudie :
+{lesson_ctx}
+
+Évalue la conversation ci-dessous selon ces critères et donne une note sur 20 :
+
+1. **Utilisation du darija** (5 pts) : L'élève a-t-il essayé de parler en darija ? A-t-il utilisé des mots/expressions des leçons ?
+2. **Vocabulaire** (5 pts) : Variété et justesse du vocabulaire utilisé par rapport à son niveau.
+3. **Grammaire & Structure** (5 pts) : Les phrases sont-elles bien construites pour son niveau ?
+4. **Engagement & Effort** (5 pts) : L'élève participe-t-il activement ? Pose-t-il des questions ? Fait-il des efforts ?
+
+Format de réponse OBLIGATOIRE :
+
+## 📊 Évaluation de ta conversation
+
+**🎯 Note globale : X/20**
+
+### Détail :
+| Critère | Note | Commentaire |
+|---------|------|-------------|
+| Utilisation du darija | X/5 | ... |
+| Vocabulaire | X/5 | ... |
+| Grammaire & Structure | X/5 | ... |
+| Engagement & Effort | X/5 | ... |
+
+### ✅ Ce que tu fais bien :
+- ...
+
+### 📈 Ce que tu dois améliorer :
+- ...
+
+### 💡 Conseils pour progresser :
+- ...
+
+Sois encourageant mais honnête. Donne des exemples concrets tirés de la conversation."""
+
+    try:
+        resp = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": OPENROUTER_EVAL_MODEL,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {
+                        "role": "user",
+                        "content": f"Voici la conversation à évaluer :\n\n{conv_text}",
+                    },
+                ],
+                "temperature": 0.3,
+                "max_tokens": 800,
+            },
+            timeout=45,
+        )
+        if resp.status_code == 200:
+            return resp.json()["choices"][0]["message"]["content"].strip()
+        return f"❌ Erreur API ({resp.status_code})"
+    except Exception as e:
+        return f"❌ Erreur : {e}"
 
 
 # ============================================================
@@ -781,29 +1185,48 @@ def page_lecons():
 
             st.markdown("---")
 
-            # Audio
+            # Dialogue en darija (translittération)
+            dialogue_darija = lesson.get("dialogue_darija", "")
+            dialogue_francais = lesson.get("dialogue_francais", "")
+            html = format_dialogue_html(dialogue_darija, dialogue_francais, show_french)
+
+            # Audio + Dialogue côte à côte
             if has_audio:
-                st.markdown("### 🔊 Écouter le dialogue")
-                display_audio_player(get_audio_path(lesson))
+                text_col, audio_col = st.columns([3, 1])
+                with audio_col:
+                    st.markdown(
+                        '<div class="sticky-audio-wrapper">', unsafe_allow_html=True
+                    )
+                    st.markdown("#### 🔊 Audio")
+                    display_audio_player(get_audio_path(lesson))
+                    if st.button("🔄 Regénérer", key=f"regen_audio_{i}"):
+                        get_audio_path(lesson).unlink(missing_ok=True)
+                        st.rerun()
+                    st.markdown("</div>", unsafe_allow_html=True)
+                with text_col:
+                    st.markdown("### 💬 Dialogue en Darija")
+                    st.markdown(html, unsafe_allow_html=True)
             else:
                 if st.button(f"🎙️ Générer l'audio", key=f"gen_audio_{i}"):
-                    with st.spinner("Génération en cours avec Edge TTS..."):
+                    with st.spinner("Génération en cours..."):
                         try:
-                            result = asyncio.run(generate_audio_for_lesson(lesson))
+                            result, engine = asyncio.run(
+                                generate_audio_for_lesson(lesson)
+                            )
                             if result:
-                                st.success("✅ Audio généré !")
+                                if "edge_tts" in engine:
+                                    st.warning(
+                                        "⚠️ Quota ElevenLabs épuisé — audio généré avec Edge TTS (qualité réduite)"
+                                    )
+                                else:
+                                    st.success("✅ Audio généré avec ElevenLabs !")
                                 st.rerun()
                             else:
                                 st.error("❌ Échec de la génération")
                         except Exception as e:
                             st.error(f"❌ Erreur : {e}")
-
-            # Dialogue en darija (translittération)
-            st.markdown("### 💬 Dialogue en Darija")
-            dialogue_darija = lesson.get("dialogue_darija", "")
-            dialogue_francais = lesson.get("dialogue_francais", "")
-            html = format_dialogue_html(dialogue_darija, dialogue_francais, show_french)
-            st.markdown(html, unsafe_allow_html=True)
+                st.markdown("### 💬 Dialogue en Darija")
+                st.markdown(html, unsafe_allow_html=True)
 
             # Texte arabe (optionnel)
             if show_arabe:
@@ -835,21 +1258,57 @@ def page_lecons():
                 else:
                     st.info("Tous les mots sont déjà dans tes flashcards.")
 
-            # Marquer comme terminé
+            # Statut de la leçon : (aucun) → en_cours → termine
             profiles = load_profiles()
             if profiles:
                 profile = profiles[0]
                 lesson_id = f"{lesson['_source_file']}:{lesson['title']}"
-                completed = profile.get("lessons_completed", [])
-                if lesson_id not in completed:
-                    if st.button(f"✅ Marquer comme terminée", key=f"complete_{i}"):
-                        completed.append(lesson_id)
-                        profile["lessons_completed"] = completed
-                        save_profiles(profiles)
-                        st.success("Leçon marquée comme terminée ! 🎉")
-                        st.rerun()
-                else:
-                    st.success("✅ Leçon déjà terminée")
+                lesson_status = profile.get("lesson_status", {})
+                current_status = lesson_status.get(lesson_id, None)
+
+                # Rétro-compat : si déjà dans lessons_completed, marquer termine
+                if (
+                    lesson_id in profile.get("lessons_completed", [])
+                    and current_status is None
+                ):
+                    lesson_status[lesson_id] = "termine"
+                    profile["lesson_status"] = lesson_status
+                    save_profiles(profiles)
+                    current_status = "termine"
+
+                st.markdown("---")
+                scol1, scol2 = st.columns(2)
+                with scol1:
+                    if current_status == "en_cours":
+                        st.info("📖 En cours d'apprentissage")
+                    elif current_status == "termine":
+                        st.success("✅ Leçon terminée")
+                    else:
+                        st.caption("Pas encore commencée")
+                with scol2:
+                    if current_status is None:
+                        if st.button("📖 Commencer cette leçon", key=f"start_{i}"):
+                            lesson_status[lesson_id] = "en_cours"
+                            profile["lesson_status"] = lesson_status
+                            save_profiles(profiles)
+                            st.rerun()
+                    elif current_status == "en_cours":
+                        if st.button("✅ Marquer comme terminée", key=f"complete_{i}"):
+                            lesson_status[lesson_id] = "termine"
+                            profile["lesson_status"] = lesson_status
+                            if lesson_id not in profile.get("lessons_completed", []):
+                                profile.setdefault("lessons_completed", []).append(
+                                    lesson_id
+                                )
+                            save_profiles(profiles)
+                            st.success("Leçon terminée ! 🎉")
+                            st.rerun()
+                    elif current_status == "termine":
+                        if st.button("🔄 Remettre en cours", key=f"restart_{i}"):
+                            lesson_status[lesson_id] = "en_cours"
+                            profile["lesson_status"] = lesson_status
+                            save_profiles(profiles)
+                            st.rerun()
 
 
 def page_vocabulaire():
@@ -1115,14 +1574,14 @@ def page_shadowing():
                 arabe_text = arabe_match.group(1)
                 if st.button(f"🔊 Écouter", key=f"shad_listen_{i}"):
                     try:
-                        import edge_tts
-
-                        voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
                         temp_file = AUDIO_DIR / f"_shad_temp_{i}.mp3"
-                        asyncio.run(
-                            edge_tts.Communicate(arabe_text, voice).save(str(temp_file))
-                        )
-                        display_audio_player(temp_file)
+                        success, engine = tts_generate(arabe_text, temp_file, speaker)
+                        if success:
+                            if "edge_tts" in engine:
+                                st.warning(
+                                    "⚠️ Quota ElevenLabs épuisé — voix Edge TTS utilisée"
+                                )
+                            display_audio_player(temp_file)
                         temp_file.unlink(missing_ok=True)
                     except Exception as e:
                         st.error(f"Erreur: {e}")
@@ -1608,21 +2067,29 @@ def page_histoires():
                 st.markdown("### 🔊 Écouter l'histoire")
                 with open(audio_path, "rb") as af:
                     st.audio(af.read(), format="audio/mp3")
+                if st.button("🔄 Regénérer l'audio", key=f"regen_story_audio_{i}"):
+                    audio_path.unlink(missing_ok=True)
+                    st.rerun()
             else:
                 if st.button(f"🎙️ Générer l'audio", key=f"gen_story_audio_{i}"):
                     with st.spinner("Génération audio en cours..."):
                         try:
-                            import edge_tts
-
                             text_arabe = story.get("story_arabe", "")
                             if text_arabe:
                                 STORY_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-                                communicate = edge_tts.Communicate(
-                                    text_arabe, "ar-MA-JamalNeural"
+                                success, engine = tts_generate(
+                                    text_arabe, audio_path, "A"
                                 )
-                                asyncio.run(communicate.save(str(audio_path)))
-                                st.success("✅ Audio généré !")
-                                st.rerun()
+                                if success:
+                                    if "edge_tts" in engine:
+                                        st.warning(
+                                            "⚠️ Quota ElevenLabs épuisé — audio généré avec Edge TTS (qualité réduite)"
+                                        )
+                                    else:
+                                        st.success("✅ Audio généré avec ElevenLabs !")
+                                    st.rerun()
+                                else:
+                                    st.error("❌ Échec de la génération")
                         except Exception as e:
                             st.error(f"❌ Erreur : {e}")
 
@@ -1679,6 +2146,255 @@ def page_histoires():
 
 
 # ============================================================
+# PAGE CONVERSATION IA INTERACTIVE
+# ============================================================
+def page_conversation():
+    """Page de conversation interactive avec l'IA en darija."""
+    if not OPENROUTER_API_KEY:
+        st.error(
+            "❌ Clé API OpenRouter manquante. Ajoute `OPENROUTER_API_KEY` dans ton fichier `.env`."
+        )
+        return
+
+    profiles = load_profiles()
+    profile = profiles[0] if profiles else None
+    if not profile:
+        st.error("Aucun profil trouvé.")
+        return
+
+    all_lessons = load_all_lessons()
+    lesson_status = profile.get("lesson_status", {})
+    en_cours = [
+        l
+        for l in all_lessons
+        if lesson_status.get(f"{l['_source_file']}:{l['title']}") == "en_cours"
+    ]
+    terminees = [
+        l
+        for l in all_lessons
+        if lesson_status.get(f"{l['_source_file']}:{l['title']}") == "termine"
+    ]
+
+    # Initialiser l'historique
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = load_conversation_history(
+            profile.get("id", "default")
+        )
+
+    # ── En-tête compact ──
+    hcol1, hcol2, hcol3 = st.columns([5, 3, 2])
+    with hcol1:
+        st.markdown("## 🎙️ Conversation Interactive")
+    with hcol2:
+        n_ec = len(en_cours)
+        n_te = len(terminees)
+        if n_ec:
+            st.caption(f"📖 {n_ec} leçon(s) en cours · ✅ {n_te} terminée(s)")
+        else:
+            st.caption("⚠️ Aucune leçon en cours")
+    with hcol3:
+        if st.button("🗑️ Effacer", key="clear_chat", help="Effacer la conversation"):
+            st.session_state.chat_history = []
+            save_conversation_history(profile.get("id", "default"), [])
+            st.rerun()
+
+    # ── Leçons actives (pliable, compact) ──
+    if en_cours:
+        with st.expander(f"📋 Leçons en cours ({n_ec})", expanded=False):
+            for l in en_cours:
+                chunks = ", ".join(l.get("chunk_focus", [])[:4])
+                st.markdown(
+                    f"- **{l['title']}** ({l.get('cefr_level','?')}) — _{chunks}_"
+                )
+    elif not st.session_state.chat_history:
+        st.info(
+            "💡 Va dans **🎧 Leçons** et clique **📖 Commencer** sur une leçon pour que l'IA adapte la conversation à ce que tu apprends."
+        )
+
+    # ── Zone de chat (conteneur scrollable HTML) ──
+    chat_html = '<div class="chat-container" id="chat-box">'
+    if not st.session_state.chat_history:
+        chat_html += '<div style="text-align:center; color:#888; padding:40px 20px;">'
+        chat_html += "🤖 <em>Salam ! Envoie un message ou enregistre ta voix pour commencer.</em></div>"
+    else:
+        for msg in st.session_state.chat_history:
+            content = (
+                msg["content"]
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("\n", "<br>")
+            )
+            if msg["role"] == "user":
+                chat_html += f'<div class="chat-bubble chat-user">🧑 {content}</div>'
+            else:
+                chat_html += f'<div class="chat-bubble chat-ai">🤖 {content}</div>'
+                # Audio inline — autoplay sur le dernier message IA
+                if msg.get("audio_id"):
+                    audio_path = CONVERSATION_AUDIO_DIR / f"reply_{msg['audio_id']}.mp3"
+                    if audio_path.exists():
+                        with open(audio_path, "rb") as af:
+                            audio_b64 = base64.b64encode(af.read()).decode()
+                        is_last = msg is st.session_state.chat_history[-1]
+                        autoplay_attr = "autoplay" if is_last else ""
+                        chat_html += f'<audio controls {autoplay_attr} style="width:100%;max-width:350px;height:32px;margin:4px 0 8px 0;" src="data:audio/mp3;base64,{audio_b64}"></audio>'
+    chat_html += "</div>"
+    # Auto-scroll vers le bas
+    chat_html += '<script>var cb=document.getElementById("chat-box");if(cb)cb.scrollTop=cb.scrollHeight;</script>'
+    st.markdown(chat_html, unsafe_allow_html=True)
+
+    # ── Zone d'entrée fixe en bas ──
+    MAX_EXCHANGES = 10
+    user_msg_count = len(
+        [m for m in st.session_state.chat_history if m["role"] == "user"]
+    )
+    conversation_finished = user_msg_count >= MAX_EXCHANGES
+
+    if conversation_finished:
+        st.warning(
+            f"🏁 Conversation terminée ({MAX_EXCHANGES} échanges max). "
+            "Évalue ta conversation puis recommence !"
+        )
+        fin_col1, fin_col2 = st.columns(2)
+        with fin_col1:
+            eval_clicked = st.button(
+                "📊 Évaluer ma conversation", key="eval_conv", type="primary",
+                use_container_width=True,
+            )
+        with fin_col2:
+            restart_clicked = st.button(
+                "🔄 Recommencer une conversation", key="restart_conv",
+                use_container_width=True,
+            )
+        if eval_clicked:
+            with st.spinner("📊 Évaluation en cours..."):
+                evaluation = ai_evaluate_conversation(
+                    profile, all_lessons, st.session_state.chat_history
+                )
+            st.markdown("---")
+            st.markdown(evaluation)
+            st.session_state.chat_history.append(
+                {
+                    "role": "system",
+                    "content": evaluation,
+                    "timestamp": datetime.now().isoformat(),
+                    "type": "evaluation",
+                }
+            )
+            save_conversation_history(
+                profile.get("id", "default"), st.session_state.chat_history
+            )
+        if restart_clicked:
+            st.session_state.chat_history = []
+            save_conversation_history(profile.get("id", "default"), [])
+            st.rerun()
+    else:
+        # Compteur d'échanges restants
+        remaining = MAX_EXCHANGES - user_msg_count
+        if user_msg_count > 0:
+            st.caption(f"💬 {user_msg_count}/{MAX_EXCHANGES} échanges · {remaining} restant(s)")
+
+        st.markdown("")  # petit espace
+        input_col1, input_col2 = st.columns([1, 4])
+        with input_col1:
+            input_mode = st.radio(
+                "Mode",
+                ["🎤 Micro", "⌨️ Texte"],
+                horizontal=False,
+                key="input_mode",
+                label_visibility="collapsed",
+            )
+        with input_col2:
+            user_text = None
+            if input_mode == "🎤 Micro":
+                audio_data = st.audio_input(
+                    "Parle en darija ou en français",
+                    key="audio_rec",
+                    label_visibility="collapsed",
+                )
+                if audio_data is not None:
+                    audio_hash = hashlib.md5(audio_data.getvalue()[:1000]).hexdigest()
+                    if st.session_state.get("last_audio_hash") != audio_hash:
+                        with st.spinner("🔄 Transcription..."):
+                            user_text = stt_transcribe(audio_data.getvalue())
+                        if user_text:
+                            st.session_state.last_audio_hash = audio_hash
+                        else:
+                            st.warning(
+                                "Transcription échouée. Réessaie ou passe en mode texte."
+                            )
+            else:
+                text_input = st.chat_input(
+                    "Écris en darija ou en français...", key="text_chat"
+                )
+                if text_input:
+                    user_text = text_input
+
+        # ── Traiter le message ──
+        if user_text:
+            st.session_state.chat_history.append(
+                {
+                    "role": "user",
+                    "content": user_text,
+                    "timestamp": datetime.now().isoformat(),
+                }
+            )
+
+            with st.spinner("🤔 L'IA réfléchit..."):
+                ai_response = ai_chat(
+                    user_text, profile, all_lessons, st.session_state.chat_history
+                )
+
+            msg_id = hashlib.md5(
+                (ai_response + datetime.now().isoformat()).encode()
+            ).hexdigest()[:12]
+            tts_for_conversation(ai_response, msg_id)
+
+            st.session_state.chat_history.append(
+                {
+                    "role": "assistant",
+                    "content": ai_response,
+                    "audio_id": msg_id,
+                    "timestamp": datetime.now().isoformat(),
+                }
+            )
+            save_conversation_history(
+                profile.get("id", "default"), st.session_state.chat_history
+            )
+            st.rerun()
+
+        # ── Évaluation anticipée (avant la fin) ──
+        if user_msg_count >= 2:
+            st.markdown("")
+            eval_col1, eval_col2 = st.columns([3, 1])
+            with eval_col1:
+                st.caption(
+                    f"💬 {len(st.session_state.chat_history)} messages · {user_msg_count} de toi"
+                )
+            with eval_col2:
+                eval_clicked = st.button(
+                    "📊 Évaluer ma conversation", key="eval_conv_early", type="secondary"
+                )
+            if eval_clicked:
+                with st.spinner("📊 Évaluation en cours..."):
+                    evaluation = ai_evaluate_conversation(
+                        profile, all_lessons, st.session_state.chat_history
+                    )
+                st.markdown("---")
+                st.markdown(evaluation)
+                st.session_state.chat_history.append(
+                    {
+                        "role": "system",
+                        "content": evaluation,
+                        "timestamp": datetime.now().isoformat(),
+                        "type": "evaluation",
+                    }
+                )
+                save_conversation_history(
+                    profile.get("id", "default"), st.session_state.chat_history
+                )
+
+
+# ============================================================
 # NAVIGATION
 # ============================================================
 def main():
@@ -1693,6 +2409,7 @@ def main():
             [
                 "🏠 Accueil",
                 "🎧 Leçons (Écoute)",
+                "🎙️ Conversation IA",
                 "📖 Histoires",
                 "🎯 Shadowing",
                 "📚 Vocabulaire & Flashcards",
@@ -1712,23 +2429,40 @@ def main():
             profile = profiles[0]
             st.markdown(f"**👤 {profile['name']}**")
             st.markdown(f"**🎯 Niveau : {profile.get('target_cefr', 'A1')}**")
+            ls = profile.get("lesson_status", {})
+            n_ec = sum(1 for v in ls.values() if v == "en_cours")
+            n_te = sum(1 for v in ls.values() if v == "termine")
+            if n_ec or n_te:
+                st.caption(f"📖 {n_ec} en cours · ✅ {n_te} terminée(s)")
 
         st.markdown("---")
-        st.markdown(
-            """
-        **🔊 Voix TTS :**
-        - 👨 Jamal (homme)
-        - 👩 Mouna (femme)
-
-        *Edge TTS — Gratuit*
-        """
-        )
+        st.markdown("**🔊 Moteur TTS :**")
+        quota = get_elevenlabs_quota()
+        if quota and quota["remaining"] > 0:
+            pct = int(quota["used"] / max(quota["limit"], 1) * 100)
+            st.markdown(f"✅ **ElevenLabs** ({quota['tier']})")
+            st.progress(
+                pct / 100,
+                text=f"{quota['used']:,}/{quota['limit']:,} caractères ({pct}%)",
+            )
+            st.caption(f"Reste : {quota['remaining']:,} caractères")
+        elif quota and quota["remaining"] <= 0:
+            st.warning("⚠️ Quota ElevenLabs épuisé !")
+            st.markdown("🔄 Fallback : **Edge TTS** (ar-MA)")
+            st.caption(
+                "Les audios seront générés avec Edge TTS jusqu'au renouvellement du quota."
+            )
+        else:
+            st.markdown("🔊 **Edge TTS** (ar-MA)")
+            st.caption("Configurez EVEN_LAB_KEY dans .env pour utiliser ElevenLabs.")
 
     # Router
     if page == "🏠 Accueil":
         page_accueil()
     elif page == "🎧 Leçons (Écoute)":
         page_lecons()
+    elif page == "🎙️ Conversation IA":
+        page_conversation()
     elif page == "📖 Histoires":
         page_histoires()
     elif page == "🎯 Shadowing":

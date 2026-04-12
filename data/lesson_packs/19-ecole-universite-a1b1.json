@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Nhar l-lewwel f l-madrasa - Premier jour d'école",
+    "objective": "Dialogues basiques en milieu scolaire",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "ecole-universite",
+    "grammar_focus": "F ayna... (dans quel) + les matières scolaires + pronoms",
+    "chunk_focus": ["F ayna qism?", "L-oustada", "L-ma9rou", "Kant9raw"],
+    "dialogue_darija": "A: Salam! Nta jdid f l-madrasa?\nB: Iyeh, lyoum nhar l-lewwel. F ayna qism nta?\nA: Ana f qism 4. W nta?\nB: Ana tani f qism 4! Mezyan, ghadi nkouno m3a b3diyatna.\nA: Chmen matirat 3andkom lyoum?\nB: 3andna r-ryadiyyat, l-3arbiya w l-franswiya.\nA: R-ryadiyyat sa3ba 3liya.\nB: Ana kat3ajbni. Walakin l-franswiya sa3ba 3liya.\nA: Yallah, nt3awno m3a b3diyatna!\nB: Wakha! Oustada jayya, yallah ndkhlo.",
+    "dialogue_francais": "A: Salut ! Tu es nouveau à l'école ?\nB: Oui, c'est mon premier jour. Tu es dans quelle classe ?\nA: Je suis en 4ème. Et toi ?\nB: Moi aussi en 4ème ! Super, on sera ensemble.\nA: Quelles matières vous avez aujourd'hui ?\nB: On a maths, arabe et français.\nA: Les maths c'est dur pour moi.\nB: Moi j'aime bien. Mais le français c'est dur pour moi.\nA: Allez, on s'entraide !\nB: D'accord ! La prof arrive, on entre.",
+    "dialogue_arabe": "A: سلام! نتا جديد ف المدرسة؟\nB: إيه، اليوم نهار اللوّل. ف أينا قسم نتا؟\nA: أنا ف قسم 4. و نتا؟\nB: أنا تاني ف قسم 4! مزيان، غادي نكونو مع بعضياتنا.\nA: شمن ماتيرات عندكم اليوم؟\nB: عندنا الرياضيّات، العربية و الفرنسوية.\nA: الرياضيّات صعبة عليا.\nB: أنا كتعجبني. ولكن الفرنسوية صعبة عليا.\nA: يالله، نتعاونو مع بعضياتنا!\nB: واخا! الأستاذة جايّا، يالله ندخلو.",
+    "vocabulaire": [
+      {"darija": "L-madrasa", "arabe": "المدرسة", "francais": "L'école"},
+      {"darija": "Qism", "arabe": "قسم", "francais": "La classe"},
+      {"darija": "L-oustada", "arabe": "الأستاذة", "francais": "La professeure"},
+      {"darija": "R-ryadiyyat", "arabe": "الرياضيّات", "francais": "Les mathématiques"},
+      {"darija": "L-3arbiya", "arabe": "العربية", "francais": "L'arabe"},
+      {"darija": "L-franswiya", "arabe": "الفرنسوية", "francais": "Le français"},
+      {"darija": "Sa3b/sa3ba", "arabe": "صعب/صعبة", "francais": "Difficile (m/f)"},
+      {"darija": "Nt3awno", "arabe": "نتعاونو", "francais": "On s'entraide"}
+    ]
+  },
+  {
+    "title": "F l-lysi - Au lycée",
+    "objective": "Parler de la vie au lycée : cours, examens, amis",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "ecole-universite",
+    "grammar_focus": "Khass + futur (ghadi) + expressions scolaires",
+    "chunk_focus": ["L-imti7an", "9rit mzyan?", "Khassni nraj3", "L-morataba"],
+    "dialogue_darija": "A: Wach 9riti l l-imti7an dyal ghda?\nB: Chway. Mazal ma kammalt l-7ifda.\nA: Ana tani. L-fisika sa3ba bzzaf had l-3am.\nB: W chmen wa9t l-imti7an?\nA: F t-tmanya d s-sba7. Jouj swaye3.\nB: Khassna nfay9o bkri! Ana ma kan-n3ssch mezyan 9bel l-imti7an.\nA: Yallah nraj3o m3a b3diyatna daba.\nB: Wakha. Dkhol l-maktaba, temma hda.\nA: W mn b3d l-imti7an, chnou ghadi ndirou?\nB: Nmchiw l l-madrasa Nagib w n-tafsho!\nA: Iyeh, khass-na nerta7o. Yallah!",
+    "dialogue_francais": "A: Tu as révisé pour l'examen de demain ?\nB: Un peu. Je n'ai pas encore fini d'apprendre par cœur.\nA: Moi non plus. La physique est très difficile cette année.\nB: Et c'est à quelle heure l'examen ?\nA: À 8h du matin. Deux heures.\nB: Il faut qu'on se lève tôt ! Moi je ne dors pas bien avant les examens.\nA: Allez, on révise ensemble maintenant.\nB: D'accord. On va à la bibliothèque, c'est calme là-bas.\nA: Et après l'examen, on fait quoi ?\nB: On va au parc et on se détend !\nA: Oui, on a besoin de se reposer. Allez !",
+    "dialogue_arabe": "A: واش قريتي ل الامتحان ديال غدا؟\nB: شوية. مازال ما كمّلت الحفضة.\nA: أنا تاني. الفيزيكا صعبة بزاف هاد العام.\nB: و شمن وقت الامتحان؟\nA: ف التمانية د الصباح. جوج سوايع.\nB: خصّنا نفيقو بكري! أنا ما كننعسش مزيان قبل الامتحان.\nA: يالله نراجعو مع بعضياتنا دابا.\nB: واخا. دخول ل المكتبة، تمّا هدا.\nA: و من بعد الامتحان، شنو غادي نديرو؟\nB: نمشيو ل الحديقة و نتفشّو!\nA: إيه، خصّنا نرتاحو. يالله!",
+    "vocabulaire": [
+      {"darija": "L-lysi", "arabe": "الليسي", "francais": "Le lycée"},
+      {"darija": "L-imti7an", "arabe": "الامتحان", "francais": "L'examen"},
+      {"darija": "9rit", "arabe": "قريت", "francais": "J'ai étudié / révisé"},
+      {"darija": "L-7ifda", "arabe": "الحفضة", "francais": "L'apprentissage par cœur"},
+      {"darija": "Nraj3", "arabe": "نراجع", "francais": "Je révise"},
+      {"darija": "L-maktaba", "arabe": "المكتبة", "francais": "La bibliothèque"},
+      {"darija": "Nfay9o", "arabe": "نفيقو", "francais": "On se réveille"},
+      {"darija": "Bkri", "arabe": "بكري", "francais": "Tôt"}
+    ]
+  },
+  {
+    "title": "F l-jami3a - La vie universitaire",
+    "objective": "Parler de la vie à l'université : filière, cours, stress",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "ecole-universite",
+    "grammar_focus": "Kat9ra f... (tu étudies...) + filières + futur",
+    "chunk_focus": ["Kat9ra f chmen filière?", "Sana lewla/tanya", "Stage", "L-moustaqbal"],
+    "dialogue_darija": "A: Kat9ra f chmen filière?\nB: Kan9ra l-informatique f jami3at Mohamed V. W nta?\nA: Ana kan9ra l-7ou9ou9. F sana t-tanya.\nB: Sa3ba l-7ou9ou9?\nA: Iyeh, bzzaf d l-7ifda. Walakin kat3ajbni.\nB: Ana f l-informatique, bzzaf d l-programmation. Ma kanfhamch kol chi.\nA: W b3d l-jami3a, chnou bghiti ddir?\nB: Bghit nkhdam f chi charika kbira. Ola ndiro startup dyali.\nA: Ana bghit nkoun mo7ami.\nB: Mezyan! Khassek t9ra bzzaf!\nA: Iyeh, w khassni ndir stage had s-sif.\nB: Ana tani. Yallah n9allbo 3la stage m3a b3diyatna!",
+    "dialogue_francais": "A: Tu étudies dans quelle filière ?\nB: J'étudie l'informatique à l'université Mohamed V. Et toi ?\nA: Moi j'étudie le droit. En deuxième année.\nB: C'est difficile le droit ?\nA: Oui, beaucoup d'apprentissage par cœur. Mais ça me plaît.\nB: Moi en informatique, il y a beaucoup de programmation. Je ne comprends pas tout.\nA: Et après la fac, tu veux faire quoi ?\nB: Je veux travailler dans une grande entreprise. Ou créer ma startup.\nA: Moi je veux devenir avocat.\nB: Super ! Il faut beaucoup étudier !\nA: Oui, et il faut que je fasse un stage cet été.\nB: Moi aussi. Allez, on cherche un stage ensemble !",
+    "dialogue_arabe": "A: كتقرا ف شمن فيليار؟\nB: كنقرا الإنفورماتيك ف جامعة محمد الخامس. و نتا؟\nA: أنا كنقرا الحقوق. ف سنة التانية.\nB: صعبة الحقوق؟\nA: إيه، بزاف د الحفضة. ولكن كتعجبني.\nB: أنا ف الإنفورماتيك، بزاف د البروگرامسيون. ما كنفهمش كلشي.\nA: و بعد الجامعة، شنو بغيتي دير؟\nB: بغيت نخدم ف شي شاريكة كبيرة. ولا نديرو ستارتاپ ديالي.\nA: أنا بغيت نكون محامي.\nB: مزيان! خصّك تقرا بزاف!\nA: إيه، و خصّني ندير ستاج هاد الصيف.\nB: أنا تاني. يالله نقلّبو على ستاج مع بعضياتنا!",
+    "vocabulaire": [
+      {"darija": "L-jami3a", "arabe": "الجامعة", "francais": "L'université"},
+      {"darija": "Filière", "arabe": "فيليار", "francais": "Filière / spécialité"},
+      {"darija": "Kan9ra", "arabe": "كنقرا", "francais": "J'étudie"},
+      {"darija": "L-informatique", "arabe": "الإنفورماتيك", "francais": "L'informatique"},
+      {"darija": "L-7ou9ou9", "arabe": "الحقوق", "francais": "Le droit"},
+      {"darija": "Mo7ami", "arabe": "محامي", "francais": "Avocat"},
+      {"darija": "Stage", "arabe": "ستاج", "francais": "Stage"},
+      {"darija": "Charika", "arabe": "شاريكة", "francais": "Entreprise"},
+      {"darija": "L-moustaqbal", "arabe": "المستقبل", "francais": "L'avenir"}
+    ]
+  },
+  {
+    "title": "L-ba7t w l-mémoire - Préparer son mémoire",
+    "objective": "Parler de la recherche universitaire et du mémoire de fin d'études",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "ecole-universite",
+    "grammar_focus": "Khassni (il faut que je) + verbes de recherche + stress",
+    "chunk_focus": ["L-mémoire", "L-moudir", "L-ba7t", "Soutenance"],
+    "dialogue_darija": "A: Wslti l fin f l-mémoire dyalk?\nB: Mazal f l-premier chapitre. Ma kan-l9ach l-mara9i3.\nA: Chmen mawdou3 khditi?\nB: Khdamta 3la t-ta2tir d l-intelligence artificielle f t-t3lim.\nA: Mawdou3 zwine! W l-moudir dyalk chnou gal?\nB: Gal liya khass nzid l-ba7t l-maydani. Lazem ndiro questionnaire.\nA: Ana l-moudir dyali sa3b. Kayreddi 3liya bzzaf.\nB: Ma t9all9ch, dir khdamtek w sifat lih. L-mouhem tkoun jddi.\nA: Imta l-soutenance dyalk?\nB: Nchallah f juin. W nta?\nA: Ana f juillet. Llah y3awanna!\nB: Amin! Yallah nkammlo.",
+    "dialogue_francais": "A: Tu en es où dans ton mémoire ?\nB: Encore au premier chapitre. Je ne trouve pas les références.\nA: Tu as pris quel sujet ?\nB: Je travaille sur l'impact de l'intelligence artificielle dans l'éducation.\nA: Beau sujet ! Et ton directeur, il a dit quoi ?\nB: Il m'a dit qu'il faut ajouter une recherche de terrain. Il faut faire un questionnaire.\nA: Moi mon directeur est difficile. Il me fait beaucoup de remarques.\nB: Ne t'inquiète pas, fais ton travail et envoie-le. L'important c'est d'être sérieux.\nA: C'est quand ta soutenance ?\nB: Inchallah en juin. Et toi ?\nA: Moi en juillet. Que Dieu nous aide !\nB: Amen ! Allez, on continue.",
+    "dialogue_arabe": "A: وصلتي لفين ف الميموار ديالك؟\nB: مازال ف البرومي شابيتر. ما كنلقاش المراجع.\nA: شمن موضوع خديتي؟\nB: خدامة على التأطير ديال الذكاء الاصطناعي ف التعليم.\nA: موضوع زوين! و المدير ديالك شنو قال؟\nB: قال ليا خص نزيد البحت الميداني. لازم نديرو كيستيونار.\nA: أنا المدير ديالي صعب. كيردّي عليا بزاف.\nB: ما تقلّقش، دير خدمتك و سيفط ليه. المهم تكون جدّي.\nA: إمتا السوتونونس ديالك؟\nB: إن شاء الله ف جوان. و نتا؟\nA: أنا ف يوليوز. الله يعاوننا!\nB: آمين! يالله نكمّلو.",
+    "vocabulaire": [
+      {"darija": "L-mémoire", "arabe": "الميموار", "francais": "Le mémoire"},
+      {"darija": "L-moudir", "arabe": "المدير", "francais": "Le directeur de recherche"},
+      {"darija": "L-ba7t", "arabe": "البحت", "francais": "La recherche"},
+      {"darija": "Mawdou3", "arabe": "موضوع", "francais": "Sujet"},
+      {"darija": "L-mara9i3", "arabe": "المراجع", "francais": "Les références"},
+      {"darija": "Soutenance", "arabe": "سوتونونس", "francais": "Soutenance"},
+      {"darija": "Sifat", "arabe": "سيفط", "francais": "Envoyer"},
+      {"darija": "Jddi", "arabe": "جدّي", "francais": "Sérieux"}
+    ]
+  }
+]

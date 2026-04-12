@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Ntaybou f d-dar - Cuisiner à la maison",
+    "objective": "Parler de la cuisine marocaine à la maison",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "cuisine-marche",
+    "grammar_focus": "Verbes de cuisine (tayb, 9ta3, zid) + ingrédients",
+    "chunk_focus": ["Tayb/ntaybou", "Zid chway d...", "L-ma9la", "Fya7"],
+    "dialogue_darija": "A: Chnou ghadi ntaybou lyoum?\nB: Bghit ndiro tajin d l-7out.\nA: Chnou khassna?\nB: Khassna 7out, tomaticha, bsla, thoum w l-fya7.\nA: Chmen fya7 khassna?\nB: Kamoun, skinjbir, 9rfa w l-7ar.\nA: W z-zit?\nB: Iyeh, zid z-zit d z-zitoun f l-ma9la.\nA: W9ach l-7out khasso ykoun jdid?\nB: Tab3an! Sir l s-souq w jib li 7out taza.\nA: W ch7al d l-wa9t kay-tayb?\nB: 7dawach sa3a. Chou3la hdiya.\nA: Wakha, ghadi nmchi njib l-7out daba!",
+    "dialogue_francais": "A: Qu'est-ce qu'on prépare aujourd'hui ?\nB: Je veux faire un tajine de poisson.\nA: Qu'est-ce qu'il nous faut ?\nB: Il nous faut du poisson, des tomates, de l'oignon, de l'ail et des épices.\nA: Quelles épices il faut ?\nB: Cumin, gingembre, cannelle et piment.\nA: Et l'huile ?\nB: Oui, ajoute de l'huile d'olive dans la poêle.\nA: Le poisson doit être frais ?\nB: Bien sûr ! Va au souk et ramène-moi du poisson frais.\nA: Et ça cuit combien de temps ?\nB: Environ une heure. À feu doux.\nA: D'accord, je vais chercher le poisson maintenant !",
+    "dialogue_arabe": "A: شنو غادي نطيّبو اليوم؟\nB: بغيت نديرو طاجين ديال الحوت.\nA: شنو خصّنا؟\nB: خصّنا حوت، طماطيشا، بصلة، ثوم و الفياح.\nA: شمن فياح خصّنا؟\nB: كمّون، سكنجبير، قرفة و الحار.\nA: و الزيت؟\nB: إيه، زيد الزيت ديال الزيتون ف المقلة.\nA: واش الحوت خصّو يكون جديد؟\nB: طبعاً! سير ل السوق و جيب لي حوت طازا.\nA: و شحال د الوقت كيطيب؟\nB: حداوش ساعة. شعلة هديا.\nA: واخا، غادي نمشي نجيب الحوت دابا!",
+    "vocabulaire": [
+      {"darija": "Ntaybou", "arabe": "نطيّبو", "francais": "On cuisine"},
+      {"darija": "Tajin", "arabe": "طاجين", "francais": "Tajine"},
+      {"darija": "7out", "arabe": "حوت", "francais": "Poisson"},
+      {"darija": "Fya7", "arabe": "فياح", "francais": "Épices"},
+      {"darija": "Kamoun", "arabe": "كمّون", "francais": "Cumin"},
+      {"darija": "Skinjbir", "arabe": "سكنجبير", "francais": "Gingembre"},
+      {"darija": "L-ma9la", "arabe": "المقلة", "francais": "La poêle"},
+      {"darija": "Chou3la hdiya", "arabe": "شعلة هديا", "francais": "Feu doux"},
+      {"darija": "Taza", "arabe": "طازا", "francais": "Frais/fraîche"}
+    ]
+  },
+  {
+    "title": "F s-souq d l-khodra - Au marché des légumes",
+    "objective": "Acheter des légumes et des fruits au marché",
+    "estimated_minutes": 6,
+    "cefr_level": "A1",
+    "theme": "cuisine-marche",
+    "grammar_focus": "Bch7al + kilo/rtal + nombres + négociation rapide",
+    "chunk_focus": ["3tini", "Bch7al l-kilo?", "Rkhis/ghali", "Zidni"],
+    "dialogue_darija": "A: Sba7 l-kheir a l-7ajj! Wach 3andk tomaticha?\nB: Sba7 l-kheir! Iyeh, tomaticha frmla. Bch7al bghiti?\nA: 3tini jouj kilo. Bch7al l-kilo?\nB: Sab3in l-kilo.\nA: Ghali chway! Khamsin ma ymknch?\nB: La a khoya, sitt khalli7a fiya.\nA: Wakha. W l-khodra l-khdra bch7al?\nB: L-ma3dnous w l-9zbor b khamsa d-drhm z-zriba.\nA: Wakha, 3tini zriba d l-ma3dnous, w zriba d l-9zbor.\nB: Chnou 3awed? Bghiti chi 7aja khra?\nA: 3tini telt kilo d l-bsla w kilo d l-khizou.\nB: Ha hou. Kol chi b miyya w khamsa w 3achrin.\nA: Wakha, tfaddal. Bssla7a!",
+    "dialogue_francais": "A: Bonjour monsieur ! Vous avez des tomates ?\nB: Bonjour ! Oui, des tomates bien mûres. Combien vous en voulez ?\nA: Donnez-moi deux kilos. C'est combien le kilo ?\nB: Soixante-dix le kilo.\nA: C'est un peu cher ! Cinquante, c'est possible ?\nB: Non mon frère, soixante, laisse-moi un peu de marge.\nA: D'accord. Et les légumes verts, c'est combien ?\nB: Le persil et la coriandre à cinq dirhams la botte.\nA: D'accord, donnez-moi une botte de persil et une de coriandre.\nB: Quoi d'autre ? Vous voulez autre chose ?\nA: Donnez-moi trois kilos d'oignons et un kilo de carottes.\nB: Voilà. Le tout pour cent vingt-cinq.\nA: D'accord, tenez. Au revoir !",
+    "dialogue_arabe": "A: صباح الخير ا الحاج! واش عندك طماطيشا؟\nB: صباح الخير! إيه، طماطيشا فرملا. بشحال بغيتي؟\nA: عطيني جوج كيلو. بشحال الكيلو؟\nB: سبعين الكيلو.\nA: غالي شوية! خمسين ما يمكنش؟\nB: لا أ خويا، ستّين خلّيها فيا.\nA: واخا. و الخضرة الخضرا بشحال؟\nB: المعدنوس و القزبور ب خمسة دراهم الزريبة.\nA: واخا، عطيني زريبة ديال المعدنوس، و زريبة ديال القزبور.\nB: شنو عاود؟ بغيتي شي حاجة خرا؟\nA: عطيني تلت كيلو ديال البصلة و كيلو ديال الخيزو.\nB: ها هو. كلشي ب مية و خمسة و عشرين.\nA: واخا، تفضّل. بسلامة!",
+    "vocabulaire": [
+      {"darija": "S-souq", "arabe": "السوق", "francais": "Le marché"},
+      {"darija": "Khodra", "arabe": "خضرة", "francais": "Légumes"},
+      {"darija": "Tomaticha", "arabe": "طماطيشا", "francais": "Tomates"},
+      {"darija": "Ma3dnous", "arabe": "المعدنوس", "francais": "Persil"},
+      {"darija": "9zbor", "arabe": "القزبور", "francais": "Coriandre"},
+      {"darija": "Bsla", "arabe": "بصلة", "francais": "Oignons"},
+      {"darija": "Khizou", "arabe": "خيزو", "francais": "Carottes"},
+      {"darija": "Ghali", "arabe": "غالي", "francais": "Cher"},
+      {"darija": "Rkhis", "arabe": "رخيص", "francais": "Pas cher"},
+      {"darija": "Zriba", "arabe": "زريبة", "francais": "Botte (d'herbes)"}
+    ]
+  },
+  {
+    "title": "Ri7t l-koskos d jma3 - L'odeur du couscous du vendredi",
+    "objective": "Parler de la tradition du couscous du vendredi",
+    "estimated_minutes": 6,
+    "cefr_level": "A2",
+    "theme": "cuisine-marche",
+    "grammar_focus": "L-3ada (tradition) + verbes culinaires avancés + quantités",
+    "chunk_focus": ["L-koskos", "Nfawwro", "D-dkhkhan", "3la 7ssab l-3a2ila"],
+    "dialogue_darija": "A: Lyoum l-jma3. Wach mmakom katayb l-koskos?\nB: Tab3an! Kol jma3 l-walida kattaybou.\nA: Dyal chnou katdirouh?\nB: Dyal l-7am w l-khodra. L-gra3 w l-lft w l-9ar3a.\nA: Mmmm, bnayn! W kifach katdiro smida?\nB: Kat3arrkha b l-ma w z-zit w kat-fawwrha f l-keskass.\nA: Bch7al d l-marra kat-fawwrha?\nB: Telt mrrat. Bch ykoun khfif.\nA: W l-marra dyalk?\nB: Katdir bzzaf d l-7waye9. 7mmus, bsla m7ammra, zbib.\nA: Njiw 3ndkom lyoum?\nB: Ahlan w sahlan! L-koskos d l-jma3 l-bab mftou7 l-jmi3!",
+    "dialogue_francais": "A: C'est vendredi aujourd'hui. Votre mère prépare le couscous ?\nB: Bien sûr ! Chaque vendredi, ma mère le prépare.\nA: Vous le faites avec quoi ?\nB: Avec de la viande et des légumes. Courge, navets et courgettes.\nA: Mmmm, délicieux ! Et comment elle prépare la semoule ?\nB: Elle la roule avec de l'eau et de l'huile et la met à la vapeur dans le couscoussier.\nA: Combien de fois elle la passe à la vapeur ?\nB: Trois fois. Pour qu'elle soit légère.\nA: Et votre sauce ?\nB: Elle met beaucoup d'ingrédients. Pois chiches, oignons caramélisés, raisins secs.\nA: On vient chez vous aujourd'hui ?\nB: Bienvenue ! Le couscous du vendredi, la porte est ouverte à tous !",
+    "dialogue_arabe": "A: اليوم الجمعة. واش مماكم كتطيب الكسكس؟\nB: طبعاً! كل جمعة الوالدة كتطيّبو.\nA: ديال شنو كتديروه؟\nB: ديال الحم و الخضرة. القرع و اللفت و القرعة.\nA: ممم، بناين! و كيفاش كتديرو السميدة؟\nB: كتعرّكها ب الما و الزيت و كتفوّرها ف الكسكاس.\nA: بشحال د المرّة كتفوّرها؟\nB: تلت مرّات. بش يكون خفيف.\nA: و المرقة ديالكم؟\nB: كتدير بزاف ديال الحوايج. حمّص، بصلة محمّرة، زبيب.\nA: نجيو عندكم اليوم؟\nB: أهلاً و سهلاً! الكسكس ديال الجمعة الباب مفتوح للجميع!",
+    "vocabulaire": [
+      {"darija": "L-koskos", "arabe": "الكسكس", "francais": "Le couscous"},
+      {"darija": "Smida", "arabe": "السميدة", "francais": "La semoule"},
+      {"darija": "L-keskass", "arabe": "الكسكاس", "francais": "Le couscoussier"},
+      {"darija": "Nfawwro", "arabe": "نفوّرو", "francais": "On passe à la vapeur"},
+      {"darija": "L-gra3", "arabe": "القرع", "francais": "La courge"},
+      {"darija": "L-lft", "arabe": "اللفت", "francais": "Les navets"},
+      {"darija": "7mmus", "arabe": "حمّص", "francais": "Pois chiches"},
+      {"darija": "Zbib", "arabe": "زبيب", "francais": "Raisins secs"},
+      {"darija": "M7ammra", "arabe": "محمّرة", "francais": "Caramélisé(e)"}
+    ]
+  },
+  {
+    "title": "Nchriw l-7waye9 f supermarché - Courses au supermarché",
+    "objective": "Faire ses courses au supermarché - produits de base",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "cuisine-marche",
+    "grammar_focus": "Khassna nchriw + lista d l-mouchtriyat + prix",
+    "chunk_focus": ["L-lista", "Nchriw", "Fach khassna?", "L-caisse"],
+    "dialogue_darija": "A: Khassna nmchiw l supermarché. Ma b9a walo f d-dar.\nB: Wakha. Chnou khassna nchriw?\nA: 7lib, khobz, lbid w fromage.\nB: Zid l-3asir w l-ma.\nA: W s-sokor w l-9ahwa?\nB: Iyeh, s-sokor sali w l-9ahwa tani.\nA: Wakha, 3tini l-lista, ghadi nktebbha f t-tilifoun.\nB: 7lib, khobz, lbid, fromage, 3asir, l-ma, sokor, 9ahwa.\nA: W l-mwat? Klima w soban?\nB: Iyeh, zid klima w soban d l-mwa3in.\nA: Yallah, nmchiw 9bel ma ysaddo!\nB: Ghi khodni 3and l-caisse b zer9a, ma bghitch ndir la file.",
+    "dialogue_francais": "A: Il faut qu'on aille au supermarché. Il ne reste plus rien à la maison.\nB: D'accord. Qu'est-ce qu'il nous faut ?\nA: Du lait, du pain, des œufs et du fromage.\nB: Ajoute le jus et l'eau.\nA: Et le sucre et le café ?\nB: Oui, le sucre est fini et le café aussi.\nA: D'accord, donne-moi la liste, je vais la noter sur le téléphone.\nB: Lait, pain, œufs, fromage, jus, eau, sucre, café.\nA: Et les produits ménagers ? Javel et liquide vaisselle ?\nB: Oui, ajoute la javel et le liquide vaisselle.\nA: Allez, on y va avant qu'ils ferment !\nB: Emmène-moi vite à la caisse, je ne veux pas faire la queue.",
+    "dialogue_arabe": "A: خصّنا نمشيو ل سوپرمارشي. ما بقا والو ف الدار.\nB: واخا. شنو خصّنا نشريو؟\nA: حليب، خبز، لبيض و فروماج.\nB: زيد العصير و الما.\nA: و السكّور و القهوة؟\nB: إيه، السكّور سالي و القهوة تاني.\nA: واخا، عطيني الليستا، غادي نكتبها ف التيليفون.\nB: حليب، خبز، لبيض، فروماج، عصير، الما، سكّور، قهوة.\nA: و الموات؟ كليما و صابون؟\nB: إيه، زيد كليما و صابون ديال المواعين.\nA: يالله، نمشيو قبل ما يسدّو!\nB: غي خدني عند الكيس بالزربة، ما بغيتش ندير لا فيل.",
+    "vocabulaire": [
+      {"darija": "Supermarché", "arabe": "سوپرمارشي", "francais": "Supermarché"},
+      {"darija": "Nchriw", "arabe": "نشريو", "francais": "On achète"},
+      {"darija": "7lib", "arabe": "حليب", "francais": "Lait"},
+      {"darija": "Khobz", "arabe": "خبز", "francais": "Pain"},
+      {"darija": "Lbid", "arabe": "لبيض", "francais": "Œufs"},
+      {"darija": "Sokor", "arabe": "سكّور", "francais": "Sucre"},
+      {"darija": "L-caisse", "arabe": "الكيس", "francais": "La caisse"},
+      {"darija": "Klima", "arabe": "كليما", "francais": "Eau de javel"},
+      {"darija": "Soban d l-mwa3in", "arabe": "صابون ديال المواعين", "francais": "Liquide vaisselle"}
+    ]
+  }
+]

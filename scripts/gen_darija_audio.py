@@ -1,24 +1,37 @@
 """
-Génération audio des dialogues darija avec Edge TTS
-Utilise les voix marocaines ar-MA-JamalNeural (homme) et ar-MA-MounaNeural (femme)
+Génération audio des dialogues darija
+ElevenLabs en priorité, Edge TTS en fallback
 Lit le texte arabe pour la prononciation, affiche le texte en translittération pour l'apprentissage
 """
 
 import asyncio
 import json
+import os
 import re
 import time
 from pathlib import Path
 
 import edge_tts
+import requests
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent.parent / ".env")
 
 BASE_DIR = Path(__file__).parent.parent
 LESSON_DIR = BASE_DIR / "data" / "lesson_packs"
 AUDIO_DIR = BASE_DIR / "data" / "lesson_audio"
 
-# Voix marocaines Edge TTS
-VOICE_MALE = "ar-MA-JamalNeural"  # Voix masculine marocaine
-VOICE_FEMALE = "ar-MA-MounaNeural"  # Voix féminine marocaine
+# Voix marocaines Edge TTS (fallback)
+VOICE_MALE = "ar-MA-JamalNeural"
+VOICE_FEMALE = "ar-MA-MounaNeural"
+
+# ElevenLabs config
+ELEVENLABS_API_KEY = os.getenv("EVEN_LAB_KEY", "")
+ELEVENLABS_MODEL = "eleven_v3"
+ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "pNInz6obpgDQGcFmaJgB")
+ELEVENLABS_VOICE_ID_FEMALE = os.getenv(
+    "ELEVENLABS_VOICE_ID_FEMALE", "EXAVITQu4vr4xnSDxMaL"
+)
 
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -42,8 +55,31 @@ def parse_dialogue_arabe(dialogue_arabe: str):
     return parts
 
 
-async def generate_single_audio(text: str, voice: str, output_file: Path):
-    """Génère un fichier audio unique"""
+async def generate_single_audio(
+    text: str, voice: str, output_file: Path, speaker: str = "A"
+):
+    """Génère un fichier audio — ElevenLabs en priorité, Edge TTS en fallback"""
+    # Essayer ElevenLabs d'abord
+    if ELEVENLABS_API_KEY:
+        voice_id = ELEVENLABS_VOICE_ID if speaker == "A" else ELEVENLABS_VOICE_ID_FEMALE
+        url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+        headers = {"xi-api-key": ELEVENLABS_API_KEY, "Content-Type": "application/json"}
+        payload = {
+            "text": text,
+            "model_id": ELEVENLABS_MODEL,
+            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
+        }
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=60)
+            if resp.status_code == 200:
+                with open(output_file, "wb") as f:
+                    f.write(resp.content)
+                return
+            else:
+                print(f"    ⚠️  ElevenLabs {resp.status_code}, fallback Edge TTS")
+        except Exception as e:
+            print(f"    ⚠️  ElevenLabs erreur: {e}, fallback Edge TTS")
+    # Fallback Edge TTS
     communicate = edge_tts.Communicate(text, voice)
     await communicate.save(str(output_file))
 
@@ -75,7 +111,7 @@ async def generate_dialogue_audio(lesson: dict, output_file: Path):
         voice = voice_map.get(part["speaker"], VOICE_MALE)
         temp_file = temp_dir / f"part_{i:03d}.mp3"
         try:
-            await generate_single_audio(part["text"], voice, temp_file)
+            await generate_single_audio(part["text"], voice, temp_file, part["speaker"])
             temp_files.append(temp_file)
         except Exception as e:
             print(f"  ⚠️  Erreur partie {i}: {e}")
@@ -185,9 +221,17 @@ async def process_all_lessons():
 
 
 if __name__ == "__main__":
-    print("🇲🇦 Génération audio Darija - Edge TTS")
+    tts_engine = (
+        "ElevenLabs + Edge TTS fallback"
+        if ELEVENLABS_API_KEY
+        else "Edge TTS uniquement"
+    )
+    print(f"🇲🇦 Génération audio Darija - {tts_engine}")
     print(f"   Voix homme: {VOICE_MALE}")
     print(f"   Voix femme: {VOICE_FEMALE}")
+    if ELEVENLABS_API_KEY:
+        print(f"   ElevenLabs voice M: {ELEVENLABS_VOICE_ID}")
+        print(f"   ElevenLabs voice F: {ELEVENLABS_VOICE_ID_FEMALE}")
     print(f"   Dossier leçons: {LESSON_DIR}")
     print(f"   Dossier audio: {AUDIO_DIR}")
     print()

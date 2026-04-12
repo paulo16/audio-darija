@@ -1,0 +1,71 @@
+[
+  {
+    "title": "D-dar dyali - Décrire sa maison",
+    "objective": "Apprendre à décrire une maison et ses pièces en darija",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "maison-quotidien",
+    "grammar_focus": "Fiha (il y a) + les pièces + adjectifs (kbir, sghir, zwine)",
+    "chunk_focus": ["D-dar dyali", "Fiha...", "Bit/byut", "Kouzina"],
+    "dialogue_darija": "A: Fin sakna?\nB: Sakna f Hay Riad, f appartement.\nA: Kbir l-appartement?\nB: Iyeh, fih 3 d l-byut, salon, kouzina w salle de bain.\nA: Mezyan! 3andek balcon?\nB: Iyeh, 3andi balcon kbir, kanchouf mno l-mdina.\nA: W l-kouzina, wasa3a?\nB: Wasa3a chway. Fih kol chi: l-koussina, frigo, four.\nA: Ana sakna f dar 3rbiya f l-mdina l-9dima.\nB: Waw! Fih riyad?\nA: Iyeh, fih riyad zwina b l-zellige w naffara.\nB: Hadi 7lomm! Kanebghi d-dyour l-9dim!",
+    "dialogue_francais": "A: Où est-ce que tu habites ?\nB: J'habite à Hay Riad, dans un appartement.\nA: Il est grand l'appartement ?\nB: Oui, il a 3 chambres, un salon, une cuisine et une salle de bain.\nA: Bien ! Tu as un balcon ?\nB: Oui, j'ai un grand balcon, je vois la ville d'en haut.\nA: Et la cuisine, elle est spacieuse ?\nB: Un peu spacieuse. Il y a tout : la cuisinière, le frigo, le four.\nA: Moi j'habite dans une maison traditionnelle dans la vieille médina.\nB: Waouh ! Il y a un riad ?\nA: Oui, il y a un beau riad avec du zellige et une fontaine.\nB: C'est un rêve ! J'adore les maisons anciennes !",
+    "dialogue_arabe": "A: فين ساكنة؟\nB: ساكنة ف حي الرياض، ف أبارطمون.\nA: كبير الأبارطمون؟\nB: إيه، فيه 3 د البيوت، صالون، كوزينة و سال دو بان.\nA: مزيان! عندك بالكون؟\nB: إيه، عندي بالكون كبير، كنشوف منو المدينة.\nA: و الكوزينة، واسعة؟\nB: واسعة شوية. فيه كلشي: الكوسينة، فريگو، فور.\nA: أنا ساكنة ف دار عربية ف المدينة القديمة.\nB: واو! فيه رياض؟\nA: إيه، فيه رياض زوينة ب الزليج و نافرة.\nB: هادي حلوم! كنبغي الديور القديم!",
+    "vocabulaire": [
+      {"darija": "D-dar", "arabe": "الدار", "francais": "La maison"},
+      {"darija": "Bit/byut", "arabe": "بيت/بيوت", "francais": "Chambre(s)"},
+      {"darija": "Kouzina", "arabe": "كوزينة", "francais": "La cuisine"},
+      {"darija": "Salon", "arabe": "صالون", "francais": "Le salon"},
+      {"darija": "Balcon", "arabe": "بالكون", "francais": "Le balcon"},
+      {"darija": "Wasa3/wasa3a", "arabe": "واسع/واسعة", "francais": "Spacieux/spacieuse"},
+      {"darija": "Dar 3rbiya", "arabe": "دار عربية", "francais": "Maison traditionnelle"},
+      {"darija": "Zellige", "arabe": "الزليج", "francais": "Mosaïque marocaine"},
+      {"darija": "Saken/sakna", "arabe": "ساكن/ساكنة", "francais": "J'habite (m/f)"}
+    ]
+  },
+  {
+    "title": "L-mwadin f d-dar - Les meubles et objets de la maison",
+    "objective": "Nommer les objets et meubles de la maison",
+    "estimated_minutes": 5,
+    "cefr_level": "A1",
+    "theme": "maison-quotidien",
+    "grammar_focus": "Fin kayn? (Où est?) + prépositions (f, fo9, t7t, hdaya)",
+    "chunk_focus": ["Fin kayn...?", "Fo9 t-tabla", "F l-kouzina", "Hdaya"],
+    "dialogue_darija": "A: Fin kayn t-télécommande?\nB: Fo9 t-tabla f salon.\nA: Ma l9it-hash. Fin byedi?\nB: Chuf t7t l-coussin dyal l-kanapa.\nA: Ah, ha hiya! W fin kayn chargeur dyal t-téléphoune?\nB: F l-kouzina, hdaya l-micro-onde.\nA: Chokran. W l-mfata7 d d-dar?\nB: Khrjat mn jib-ek? Chuf f l-meuble d l-dkhoul.\nA: La, machi temma. Ma3raft fin khellithom.\nB: Chuf fo9 l-frigo. Dima katkhellihom temma!\nA: Bssah! Ha homa. Nta t3arfni 7sen mn rassi!",
+    "dialogue_francais": "A: Où est la télécommande ?\nB: Sur la table du salon.\nA: Je ne l'ai pas trouvée. Où est passée ?\nB: Regarde sous le coussin du canapé.\nA: Ah, la voilà ! Et où est le chargeur du téléphone ?\nB: Dans la cuisine, à côté du micro-ondes.\nA: Merci. Et les clés de la maison ?\nB: Elles sont tombées de ta poche ? Regarde dans le meuble de l'entrée.\nA: Non, pas là-bas. Je ne sais pas où je les ai laissées.\nB: Regarde sur le frigo. Tu les laisses toujours là-bas !\nA: C'est vrai ! Les voilà. Tu me connais mieux que moi-même !",
+    "dialogue_arabe": "A: فين كاين التيليكوموند؟\nB: فوق الطابلة ف الصالون.\nA: ما لقيتهاش. فين بايدي؟\nB: شوف تحت الكوسان ديال الكنبة.\nA: آه، ها هيا! و فين كاين الشارجور ديال التيليفون؟\nB: ف الكوزينة، حدايا الميكرو-أوند.\nA: شكرا. و المفاتح د الدار؟\nB: خرجات من جيبك؟ شوف ف المبل د الدخول.\nA: لا، ماشي تمّا. ما عرفتش فين خلّيتهم.\nB: شوف فوق الفريگو. ديما كتخلّيهم تمّا!\nA: بصّح! ها هما. نتا تعرفني حسن من راسي!",
+    "vocabulaire": [
+      {"darija": "Fin kayn?", "arabe": "فين كاين؟", "francais": "Où est ?"},
+      {"darija": "T-tabla", "arabe": "الطابلة", "francais": "La table"},
+      {"darija": "L-kanapa", "arabe": "الكنبة", "francais": "Le canapé"},
+      {"darija": "Fo9", "arabe": "فوق", "francais": "Sur / dessus"},
+      {"darija": "T7t", "arabe": "تحت", "francais": "Sous"},
+      {"darija": "Hdaya", "arabe": "حدايا", "francais": "À côté de"},
+      {"darija": "L-mfata7", "arabe": "المفاتح", "francais": "Les clés"},
+      {"darija": "Chuf", "arabe": "شوف", "francais": "Regarde"},
+      {"darija": "Khellithom", "arabe": "خلّيتهم", "francais": "Je les ai laissés"}
+    ]
+  },
+  {
+    "title": "T-tnqiya w l-khdem d d-dar - Le ménage",
+    "objective": "Parler des tâches ménagères et du nettoyage",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "maison-quotidien",
+    "grammar_focus": "Khass + verbes de nettoyage + impératif",
+    "chunk_focus": ["Khassna nsaybo", "Ghassal", "Knas", "Sayab d-dar"],
+    "dialogue_darija": "A: D-dar khassna nsaybouha, ghda jay diyouf!\nB: Iyeh, bda mn l-kouzina. Ghsel l-ma3oun.\nA: Wakha, w nta knes salon.\nB: W l-7ammam, chkoun ghadi ysaybou?\nA: Ana ghadi nsayab l-7ammam. Jib l-javel.\nA: W l-ghsil? 3andna bzzaf d l-7waye9.\nB: Dir l-machine, ana ghadi nchr l-7waye9 l-yabsin.\nA: Khassna nchriw l-monadif tani, sali.\nB: W khassna ndirou l-frach jdid f l-byut.\nA: Yallah nbdaw daba bash nkammlo 9bel l-3chiya!\nB: Bismillah!",
+    "dialogue_francais": "A: Il faut qu'on nettoie la maison, demain on a des invités !\nB: Oui, commence par la cuisine. Fais la vaisselle.\nA: D'accord, et toi balaie le salon.\nB: Et la salle de bain, qui va la nettoyer ?\nA: Moi je vais nettoyer la salle de bain. Amène la javel.\nA: Et le linge ? On a beaucoup de vêtements.\nB: Mets la machine, moi je vais étendre les vêtements secs.\nA: Il faut qu'on achète du nettoyant aussi, c'est fini.\nB: Et il faut qu'on mette des draps neufs dans les chambres.\nA: Allez, on commence maintenant pour finir avant ce soir !\nB: Bismillah !",
+    "dialogue_arabe": "A: الدار خصّنا نصيبوها، غدا جاي ضيوف!\nB: إيه، بدا من الكوزينة. غسل الماعون.\nA: واخا، و نتا كنس الصالون.\nB: و الحمّام، شكون غادي يصيبو؟\nA: أنا غادي نصيب الحمّام. جيب الجافيل.\nA: و الغسيل؟ عندنا بزاف د الحوايج.\nB: دير الماشين، أنا غادي نشر الحوايج اليابسين.\nA: خصّنا نشريو المنظيف تاني، سالي.\nB: و خصّنا نديرو الفراش جديد ف البيوت.\nA: يالله نبداو دابا باش نكمّلو قبل العشية!\nB: بسم الله!",
+    "vocabulaire": [
+      {"darija": "Nsaybou", "arabe": "نصيبو", "francais": "On nettoie / on arrange"},
+      {"darija": "Ghassal", "arabe": "غسل", "francais": "Laver / la vaisselle"},
+      {"darija": "Knes", "arabe": "كنس", "francais": "Balayer"},
+      {"darija": "L-ma3oun", "arabe": "الماعون", "francais": "La vaisselle"},
+      {"darija": "L-7waye9", "arabe": "الحوايج", "francais": "Les vêtements / le linge"},
+      {"darija": "L-machine", "arabe": "الماشين", "francais": "La machine à laver"},
+      {"darija": "L-frach", "arabe": "الفراش", "francais": "Les draps / le lit"},
+      {"darija": "Diyouf", "arabe": "ضيوف", "francais": "Des invités"},
+      {"darija": "Khassna", "arabe": "خصّنا", "francais": "Il faut qu'on"}
+    ]
+  }
+]

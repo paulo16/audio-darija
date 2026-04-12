@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Sba7 l-kheir a z-zmala2 - Bonjour les collègues",
+    "objective": "Salutations et petite conversation au bureau le matin",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "travail-collegues",
+    "grammar_focus": "Kif dayr/dayra + 3lach + expressions du bureau",
+    "chunk_focus": ["Z-zmala2", "L-bureau", "Kif fat l-weekend?", "Réunion"],
+    "dialogue_darija": "A: Sba7 l-kheir a Rachid! Kif dayr?\nB: Sba7 n-nour a Karim! Labass 7amdullah. W nta?\nA: Labass. Chouya d l-3ya had s-sba7.\nB: 3lach? Ma n3astich?\nA: La, n3ast mtakhkhar. Kant kanraj3 dossier d l-patron.\nB: Ah, dak l-dossier d l-marketing? Ana tani khdamt 3lih.\nA: Iyeh. L-patron bghah lyoum.\nB: 3andna réunion m3ah f 3achra, wach 3rafti?\nA: La, ma sma3tch! Merci lli gltili.\nB: Ma chi mouchkil. Yallah nchorbou 9ahwa 9bel ma nbdaw.\nA: Iyeh, bla 9ahwa ma kanfham walo.\nB: Hahaha, ana tani! Yallah l-cuisine.",
+    "dialogue_francais": "A: Bonjour Rachid ! Comment vas-tu ?\nB: Bonjour Karim ! Ça va, hamdoulillah. Et toi ?\nA: Ça va. Un peu fatigué ce matin.\nB: Pourquoi ? T'as pas dormi ?\nA: Si, je me suis couché tard. Je préparais le dossier du patron.\nB: Ah, ce dossier marketing ? Moi aussi j'ai travaillé dessus.\nA: Oui. Le patron le veut aujourd'hui.\nB: On a une réunion avec lui à 10h, tu savais ?\nA: Non, j'étais pas au courant ! Merci de m'avoir prévenu.\nB: De rien. Allez, on prend un café avant de commencer.\nA: Oui, sans café je ne comprends rien.\nB: Hahaha, moi aussi ! Allez, on va à la cuisine.",
+    "dialogue_arabe": "A: صباح الخير أ رشيد! كيف داير؟\nB: صباح النور أ كريم! لاباس حمد الله. و نتا؟\nA: لاباس. شوية ديال العيا هاد الصباح.\nB: علاش؟ ما نعستيش؟\nA: لا، نعست متخّر. كنت كنراجع دوسّي ديال الباطرون.\nB: آه، داك الدوسّي ديال الماركتينگ؟ أنا تاني خدمت عليه.\nA: إيه. الباطرون بغاه اليوم.\nB: عندنا ريونيون معاه ف عشرة، واش عرفتي؟\nA: لا، ما سمعتش! ميرسي اللي قلتيلي.\nB: ما شي مشكل. يالله نشوربو قهوة قبل ما نبداو.\nA: إيه، بلا قهوة ما كنفهم والو.\nB: هههه، أنا تاني! يالله ل الكويزين.",
+    "vocabulaire": [
+      {"darija": "Z-zmala2", "arabe": "الزملاء", "francais": "Les collègues"},
+      {"darija": "L-bureau", "arabe": "البيرو", "francais": "Le bureau"},
+      {"darija": "L-patron", "arabe": "الباطرون", "francais": "Le patron"},
+      {"darija": "Réunion", "arabe": "ريونيون", "francais": "Réunion"},
+      {"darija": "Dossier", "arabe": "دوسّي", "francais": "Dossier"},
+      {"darija": "L-3ya", "arabe": "العيا", "francais": "La fatigue"},
+      {"darija": "Mtakhkhar", "arabe": "متخّر", "francais": "Tard / en retard"},
+      {"darija": "Nbdaw", "arabe": "نبداو", "francais": "On commence"}
+    ]
+  },
+  {
+    "title": "Réunion d l-khidma - La réunion de travail",
+    "objective": "Participer à une réunion de travail et donner son avis",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "travail-collegues",
+    "grammar_focus": "Khass + na9tara7 (proposer) + expressions professionnelles",
+    "chunk_focus": ["L-machrou3", "Na9tara7", "L-budget", "Deadline"],
+    "dialogue_darija": "A: Yallah nbdaw r-réunion. L-machrou3 l-jdid, f ayna wa9t wsalna?\nB: Kammalna l-étude de marché. L-résultats mezyane.\nA: W l-budget?\nC: L-budget ma kafich. Khassna nzido 3achrin f l-miya.\nA: 3achrin f l-miya bzzaf. L-idara ma ghadi t9ablch.\nB: Na9tara7 nna9so l-pub w nzido f l-digital.\nC: Fikra mezyane. L-digital arkhas w kaywsal l-ktar d n-nas.\nA: Wakha. W deadline?\nB: Khassna nkammlo 9bel fin d mars.\nA: Jouj chhor? Ymkan?\nC: Ila khadmo b jouj équipes, iyeh ymkan.\nA: Wakha. Rachid, nta dir l-planning. Khadija, nti kammli l-budget.\nB: Wakha a sidi.\nC: Mafhoum.",
+    "dialogue_francais": "A: Allez, on commence la réunion. Le nouveau projet, on en est où ?\nB: On a terminé l'étude de marché. Les résultats sont bons.\nA: Et le budget ?\nC: Le budget ne suffit pas. Il faut ajouter vingt pour cent.\nA: Vingt pour cent c'est beaucoup. La direction n'acceptera pas.\nB: Je propose qu'on réduise la pub et qu'on mise sur le digital.\nC: Bonne idée. Le digital est moins cher et touche plus de monde.\nA: D'accord. Et le deadline ?\nB: Il faut qu'on finisse avant fin mars.\nA: Deux mois ? C'est possible ?\nC: Si on travaille en deux équipes, oui c'est possible.\nA: D'accord. Rachid, toi tu fais le planning. Khadija, toi tu finalises le budget.\nB: Entendu, monsieur.\nC: Compris.",
+    "dialogue_arabe": "A: يالله نبداو الريونيون. المشروع الجديد، ف أينا وقت وصلنا؟\nB: كمّلنا الدراسة ديال السوق. الريزولتا مزيانة.\nA: و البودجي؟\nC: البودجي ما كافيش. خصّنا نزيدو عشرين ف المية.\nA: عشرين ف المية بزاف. الإدارة ما غادي تقبلش.\nB: نقترح نناقصو الپوب و نزيدو ف الديجيتال.\nC: فكرة مزيانة. الديجيتال أرخص و كيوصل لكتر ديال الناس.\nA: واخا. و الديدلاين؟\nB: خصّنا نكمّلو قبل فين ديال مارس.\nA: جوج شهور؟ يمكن؟\nC: إلا خدمو ب جوج إيكيپ، إيه يمكن.\nA: واخا. رشيد، نتا دير البلانينگ. خديجة، نتي كمّلي البودجي.\nB: واخا أ سيدي.\nC: مفهوم.",
+    "vocabulaire": [
+      {"darija": "L-machrou3", "arabe": "المشروع", "francais": "Le projet"},
+      {"darija": "Na9tara7", "arabe": "نقترح", "francais": "Je propose"},
+      {"darija": "L-budget", "arabe": "البودجي", "francais": "Le budget"},
+      {"darija": "Deadline", "arabe": "ديدلاين", "francais": "Date limite"},
+      {"darija": "L-idara", "arabe": "الإدارة", "francais": "La direction / administration"},
+      {"darija": "Équipe", "arabe": "إيكيپ", "francais": "Équipe"},
+      {"darija": "Planning", "arabe": "بلانينگ", "francais": "Planning"},
+      {"darija": "Mafhoum", "arabe": "مفهوم", "francais": "Compris / entendu"}
+    ]
+  },
+  {
+    "title": "Mouchkil m3a chi wah9d f l-khidma - Problème avec un collègue",
+    "objective": "Gérer un conflit ou un malentendu au travail",
+    "estimated_minutes": 6,
+    "cefr_level": "B1",
+    "theme": "travail-collegues",
+    "grammar_focus": "Exprimer le mécontentement + résolution de conflit + conditionnel",
+    "chunk_focus": ["Ma 3ajbnich", "Dir mo7awala", "Nsol7o", "Ma kantkach bghiti"],
+    "dialogue_darija": "A: Nadia, momkin n7adro chway?\nB: Iyeh, chnou kayn?\nA: Dak l-mail lli sifatih l l-client, ma 3ajbnich.\nB: 3lach? Chnou fih?\nA: Ktabti f l-mail blli l-machrou3 ghadi ytkakhkhar. Walakin ma chawartich m3aya.\nB: Ana golt l-7a9i9a. L-machrou3 3andou mouchkil.\nA: Ana 3arf, walakin khassek tchawri m3aya 9bel ma tsifti l l-client.\nB: 3andek l-7a9. Sma7liya, ma kantkach bghit ndir mouchkil.\nA: Makayn bass. L-mouhem ndiro équipe w ntfahmo.\nB: Iyeh, d l-mrrat jay khassni n7adr m3ak 9bel.\nA: Iyeh, nt3awno. Ana ma za3fanch 3lik, ghi bghit nfahmek.\nB: Choukran a Youssef. Ghadi ndiro hakda d l-mrrat jaya.",
+    "dialogue_francais": "A: Nadia, on peut parler un moment ?\nB: Oui, qu'est-ce qu'il y a ?\nA: Ce mail que tu as envoyé au client, ça ne m'a pas plu.\nB: Pourquoi ? Qu'est-ce qu'il y a dedans ?\nA: Tu as écrit que le projet allait être retardé. Mais tu ne m'as pas consulté.\nB: Moi j'ai dit la vérité. Le projet a un problème.\nA: Je sais, mais il fallait me consulter avant d'envoyer au client.\nB: Tu as raison. Excuse-moi, je ne voulais pas créer de problème.\nA: Pas de souci. L'important c'est qu'on fasse équipe et qu'on se comprenne.\nB: Oui, la prochaine fois je te consulte avant.\nA: Oui, on s'entraide. Je ne suis pas fâché, je voulais juste t'expliquer.\nB: Merci Youssef. Je ferai comme ça la prochaine fois.",
+    "dialogue_arabe": "A: نادية، ممكن نحضرو شوية؟\nB: إيه، شنو كاين؟\nA: داك الميل اللي سيفتيه ل الكليان، ما عجبنيش.\nB: علاش؟ شنو فيه؟\nA: كتبتي ف الميل بلّي المشروع غادي يتكخّر. ولكن ما شاورتيش معايا.\nB: أنا قلت الحقيقة. المشروع عندو مشكل.\nA: أنا عارف، ولكن خصّك تشاوري معايا قبل ما تسيفتي ل الكليان.\nB: عندك الحق. سمحليا، ما كنتكش بغيت ندير مشكل.\nA: ماكاين باس. المهم نديرو إيكيپ و نتفاهمو.\nB: إيه، د المرّات الجاي خصّني نحضر معاك قبل.\nA: إيه، نتعاونو. أنا ما زعفانش عليك، غي بغيت نفهمك.\nB: شكراً أ يوسف. غادي نديرو هاكدا د المرّات الجاية.",
+    "vocabulaire": [
+      {"darija": "Tchawri", "arabe": "تشاوري", "francais": "Tu consultes"},
+      {"darija": "L-client", "arabe": "الكليان", "francais": "Le client"},
+      {"darija": "Sifatih", "arabe": "سيفتيه", "francais": "Tu l'as envoyé"},
+      {"darija": "Ytkakhkhar", "arabe": "يتكخّر", "francais": "Être retardé"},
+      {"darija": "Za3fan", "arabe": "زعفان", "francais": "Fâché / en colère"},
+      {"darija": "Sma7liya", "arabe": "سمحليا", "francais": "Excuse-moi"},
+      {"darija": "Ntfahmo", "arabe": "نتفاهمو", "francais": "On se comprend"},
+      {"darija": "D l-mrrat jay", "arabe": "د المرّات الجاي", "francais": "La prochaine fois"}
+    ]
+  },
+  {
+    "title": "Pause café m3a z-zmala2 - Pause café entre collègues",
+    "objective": "Conversation informelle entre collègues pendant la pause",
+    "estimated_minutes": 5,
+    "cefr_level": "A2",
+    "theme": "travail-collegues",
+    "grammar_focus": "Conversation informelle + ragots bienveillants + futur",
+    "chunk_focus": ["Sma3ti?", "Yak?", "Ma t9oulch l 7add", "Frah/farha"],
+    "dialogue_darija": "A: Sma3ti b l-khabar?\nB: Chmen khabar?\nA: Fatima ghatkhraj mn l-boîte.\nB: Bssa7? 3lach?\nA: L9at khidma khra f chi charika kbira f Casa.\nB: Wallah? Mezyan liha! Walakin ghadi ynq9ona.\nA: Iyeh, hiya lli kanji m3aha l-café kol yoùm.\nB: W Hamid, sma3ti? Ghat3arras f septambr!\nA: Bssa7? M3a chkoun?\nB: M3a bnt 3ammhou. 3ando 3am kaychoufha.\nA: Llah ykmmal b l-kheir! Khassna ndirou lih chi 7afla f l-bureau.\nB: Iyeh, ghi ma t9oulch lih, bghina ndirou lih surprise!\nA: Wakha wakha, sakt ana! Haha!",
+    "dialogue_francais": "A: Tu as entendu la nouvelle ?\nB: Quelle nouvelle ?\nA: Fatima va quitter la boîte.\nB: C'est vrai ? Pourquoi ?\nA: Elle a trouvé un autre poste dans une grande entreprise à Casa.\nB: Vraiment ? Tant mieux pour elle ! Mais elle va nous manquer.\nA: Oui, c'est avec elle que je prends le café chaque jour.\nB: Et Hamid, t'as entendu ? Il va se marier en septembre !\nA: C'est vrai ? Avec qui ?\nB: Avec la fille de son oncle. Ça fait un an qu'ils se voient.\nA: Que Dieu les bénisse ! Il faut qu'on lui organise une fête au bureau.\nB: Oui, mais ne lui dis pas, on veut lui faire une surprise !\nA: D'accord d'accord, je me tais ! Haha !",
+    "dialogue_arabe": "A: سمعتي ب الخبار؟\nB: شمن خبار؟\nA: فاطمة غتخرج من البوات.\nB: بصّح؟ علاش؟\nA: لقات خدمة خرا ف شي شاريكة كبيرة ف كازا.\nB: والله؟ مزيان ليها! ولكن غادي ينقصونا.\nA: إيه، هيا اللي كنجي معاها الكافي كل يوم.\nB: و حميد، سمعتي؟ غيتعرّس ف شتنبر!\nA: بصّح؟ مع شكون؟\nB: مع بنت عمّو. عندو عام كيشوفها.\nA: الله يكمّل بالخير! خصّنا نديرو ليه شي حفلة ف البيرو.\nB: إيه، غي ما تقولش ليه، بغينا نديرو ليه سورپريز!\nA: واخا واخا، ساكت أنا! ههه!",
+    "vocabulaire": [
+      {"darija": "L-khabar", "arabe": "الخبار", "francais": "La nouvelle"},
+      {"darija": "L-boîte", "arabe": "البوات", "francais": "La boîte / l'entreprise"},
+      {"darija": "Ghat3arras", "arabe": "غيتعرّس", "francais": "Il va se marier"},
+      {"darija": "7afla", "arabe": "حفلة", "francais": "Fête"},
+      {"darija": "Surprise", "arabe": "سورپريز", "francais": "Surprise"},
+      {"darija": "Yn9sona", "arabe": "ينقصونا", "francais": "Elle va nous manquer"},
+      {"darija": "Sakt", "arabe": "ساكت", "francais": "Je me tais / silencieux"},
+      {"darija": "Bnt 3ammou", "arabe": "بنت عمّو", "francais": "La fille de son oncle (paternel)"}
+    ]
+  }
+]
