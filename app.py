@@ -16,6 +16,7 @@ from pathlib import Path
 
 import requests
 import streamlit as st
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -524,17 +525,58 @@ def display_audio_player(audio_path: Path, key: str = ""):
             audio_b64 = base64.b64encode(f.read()).decode()
         uid = key or hashlib.md5(str(audio_path).encode()).hexdigest()[:10]
         html = f'''
+        <html><head><style>
+        .audio-loop-container {{ display:flex; align-items:center; gap:8px; margin:4px 0; }}
+        .audio-loop-container audio {{ flex:1; min-width:0; height:40px; }}
+        .loop-btn {{ background:#f0f0f0; border:2px solid #ccc; border-radius:8px;
+                     padding:4px 10px; font-size:1.2em; cursor:pointer; transition:all 0.2s; flex-shrink:0; }}
+        .loop-btn:hover {{ background:#e0e0e0; }}
+        .loop-btn.active {{ background:#c1272d; color:white; border-color:#c1272d; }}
+        body {{ margin:0; padding:0; }}
+        </style></head><body>
         <div class="audio-loop-container">
             <audio id="audio_{uid}" controls src="data:audio/mp3;base64,{audio_b64}"
                    style="width:100%;height:40px;"></audio>
-            <button class="loop-btn" id="loopbtn_{uid}" onclick="
-                var a=document.getElementById('audio_{uid}');
-                a.loop=!a.loop;
-                this.classList.toggle('active',a.loop);
-                this.title=a.loop?'Boucle activée':'Boucle désactivée';
-            " title="Boucle désactivée">🔁</button>
-        </div>'''
-        st.markdown(html, unsafe_allow_html=True)
+            <button class="loop-btn" id="loopbtn_{uid}" title="Répéter en boucle">🔁</button>
+        </div>
+        <script>
+        (function() {{
+            var btn = document.getElementById('loopbtn_{uid}');
+            var audio = document.getElementById('audio_{uid}');
+            var loopCount = 0;
+            var maxLoops = 20;
+            var looping = false;
+            btn.addEventListener('click', function() {{
+                looping = !looping;
+                btn.classList.toggle('active', looping);
+                if (looping) {{
+                    loopCount = 0;
+                    btn.title = 'Boucle activée (0/' + maxLoops + ')';
+                    audio.play();
+                }} else {{
+                    btn.title = 'Répéter en boucle';
+                    loopCount = 0;
+                }}
+            }});
+            audio.addEventListener('ended', function() {{
+                if (looping) {{
+                    loopCount++;
+                    btn.title = 'Boucle activée (' + loopCount + '/' + maxLoops + ')';
+                    if (loopCount < maxLoops) {{
+                        audio.currentTime = 0;
+                        audio.play();
+                    }} else {{
+                        looping = false;
+                        btn.classList.remove('active');
+                        btn.title = 'Répéter en boucle';
+                        loopCount = 0;
+                    }}
+                }}
+            }});
+        }})();
+        </script>
+        </body></html>'''
+        components.html(html, height=50)
         return True
     return False
 
@@ -2302,16 +2344,54 @@ def page_conversation():
                             <audio id="chat_audio_{uid}" controls {autoplay_attr}
                                    style="width:100%;max-width:350px;height:32px;margin:4px 0 8px 0;"
                                    src="data:audio/mp3;base64,{audio_b64}"></audio>
-                            <button class="loop-btn" id="loopbtn_chat_{uid}" onclick="
-                                var a=document.getElementById(\'chat_audio_{uid}\');
-                                a.loop=!a.loop;
-                                this.classList.toggle(\'active\',a.loop);
-                            " title="Boucle">🔁</button>
+                            <button class="loop-btn" data-audio-id="chat_audio_{uid}" title="Répéter en boucle">🔁</button>
                         </div>'''
     chat_html += "</div>"
     # Auto-scroll vers le bas
     chat_html += '<script>var cb=document.getElementById("chat-box");if(cb)cb.scrollTop=cb.scrollHeight;</script>'
     st.markdown(chat_html, unsafe_allow_html=True)
+
+    # ── Script pour activer les boutons boucle du chat ──
+    _loop_script = '''<html><body><script>
+    var btns = window.parent.document.querySelectorAll('button[data-audio-id]');
+    btns.forEach(function(btn) {
+        if (btn._loopBound) return;
+        btn._loopBound = true;
+        var audioId = btn.getAttribute('data-audio-id');
+        var audio = window.parent.document.getElementById(audioId);
+        if (!audio) return;
+        var loopCount = 0, maxLoops = 20, looping = false;
+        btn.addEventListener('click', function() {
+            looping = !looping;
+            btn.classList.toggle('active', looping);
+            if (looping) {
+                loopCount = 0;
+                btn.title = 'Boucle activée (0/' + maxLoops + ')';
+                audio.currentTime = 0;
+                audio.play();
+            } else {
+                btn.title = 'Répéter en boucle';
+                loopCount = 0;
+            }
+        });
+        audio.addEventListener('ended', function() {
+            if (looping) {
+                loopCount++;
+                btn.title = 'Boucle activée (' + loopCount + '/' + maxLoops + ')';
+                if (loopCount < maxLoops) {
+                    audio.currentTime = 0;
+                    audio.play();
+                } else {
+                    looping = false;
+                    btn.classList.remove('active');
+                    btn.title = 'Répéter en boucle';
+                    loopCount = 0;
+                }
+            }
+        });
+    });
+    </script></body></html>'''
+    components.html(_loop_script, height=0)
 
     # ── Zone d'entrée fixe en bas ──
     MAX_EXCHANGES = 10
@@ -2593,44 +2673,95 @@ def page_playlist():
             unsafe_allow_html=True,
         )
 
-        html = f'''<div class="audio-loop-container">
+        pl_html = f'''<html><head><style>
+        .audio-loop-container {{ display:flex; align-items:center; gap:8px; margin:4px 0; }}
+        .audio-loop-container audio {{ flex:1; min-width:0; height:40px; }}
+        .loop-btn {{ background:#f0f0f0; border:2px solid #ccc; border-radius:8px;
+                     padding:4px 10px; font-size:1.2em; cursor:pointer; transition:all 0.2s; flex-shrink:0; }}
+        .loop-btn:hover {{ background:#e0e0e0; }}
+        .loop-btn.active {{ background:#c1272d; color:white; border-color:#c1272d; }}
+        body {{ margin:0; padding:0; }}
+        </style></head><body>
+        <div class="audio-loop-container">
             <audio id="audio_{uid}" controls src="data:audio/mp3;base64,{audio_b64}"
-                   style="width:100%;height:40px;" class="playlist-audio"></audio>
-            <button class="loop-btn" id="loopbtn_{uid}" onclick="
-                var a=document.getElementById('audio_{uid}');
-                a.loop=!a.loop;
-                this.classList.toggle('active',a.loop);
-            " title="Boucle">🔁</button>
-        </div>'''
-        st.markdown(html, unsafe_allow_html=True)
+                   style="width:100%;height:40px;"></audio>
+            <button class="loop-btn" id="loopbtn_{uid}" title="Répéter en boucle">🔁</button>
+        </div>
+        <script>
+        (function() {{
+            var btn = document.getElementById('loopbtn_{uid}');
+            var audio = document.getElementById('audio_{uid}');
+            var loopCount = 0, maxLoops = 20, looping = false;
+            btn.addEventListener('click', function() {{
+                looping = !looping;
+                btn.classList.toggle('active', looping);
+                if (looping) {{
+                    loopCount = 0;
+                    btn.title = 'Boucle activée (0/' + maxLoops + ')';
+                    audio.currentTime = 0;
+                    audio.play();
+                }} else {{
+                    btn.title = 'Répéter en boucle';
+                    loopCount = 0;
+                }}
+            }});
+            audio.addEventListener('ended', function() {{
+                if (looping) {{
+                    loopCount++;
+                    btn.title = 'Boucle activée (' + loopCount + '/' + maxLoops + ')';
+                    if (loopCount < maxLoops) {{
+                        audio.currentTime = 0;
+                        audio.play();
+                    }} else {{
+                        looping = false;
+                        btn.classList.remove('active');
+                        btn.title = 'Répéter en boucle';
+                        loopCount = 0;
+                    }}
+                }}
+            }});
+        }})();
+        </script>
+        </body></html>'''
+        components.html(pl_html, height=50)
 
     # ── Script de lecture enchaînée ──
     if play_all and len(audio_ids) > 1:
         ids_js = ",".join(f"'audio_{uid}'" for uid in audio_ids)
         loop_flag = "true" if loop_all else "false"
-        chain_script = f"""
-        <script>
+        chain_script = f"""<html><body><script>
         (function() {{
             var ids = [{ids_js}];
             var loopAll = {loop_flag};
             for (var i = 0; i < ids.length; i++) {{
                 (function(idx) {{
-                    var el = document.getElementById(ids[idx]);
+                    var frames = window.parent.document.querySelectorAll('iframe');
+                    var el = null;
+                    for (var f = 0; f < frames.length; f++) {{
+                        try {{ el = frames[f].contentDocument.getElementById(ids[idx]); if (el) break; }} catch(e) {{}}
+                    }}
                     if (!el) return;
                     el.addEventListener('ended', function() {{
-                        if (el.loop) return;  // skip if individual loop is on
-                        var next = idx + 1;
-                        if (next < ids.length) {{
-                            document.getElementById(ids[next]).play();
+                        if (el._looping) return;
+                        var nextEl = null;
+                        var nextIdx = idx + 1;
+                        if (nextIdx < ids.length) {{
+                            for (var f = 0; f < frames.length; f++) {{
+                                try {{ nextEl = frames[f].contentDocument.getElementById(ids[nextIdx]); if (nextEl) break; }} catch(e) {{}}
+                            }}
+                            if (nextEl) nextEl.play();
                         }} else if (loopAll) {{
-                            document.getElementById(ids[0]).play();
+                            for (var f = 0; f < frames.length; f++) {{
+                                try {{ nextEl = frames[f].contentDocument.getElementById(ids[0]); if (nextEl) break; }} catch(e) {{}}
+                            }}
+                            if (nextEl) nextEl.play();
                         }}
                     }});
                 }})(i);
             }}
         }})();
-        </script>"""
-        st.markdown(chain_script, unsafe_allow_html=True)
+        </script></body></html>"""
+        components.html(chain_script, height=0)
 
 
 # ============================================================
