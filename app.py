@@ -647,6 +647,21 @@ async def _edge_tts_save(text: str, voice: str, output_path: Path):
     await communicate.save(str(output_path))
 
 
+def _run_async(coro):
+    """Exécute une coroutine de manière sûre, même si un event loop tourne déjà (Streamlit)."""
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        loop = None
+    if loop and loop.is_running():
+        import concurrent.futures
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+            return pool.submit(asyncio.run, coro).result()
+    else:
+        return asyncio.run(coro)
+
+
 def tts_generate(text: str, output_path: Path, speaker: str = "A") -> tuple[bool, str]:
     """Génère un audio selon le moteur configuré (TTS_ENGINE).
     Retourne (success, engine_used) où engine = 'elevenlabs', 'edge_tts', ou 'failed'.
@@ -659,7 +674,7 @@ def tts_generate(text: str, output_path: Path, speaker: str = "A") -> tuple[bool
         # Fallback Edge TTS si ElevenLabs échoue
         voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
         try:
-            asyncio.run(_edge_tts_save(text, voice, output_path))
+            _run_async(_edge_tts_save(text, voice, output_path))
             return True, f"edge_tts:{reason}"
         except Exception:
             return False, "failed"
@@ -667,13 +682,13 @@ def tts_generate(text: str, output_path: Path, speaker: str = "A") -> tuple[bool
         # Edge TTS par défaut
         voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
         try:
-            asyncio.run(_edge_tts_save(text, voice, output_path))
+            _run_async(_edge_tts_save(text, voice, output_path))
             return True, "edge_tts"
         except Exception:
             return False, "failed"
 
 
-async def generate_audio_for_lesson(lesson: dict) -> tuple[bool, str]:
+def generate_audio_for_lesson(lesson: dict) -> tuple[bool, str]:
     """Génère l'audio pour une leçon. Retourne (success, engine_info)."""
     output_file = get_audio_path(lesson)
     dialogue_arabe = lesson.get("dialogue_arabe", "")
@@ -1319,9 +1334,7 @@ def page_lecons():
                 if st.button(f"🎙️ Générer l'audio", key=f"gen_audio_{i}"):
                     with st.spinner("Génération en cours..."):
                         try:
-                            result, engine = asyncio.run(
-                                generate_audio_for_lesson(lesson)
-                            )
+                            result, engine = generate_audio_for_lesson(lesson)
                             if result:
                                 if "edge_tts" in engine and TTS_ENGINE == "elevenlabs":
                                     st.warning(
