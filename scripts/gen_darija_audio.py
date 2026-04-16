@@ -1,6 +1,6 @@
 """
 Génération audio des dialogues darija
-ElevenLabs en priorité, Edge TTS en fallback
+Edge TTS par défaut, ElevenLabs si TTS_ENGINE=elevenlabs
 Lit le texte arabe pour la prononciation, affiche le texte en translittération pour l'apprentissage
 """
 
@@ -21,17 +21,18 @@ BASE_DIR = Path(__file__).parent.parent
 LESSON_DIR = BASE_DIR / "data" / "lesson_packs"
 AUDIO_DIR = BASE_DIR / "data" / "lesson_audio"
 
-# Voix marocaines Edge TTS (fallback)
+# Moteur TTS : "edge_tts" (défaut) ou "elevenlabs"
+TTS_ENGINE = os.getenv("TTS_ENGINE", "edge_tts").lower().strip()
+
+# Voix marocaines Edge TTS
 VOICE_MALE = "ar-MA-JamalNeural"
 VOICE_FEMALE = "ar-MA-MounaNeural"
 
-# ElevenLabs config
+# ElevenLabs config (utilisé uniquement si TTS_ENGINE="elevenlabs")
 ELEVENLABS_API_KEY = os.getenv("EVEN_LAB_KEY", "")
 ELEVENLABS_MODEL = "eleven_v3"
-ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "pNInz6obpgDQGcFmaJgB")
-ELEVENLABS_VOICE_ID_FEMALE = os.getenv(
-    "ELEVENLABS_VOICE_ID_FEMALE", "EXAVITQu4vr4xnSDxMaL"
-)
+ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "")
+ELEVENLABS_VOICE_ID_FEMALE = os.getenv("ELEVENLABS_VOICE_ID_FEMALE", "")
 
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -58,27 +59,30 @@ def parse_dialogue_arabe(dialogue_arabe: str):
 async def generate_single_audio(
     text: str, voice: str, output_file: Path, speaker: str = "A"
 ):
-    """Génère un fichier audio — ElevenLabs en priorité, Edge TTS en fallback"""
-    # Essayer ElevenLabs d'abord
-    if ELEVENLABS_API_KEY:
+    """Génère un fichier audio selon le moteur configuré (TTS_ENGINE)"""
+    if TTS_ENGINE == "elevenlabs" and ELEVENLABS_API_KEY:
         voice_id = ELEVENLABS_VOICE_ID if speaker == "A" else ELEVENLABS_VOICE_ID_FEMALE
-        url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
-        headers = {"xi-api-key": ELEVENLABS_API_KEY, "Content-Type": "application/json"}
-        payload = {
-            "text": text,
-            "model_id": ELEVENLABS_MODEL,
-            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
-        }
-        try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=60)
-            if resp.status_code == 200:
-                with open(output_file, "wb") as f:
-                    f.write(resp.content)
-                return
-            else:
-                print(f"    ⚠️  ElevenLabs {resp.status_code}, fallback Edge TTS")
-        except Exception as e:
-            print(f"    ⚠️  ElevenLabs erreur: {e}, fallback Edge TTS")
+        if voice_id:
+            url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+            headers = {
+                "xi-api-key": ELEVENLABS_API_KEY,
+                "Content-Type": "application/json",
+            }
+            payload = {
+                "text": text,
+                "model_id": ELEVENLABS_MODEL,
+                "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
+            }
+            try:
+                resp = requests.post(url, headers=headers, json=payload, timeout=60)
+                if resp.status_code == 200:
+                    with open(output_file, "wb") as f:
+                        f.write(resp.content)
+                    return
+                else:
+                    print(f"    ⚠️  ElevenLabs {resp.status_code}, fallback Edge TTS")
+            except Exception as e:
+                print(f"    ⚠️  ElevenLabs erreur: {e}, fallback Edge TTS")
     # Fallback Edge TTS
     communicate = edge_tts.Communicate(text, voice)
     await communicate.save(str(output_file))

@@ -52,19 +52,18 @@ for d in [
 ]:
     d.mkdir(parents=True, exist_ok=True)
 
-# Voix Edge TTS marocaines (fallback)
+# Moteur TTS : "edge_tts" (défaut, gratuit) ou "elevenlabs" (nécessite clé API)
+TTS_ENGINE = os.getenv("TTS_ENGINE", "edge_tts").lower().strip()
+
+# Voix Edge TTS marocaines (ar-MA)
 VOICE_MALE = "ar-MA-JamalNeural"
 VOICE_FEMALE = "ar-MA-MounaNeural"
 
-# ElevenLabs TTS config
+# ElevenLabs TTS config (utilisé uniquement si TTS_ENGINE="elevenlabs")
 ELEVENLABS_API_KEY = os.getenv("EVEN_LAB_KEY", "")
 ELEVENLABS_MODEL = "eleven_v3"
-ELEVENLABS_VOICE_ID = os.getenv(
-    "ELEVENLABS_VOICE_ID", "pNInz6obpgDQGcFmaJgB"
-)  # Adam (default multilingual voice)
-ELEVENLABS_VOICE_ID_FEMALE = os.getenv(
-    "ELEVENLABS_VOICE_ID_FEMALE", "EXAVITQu4vr4xnSDxMaL"
-)  # Sarah
+ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "")
+ELEVENLABS_VOICE_ID_FEMALE = os.getenv("ELEVENLABS_VOICE_ID_FEMALE", "")
 
 # OpenRouter config (STT + Chat AI)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
@@ -524,7 +523,7 @@ def display_audio_player(audio_path: Path, key: str = ""):
         with open(audio_path, "rb") as f:
             audio_b64 = base64.b64encode(f.read()).decode()
         uid = key or hashlib.md5(str(audio_path).encode()).hexdigest()[:10]
-        html = f'''
+        html = f"""
         <html><head><style>
         .audio-loop-container {{ display:flex; align-items:center; gap:8px; margin:4px 0; }}
         .audio-loop-container audio {{ flex:1; min-width:0; height:40px; }}
@@ -575,7 +574,7 @@ def display_audio_player(audio_path: Path, key: str = ""):
             }});
         }})();
         </script>
-        </body></html>'''
+        </body></html>"""
         components.html(html, height=50)
         return True
     return False
@@ -589,6 +588,8 @@ def elevenlabs_tts(
         return False, "no_key"
     if voice_id is None:
         voice_id = ELEVENLABS_VOICE_ID
+    if not voice_id:
+        return False, "no_voice_id"
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
     headers = {
         "xi-api-key": ELEVENLABS_API_KEY,
@@ -647,20 +648,29 @@ async def _edge_tts_save(text: str, voice: str, output_path: Path):
 
 
 def tts_generate(text: str, output_path: Path, speaker: str = "A") -> tuple[bool, str]:
-    """Génère un audio: ElevenLabs en priorité, Edge TTS en fallback.
+    """Génère un audio selon le moteur configuré (TTS_ENGINE).
     Retourne (success, engine_used) où engine = 'elevenlabs', 'edge_tts', ou 'failed'.
     """
-    voice_id = ELEVENLABS_VOICE_ID if speaker == "A" else ELEVENLABS_VOICE_ID_FEMALE
-    success, reason = elevenlabs_tts(text, output_path, voice_id)
-    if success:
-        return True, "elevenlabs"
-    # Fallback Edge TTS
-    voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
-    try:
-        asyncio.run(_edge_tts_save(text, voice, output_path))
-        return True, f"edge_tts:{reason}"
-    except Exception:
-        return False, "failed"
+    if TTS_ENGINE == "elevenlabs":
+        voice_id = ELEVENLABS_VOICE_ID if speaker == "A" else ELEVENLABS_VOICE_ID_FEMALE
+        success, reason = elevenlabs_tts(text, output_path, voice_id)
+        if success:
+            return True, "elevenlabs"
+        # Fallback Edge TTS si ElevenLabs échoue
+        voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
+        try:
+            asyncio.run(_edge_tts_save(text, voice, output_path))
+            return True, f"edge_tts:{reason}"
+        except Exception:
+            return False, "failed"
+    else:
+        # Edge TTS par défaut
+        voice = VOICE_MALE if speaker == "A" else VOICE_FEMALE
+        try:
+            asyncio.run(_edge_tts_save(text, voice, output_path))
+            return True, "edge_tts"
+        except Exception:
+            return False, "failed"
 
 
 async def generate_audio_for_lesson(lesson: dict) -> tuple[bool, str]:
@@ -1313,12 +1323,12 @@ def page_lecons():
                                 generate_audio_for_lesson(lesson)
                             )
                             if result:
-                                if "edge_tts" in engine:
+                                if "edge_tts" in engine and TTS_ENGINE == "elevenlabs":
                                     st.warning(
-                                        "⚠️ Quota ElevenLabs épuisé — audio généré avec Edge TTS (qualité réduite)"
+                                        "⚠️ ElevenLabs indisponible — audio généré avec Edge TTS"
                                     )
                                 else:
-                                    st.success("✅ Audio généré avec ElevenLabs !")
+                                    st.success("✅ Audio généré !")
                                 st.rerun()
                             else:
                                 st.error("❌ Échec de la génération")
@@ -1676,9 +1686,9 @@ def page_shadowing():
                         temp_file = AUDIO_DIR / f"_shad_temp_{i}.mp3"
                         success, engine = tts_generate(arabe_text, temp_file, speaker)
                         if success:
-                            if "edge_tts" in engine:
+                            if "edge_tts" in engine and TTS_ENGINE == "elevenlabs":
                                 st.warning(
-                                    "⚠️ Quota ElevenLabs épuisé — voix Edge TTS utilisée"
+                                    "⚠️ ElevenLabs indisponible — voix Edge TTS utilisée"
                                 )
                             display_audio_player(temp_file)
                         temp_file.unlink(missing_ok=True)
@@ -2179,12 +2189,15 @@ def page_histoires():
                                     text_arabe, audio_path, "A"
                                 )
                                 if success:
-                                    if "edge_tts" in engine:
+                                    if (
+                                        "edge_tts" in engine
+                                        and TTS_ENGINE == "elevenlabs"
+                                    ):
                                         st.warning(
-                                            "⚠️ Quota ElevenLabs épuisé — audio généré avec Edge TTS (qualité réduite)"
+                                            "⚠️ ElevenLabs indisponible — audio généré avec Edge TTS"
                                         )
                                     else:
-                                        st.success("✅ Audio généré avec ElevenLabs !")
+                                        st.success("✅ Audio généré !")
                                     st.rerun()
                                 else:
                                     st.error("❌ Échec de la génération")
@@ -2339,20 +2352,20 @@ def page_conversation():
                             audio_b64 = base64.b64encode(af.read()).decode()
                         is_last = msg is st.session_state.chat_history[-1]
                         autoplay_attr = "autoplay" if is_last else ""
-                        uid = msg['audio_id']
-                        chat_html += f'''<div class="audio-loop-container">
+                        uid = msg["audio_id"]
+                        chat_html += f"""<div class="audio-loop-container">
                             <audio id="chat_audio_{uid}" controls {autoplay_attr}
                                    style="width:100%;max-width:350px;height:32px;margin:4px 0 8px 0;"
                                    src="data:audio/mp3;base64,{audio_b64}"></audio>
                             <button class="loop-btn" data-audio-id="chat_audio_{uid}" title="Répéter en boucle">🔁</button>
-                        </div>'''
+                        </div>"""
     chat_html += "</div>"
     # Auto-scroll vers le bas
     chat_html += '<script>var cb=document.getElementById("chat-box");if(cb)cb.scrollTop=cb.scrollHeight;</script>'
     st.markdown(chat_html, unsafe_allow_html=True)
 
     # ── Script pour activer les boutons boucle du chat ──
-    _loop_script = '''<html><body><script>
+    _loop_script = """<html><body><script>
     var btns = window.parent.document.querySelectorAll('button[data-audio-id]');
     btns.forEach(function(btn) {
         if (btn._loopBound) return;
@@ -2390,7 +2403,7 @@ def page_conversation():
             }
         });
     });
-    </script></body></html>'''
+    </script></body></html>"""
     components.html(_loop_script, height=0)
 
     # ── Zone d'entrée fixe en bas ──
@@ -2578,9 +2591,7 @@ def page_playlist():
         )
     with fcol2:
         theme_keys = sorted(THEMES.keys())
-        theme_options = ["Tous les thèmes"] + [
-            THEMES[k]["nom"] for k in theme_keys
-        ]
+        theme_options = ["Tous les thèmes"] + [THEMES[k]["nom"] for k in theme_keys]
         selected_theme = st.selectbox("🏷️ Thème", theme_options, key="pl_theme")
     with fcol3:
         level_options = ["Tous"] + ["A1", "A2", "B1", "B2", "C1", "C2"]
@@ -2604,9 +2615,7 @@ def page_playlist():
             ):
                 filtered_ids.add(lid)
         playlist = [
-            l
-            for l in playlist
-            if f"{l['_source_file']}:{l['title']}" in filtered_ids
+            l for l in playlist if f"{l['_source_file']}:{l['title']}" in filtered_ids
         ]
 
     # Par thème
@@ -2648,7 +2657,9 @@ def page_playlist():
     st.markdown("---")
 
     # ── Lecture enchaînée (JavaScript) ──
-    play_all = st.checkbox("▶️ Lecture enchaînée (passe automatiquement à la suivante)", key="pl_chain")
+    play_all = st.checkbox(
+        "▶️ Lecture enchaînée (passe automatiquement à la suivante)", key="pl_chain"
+    )
     loop_all = st.checkbox("🔁 Boucler toute la playlist", key="pl_loop_all")
 
     # ── Affichage de la playlist ──
@@ -2673,7 +2684,7 @@ def page_playlist():
             unsafe_allow_html=True,
         )
 
-        pl_html = f'''<html><head><style>
+        pl_html = f"""<html><head><style>
         .audio-loop-container {{ display:flex; align-items:center; gap:8px; margin:4px 0; }}
         .audio-loop-container audio {{ flex:1; min-width:0; height:40px; }}
         .loop-btn {{ background:#f0f0f0; border:2px solid #ccc; border-radius:8px;
@@ -2722,7 +2733,7 @@ def page_playlist():
             }});
         }})();
         </script>
-        </body></html>'''
+        </body></html>"""
         components.html(pl_html, height=50)
 
     # ── Script de lecture enchaînée ──
@@ -2808,24 +2819,26 @@ def main():
 
         st.markdown("---")
         st.markdown("**🔊 Moteur TTS :**")
-        quota = get_elevenlabs_quota()
-        if quota and quota["remaining"] > 0:
-            pct = int(quota["used"] / max(quota["limit"], 1) * 100)
-            st.markdown(f"✅ **ElevenLabs** ({quota['tier']})")
-            st.progress(
-                pct / 100,
-                text=f"{quota['used']:,}/{quota['limit']:,} caractères ({pct}%)",
-            )
-            st.caption(f"Reste : {quota['remaining']:,} caractères")
-        elif quota and quota["remaining"] <= 0:
-            st.warning("⚠️ Quota ElevenLabs épuisé !")
-            st.markdown("🔄 Fallback : **Edge TTS** (ar-MA)")
-            st.caption(
-                "Les audios seront générés avec Edge TTS jusqu'au renouvellement du quota."
-            )
+        if TTS_ENGINE == "elevenlabs":
+            quota = get_elevenlabs_quota()
+            if quota and quota["remaining"] > 0:
+                pct = int(quota["used"] / max(quota["limit"], 1) * 100)
+                st.markdown(f"✅ **ElevenLabs** ({quota['tier']})")
+                st.progress(
+                    pct / 100,
+                    text=f"{quota['used']:,}/{quota['limit']:,} caractères ({pct}%)",
+                )
+                st.caption(f"Reste : {quota['remaining']:,} caractères")
+            elif quota and quota["remaining"] <= 0:
+                st.warning("⚠️ Quota ElevenLabs épuisé !")
+                st.markdown("🔄 Fallback : **Edge TTS** (ar-MA)")
+            else:
+                st.warning("⚠️ TTS_ENGINE=elevenlabs mais clé API non configurée")
+                st.markdown("🔄 Fallback : **Edge TTS** (ar-MA)")
         else:
             st.markdown("🔊 **Edge TTS** (ar-MA)")
-            st.caption("Configurez EVEN_LAB_KEY dans .env pour utiliser ElevenLabs.")
+            st.caption("Voix marocaines : JamalNeural / MounaNeural")
+            st.caption("Ajoutez TTS_ENGINE=elevenlabs dans .env pour changer.")
 
     # Router
     if page == "🏠 Accueil":
